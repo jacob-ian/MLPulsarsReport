@@ -3,8 +3,24 @@
 \usepackage{hyphenat}
 \usepackage{enumitem}
 \usepackage{graphicx}
-\graphicspath{ {./images/} }
 
+% Coding packages
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\lstset{
+  basicstyle=\ttfamily,
+  literate={~} {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}{1},
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  numbers=left,
+  stepnumber=1,
+  xleftmargin=2em,
+  framexleftmargin=1.5em
+}
+
+\graphicspath{ {./images/} }
 
 % Referencing
 \usepackage[authordate,strict,backend=bibtex8,babel=other,bibencoding=inputenc]{biblatex-chicago}
@@ -119,7 +135,7 @@ While some pulsars, like the Crab Pulsar \autocite{maoz}, emit electromagnetic w
 \section{Methods}
 \subsection{Developing the Machine Learning Training Dataset}
 
-Before a machine learning algorithm can make predictions and classify candidate data as pulsar or non-pulsar, it must first build a classification model from a training dataset which contains similar data with known positive and negative classifications \autocite{tan, lyon}. For the use case of pulsar classification, the training dataset must contain examples of data from both pulsars and from non-pulsars so that the algorithm can learn how to distinguish between the two classes.
+Before a machine learning algorithm can make predictions and classify candidates as a pulsar or a non-pulsar, it must first build a classification model from a training dataset which contains similar data with known positive and negative classifications \autocite{tan, lyon}. For the use case of pulsar classification, the training dataset must contain examples of data from both pulsars and from non-pulsars so that the algorithm can learn how to distinguish between the two classes.
 
 To maximise the accuracy of the machine learning algorithm, the input data (including the training dataset) must be composed of a common group of features that can be determined for each candidate that maximises the differences between a pulsar and a non-pulsar. The candidate features used by \smartcite{tan} to maximise the differences between pulsar and non-pulsar candidates are:
 
@@ -140,37 +156,95 @@ To maximise the accuracy of the machine learning algorithm, the input data (incl
     Subint_{\mu}, Subint_{\sigma}, Subint_{S}, Subint_{k}
 \end{equation}
 
-Where features are calculated from the: (1) Integrated Pulsar Profile, (2) the Dispersion Measure -- Signal-to-Noise Ratio Curve (DM-S/N), (3) the correlation coefficients between each sub-band and the integrated pulsar profile, and from the (4) correlation coefficients between each sub-integration and the integrated pulsar profile. See \emph{Appendix 2A} for formulae to calculate each feature.
+Where candidate features are calculated from the: (1) Integrated Pulsar Profile, (2) the Dispersion Measure -- Signal-to-Noise Ratio Curve (DM-S/N), (3) the correlation coefficients between each sub-band and the integrated pulsar profile, and from the (4) correlation coefficients between each sub-integration and the integrated pulsar profile. See \emph{Appendix 2A} for formulae to calculate each feature.
 
 To extract the 20 above features from each classification candidate, we can use the software 
 \verb|PulsarFeatureLab| \autocite{lyon}.
 
 \subsubsection{Pulsar Candidate Feature Extraction}
 
-The software tool \verb|PulsarFeatureLab| can be used to consume pulsar candidate files of the PRESTO Prepfold \verb|PFD| filetype and output the 20 above features for each candidate into a single file of WEKA Data Mining \verb|ARFF| filetype \autocite{lyon}.
+The Python software tool \verb|PulsarFeatureLab| can be used to consume pulsar candidate files of the PRESTO Prepfold \verb|PFD| filetype and output the 20 above features for each candidate into a single file of WEKA Data Mining \verb|ARFF| filetype \autocite{lyon}.
 
 To create a closed software environment in which the dependencies of the \verb|PulsarFeatureLab| software are unaffected by the host operating system, a containerised virtual operating system can be created using the free software Docker (\verb|https://docker.com|).
 
-First a directory to store the program and the Dockerfile is created by completing the following commands in a UNIX terminal:
+First, a directory to store the Dockerfile and pulsar candidate data is created by completing the following commands in a UNIX terminal:
 
-\begin{center}
-\begin{verbatim}
-    $ mkdir ~/pulsars
-    $ cd ~/pulsars
-    $ touch Dockerfile
-\end{verbatim}
-\end{center}
+\begin{lstlisting}[numbers=none]
+$ mkdir ~/pulsars
+$ cd ~/pulsars
+$ touch Dockerfile
+\end{lstlisting}
+
+To create the Docker image, the contents of the \verb|Dockerfile| can be edited to contain:
+
+\begin{lstlisting}[title=Dockerfile]
+FROM alpine/git:latest as builder
+WORKDIR /root/
+RUN cd /root/ && git clone --single-branch --branch V1.3.2 https://github.com/scienceguyrob/PulsarFeatureLab.git && mkdir PulsarFeatureLab/PulsarFeatureLab/Data/IO
+
+FROM python:2.7
+WORKDIR /usr/src/app
+COPY --from=builder /root/PulsarFeatureLab .
+RUN pip install numpy scipy matplotlib astropy
+ENTRYPOINT ["python", "./PulsarFeatureLab/Src/PulsarFeatureLab.py"]
+\end{lstlisting}
+
+The above \verb|Dockerfile| instructs Docker to:
+\begin{enumerate}[label=\roman*.]
+    \item use an image of Alpine Linux with \verb|git| preinstalled to download the \verb|PulsarFeatureLab| software from GitHub \\(\verb|https://github.com/scienceguyrob/PulsarFeatureLab|);
+    \item create a directory inside the downloaded software to store the input and output data;
+    \item create a Docker image based on Python 2.7;
+    \item transfer the \verb|PulsarFeatureLab| software into the Python 2.7 image; and
+    \item install \verb|PulsarFeatureLab|'s library dependencies (\verb|NumPy, SciPy, matplotlib| and \verb|astropy|).
+\end{enumerate}
+
+The above Docker image can now be built into a container (a virtual operating system) and a directory to hold the input data can be created by running the following commands on a UNIX terminal:
+
+\begin{lstlisting}[numbers=none]
+$ docker build -t jacobianm/pulsarfeaturelab:1.3.2 .
+$ mkdir ~/pulsars/data/pfd
+\end{lstlisting}
+
+Candidate \verb|PFD| files of known pulsars and non-pulsars detected by the Murchison Widefield Array (MWA) provided by N. Swainston can now populate the above created directory, and the following command can be ran to extract the features from the candidates:
+
+\begin{lstlisting}[numbers=none]
+$ docker run --rm -v ~/pulsars/data/pfd:/usr/src/app/PulsarFeatureLab/Data/IO jacobianm/pulsarfeaturelab:1.3.2 -d "/usr/src/app/PulsarFeatureLab/Data/IO" -c 3 -t 6 -f "/usr/src/app/PulsarFeatureLab/Data/IO/output.arff" --arff --meta
+\end{lstlisting}
+
+This function instructs Docker to connect the directory containing the \verb|PFD| files to the \verb|PulsarFeatureLab| container's input/output directory and then run the \verb|PulsarFeatureLab| software with arguments stating where the input files are, what filetype they are (\verb|PFD|), which set of features to extract, and where to place the output file.
+
+\subsubsection{Creating the Training Dataset}
+
+The \verb|output.arff| file created by \verb|PulsarFeatureLab|, contains a set of comma-separated features for each candidate, with an appended `?' character, per file line. Since the class of each candidate is already known, the `?' character on each line can be replaced by a `1' if the candidate is a pulsar, or a `0' if the candidate is a non-pulsar. This signals to the Machine Learning algorithm what a pulsar and a non-pulsar candidate's feature set may appear like.
+
+The edited file can now be renamed and moved with the following command:
+
+\begin{lstlisting}[numbers=none]
+$ mv ~/pulsars/data/pfd/output.arff ~/pulsars/data/trainingSet.arff
+\end{lstlisting}
+
+The Machine Learning Training Dataset has now been created using Murchison Widefield Array data.
+\\
     
-\subsection{Evaluating the LOTAAS Machine Learning Algorithm for use with the MWA}
+\subsection{Evaluating the LOTAASClassifier Machine Learning Classification Tool for use with the Murchison Widefield Array}
+
+
+
 
 \pagebreak
 % Results Section
-\section{Results}
-\subsection{Pulsar Candidate Training Dataset}
-\subsection{Radio Frequency Interference Training Dataset}
-\subsection{Noise Training Dataset}
-\subsection{Output from Algorithm with MWA Data}
-\subsection{Adaptations to the Machine Learning Algorithm}
+\section{Results and Outputs}
+\subsection{Machine Learning Training Dataset}
+
+The machine learning training dataset created with candidates detected by the Murchison Widefield Array is as follows:
+
+\begin{lstlisting}[title=trainingSet.arff]
+
+\end{lstlisting}
+
+
+\subsection{Output from LOTAASClassifier with Murchison Widefield Array Data}
+\subsection{Output from PulsarClassifier Machine Learning Classification Tool}
 
 \pagebreak
 % Results Discussion Section
