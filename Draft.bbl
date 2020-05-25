@@ -1,0 +1,162 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{cms/global//global/global}
+  \entry{lorimer}{book}{}
+    \name{author}{2}{}{%
+      {{hash=LDR}{%
+         family={{Lorimer}},
+         familyi={L\bibinitperiod},
+         given={D.\bibnamedelima R.},
+         giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={{Kramer}},
+         familyi={K\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{LDRKM1}
+    \strng{fullhash}{LDRKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{Handbook of Pulsar Astronomy}}
+    \field{volume}{4}
+    \list{location}{1}{%
+      {Cambridge, United Kingdom}%
+    }
+    \field{year}{2005}
+  \endentry
+
+  \entry{lyon}{article}{}
+    \name{author}{5}{}{%
+      {{hash=LRJ}{%
+         family={Lyon},
+         familyi={L\bibinitperiod},
+         given={R.\bibnamedelima J.},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SBW}{%
+         family={Stappers},
+         familyi={S\bibinitperiod},
+         given={B.\bibnamedelima W.},
+         giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Cooper},
+         familyi={C\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BJM}{%
+         family={Brooke},
+         familyi={B\bibinitperiod},
+         given={J.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=KJD}{%
+         family={Knowles},
+         familyi={K\bibinitperiod},
+         given={J.\bibnamedelima D.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRJ+1}
+    \strng{fullhash}{LRJSBWCSBJMKJD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1093/mnras/stw656
+    \endverb
+    \field{number}{1}
+    \field{pages}{1104\bibrangedash 1123}
+    \field{title}{{Fifty years of pulsar candidate selection: from simple
+  filters to a new principled real-time classification approach}}
+    \field{volume}{459}
+    \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+    \field{month}{04}
+    \field{year}{2016}
+  \endentry
+
+  \entry{maoz}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MD}{%
+         family={Maoz},
+         familyi={M\bibinitperiod},
+         given={Dan},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Princeton University Press}%
+    }
+    \strng{namehash}{MD1}
+    \strng{fullhash}{MD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{edition}{2}
+    \field{pages}{64\bibrangedash 94}
+    \field{title}{Astrophysics in a Nutshell}
+    \list{location}{1}{%
+      {Princeton, New Jersey}%
+    }
+    \field{year}{2016}
+  \endentry
+
+  \entry{swainston}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=SN}{%
+         family={Swainston},
+         familyi={S\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SN1}
+    \strng{fullhash}{SN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Investigating the Low-Frequency Population of Southern
+  Pulsars with the MWA: Milestone 2}
+    \list{institution}{1}{%
+      {International Centre for Radio Astronomy Research}%
+    }
+    \field{year}{2020}
+  \endentry
+\enddatalist
+\endinput
