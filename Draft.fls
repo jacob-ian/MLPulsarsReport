@@ -1,158 +1,142 @@
-PWD c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft
-INPUT C:\Users\jimim\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.tex
-OUTPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.log
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyphenat\hyphenat.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyphenat\hyphenat.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\biblatex-chicago.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\biblatex-chicago.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-bibtex.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-bibtex.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\chicago-authordate.bbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\chicago-authordate.bbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\chicago-authordate.cbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\chicago-authordate.cbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\chicago-dates-common.cbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\chicago-dates-common.cbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\american.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.aux
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.aux
-OUTPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.aux
-INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\cms-american.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\cms-american.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\cms-american.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\american.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\american.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
-OUTPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft-blx.bib
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.bbl
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.bbl
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.bbl
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.pdf
-INPUT C:\Users\jimim\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.toc
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.toc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
-OUTPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.toc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
-INPUT images\pulsar.jpg
-INPUT .\images\pulsar.jpg
-INPUT .\images\pulsar.jpg
-INPUT .\images\pulsar.jpg
-INPUT .\images\pulsar.jpg
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.aux
-INPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.run.xml
-OUTPUT c:\Users\jimim\Google Drive\University\Physics Project 1\Report Draft\Draft.run.xml
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
+PWD /home/jacob/pulsars/MLPulsarsReport
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.tex
+OUTPUT /home/jacob/pulsars/MLPulsarsReport/Draft.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/biblatex-chicago.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/biblatex-chicago.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/chicago-authordate.bbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/chicago-authordate.bbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/chicago-authordate.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/chicago-authordate.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/chicago-dates-common.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/chicago-dates-common.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.aux
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.aux
+OUTPUT /home/jacob/pulsars/MLPulsarsReport/Draft.aux
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+OUTPUT /home/jacob/pulsars/MLPulsarsReport/Draft-blx.bib
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.bbl
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.bbl
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.bbl
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+OUTPUT /home/jacob/pulsars/MLPulsarsReport/Draft.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.toc
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT /home/jacob/pulsars/MLPulsarsReport/Draft.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /home/jacob/pulsars/MLPulsarsReport/./images/pulsar.jpg
+INPUT ./images/pulsar.jpg
+INPUT ./images/pulsar.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.aux
+INPUT /home/jacob/pulsars/MLPulsarsReport/Draft.run.xml
+OUTPUT /home/jacob/pulsars/MLPulsarsReport/Draft.run.xml
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb

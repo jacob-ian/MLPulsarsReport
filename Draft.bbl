@@ -158,5 +158,77 @@
     }
     \field{year}{2020}
   \endentry
+
+  \entry{tan}{article}{}
+    \name{author}{8}{}{%
+      {{hash=TCM}{%
+         family={Tan},
+         familyi={T\bibinitperiod},
+         given={C.\bibnamedelima M.},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LRJ}{%
+         family={Lyon},
+         familyi={L\bibinitperiod},
+         given={R.\bibnamedelima J.},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SBW}{%
+         family={Stappers},
+         familyi={S\bibinitperiod},
+         given={B.\bibnamedelima W.},
+         giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Cooper},
+         familyi={C\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HJWT}{%
+         family={Hessels},
+         familyi={H\bibinitperiod},
+         given={J.\bibnamedelima W.\bibnamedelima T.},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim
+  T\bibinitperiod},
+      }}%
+      {{hash=KVI}{%
+         family={Kondratiev},
+         familyi={K\bibinitperiod},
+         given={V.\bibnamedelima I.},
+         giveni={V\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Michilli},
+         familyi={M\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sanidas},
+         familyi={S\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TCM+1}
+    \strng{fullhash}{TCMLRJSBWCSHJWTKVIMDSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.1093/mnras/stx3047
+    \endverb
+    \field{number}{4}
+    \field{pages}{4571\bibrangedash 4583}
+    \field{title}{Ensemble candidate classification for the LOTAAS pulsar
+  survey}
+    \field{volume}{474}
+    \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+    \field{year}{2017}
+  \endentry
 \enddatalist
 \endinput

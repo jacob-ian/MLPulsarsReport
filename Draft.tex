@@ -49,7 +49,7 @@ This project consists of three aims:
 
 \subsection{Structure of this Report}
 
-In this report, I will first explain in \emph{Section 1.3} how Pulsars, Radio Astronomy, and Machine learning work, and then explain what has been dubbed the "Candidate Selection Problem" \autocite{lyon} and why Machine Learning is necessary in completing future pulsar surveys.
+In this report, I will first explain in \emph{Section 1.3} how Pulsars, Radio Astronomy, and Machine learning work, and then explain what has been dubbed the ``Candidate Selection Problem" \autocite{lyon} and why Machine Learning is necessary in completing future pulsar surveys.
 
 In \emph{Section 2} I discuss the methods undertook in: (i) developing the machine learning training dataset for the Murchison Widefield Array algorithm, and (ii) evaluating the machine learning algorithm used by the LOFAR surveys for use with the Murchison Widefield Array.
 
@@ -81,7 +81,7 @@ $$I = \frac{2}{5}MR^2$$ where $M$ is the mass of the star and $R$ is the radius 
 
 $$\omega_2 = \frac{\frac{2}{5}MR_1^2}{\frac{2}{5}MR_2^2}\omega_1$$
 
-$$\omega_2 = \left(\frac{R_1}{R_2}\right)^2\omega_1$$ where $R_1 >> R_2$. We are left with a neutron star with a very large angular velocity. Analogous to the angular velocity of the star, the magnetic field of the star is also amplified. The ionised gas in the iron core of the star, which generates a magnetic field, is compressed by the gravitational collapse, forcing the flux of the magnetic field to be amplified such that the field strength is approximately $10^{10}$ times stronger in the neutron star compared to during the star's main sequence lifetime \autocite{maoz}.
+$$\omega_2 = \left(\frac{R_1}{R_2}\right)^2\omega_1$$ where $R_1 \gg R_2$. We are left with a neutron star with a very large angular velocity. Analogous to the angular velocity of the star, the magnetic field of the star is also amplified. The ionised gas in the iron core of the star, which generates a magnetic field, is compressed by the gravitational collapse, forcing the flux of the magnetic field to be amplified such that the field strength is approximately $10^{10}$ times stronger in the neutron star compared to during the star's main sequence lifetime \autocite{maoz}.
 
 If the rotation of the neutron star is misaligned with the axis of the magnetic field by an angle $\theta$, the spinning magnetic dipole will radiate electromagnetic waves \autocite{maoz}. As the neutron star rotates, the radiated electromagnetic waves will periodically sweep across the line of sight of an observer, creating a pulse of light. See Figure \ref{fig:pulsar1}. We can therefore define a pulsar as a rapidly rotating neutron star that appears to periodically emit electromagnetic waves \autocite{maoz,lorimer,swainston}.
 
@@ -117,11 +117,50 @@ While some pulsars, like the Crab Pulsar \autocite{maoz}, emit electromagnetic w
 \pagebreak
 % Methods Section
 \section{Methods}
-\subsection{Developing the MWA Machine Learning Training\\ Datasets}
-\subsubsection{Pulsar Candidate Training Datasets}
-\subsubsection{RFI Training Dataset}
-\subsubsection{Noise Training Dataset}
-\subsection{Evaluating the LOFAR Machine Learning Algorithm for use with the MWA}
+\subsection{Developing the Machine Learning Training Dataset}
+
+Before a machine learning algorithm can make predictions and classify candidate data as pulsar or non-pulsar, it must first build a classification model from a training dataset which contains similar data with known positive and negative classifications \autocite{tan, lyon}. For the use case of pulsar classification, the training dataset must contain examples of data from both pulsars and from non-pulsars so that the algorithm can learn how to distinguish between the two classes.
+
+To maximise the accuracy of the machine learning algorithm, the input data (including the training dataset) must be composed of a common group of features that can be determined for each candidate that maximises the differences between a pulsar and a non-pulsar. The candidate features used by \smartcite{tan} to maximise the differences between pulsar and non-pulsar candidates are:
+
+\begin{equation}
+    Prof_{\mu}, Prof_{\sigma}, Prof_{S}, Prof_{k}
+\end{equation}
+
+\begin{equation}
+    DM_{\mu}, DM_{\sigma}, DM_{S},DM_{k},
+    DM_{\mu'}, DM_{\sigma'}, DM_{|S'|},DM_{k'}
+\end{equation}
+
+\begin{equation}
+    Subband_{\mu}, Subband_{\sigma}, Subband_{S}, Subband_{k}
+\end{equation}
+
+\begin{equation}
+    Subint_{\mu}, Subint_{\sigma}, Subint_{S}, Subint_{k}
+\end{equation}
+
+Where features are calculated from the: (1) Integrated Pulsar Profile, (2) the Dispersion Measure -- Signal-to-Noise Ratio Curve (DM-S/N), (3) the correlation coefficients between each sub-band and the integrated pulsar profile, and from the (4) correlation coefficients between each sub-integration and the integrated pulsar profile. See \emph{Appendix 2A} for formulae to calculate each feature.
+
+To extract the 20 above features from each classification candidate, we can use the software 
+\verb|PulsarFeatureLab| \autocite{lyon}.
+
+\subsubsection{Pulsar Candidate Feature Extraction}
+
+The software tool \verb|PulsarFeatureLab| can be used to consume pulsar candidate files of the PRESTO Prepfold \verb|PFD| filetype and output the 20 above features for each candidate into a single file of WEKA Data Mining \verb|ARFF| filetype \autocite{lyon}.
+
+To create a closed software environment in which the dependencies of the \verb|PulsarFeatureLab| software are unaffected by the host operating system, a containerised virtual operating system can be created using the free software Docker (\verb|https://docker.com|).
+
+First a directory to store the program is created by completing the following commands in a UNIX terminal:
+
+\begin{center}
+\begin{verbatim}
+    $ mkdir ~/pulsars
+    $ cd ~/pulsars
+\end{verbatim}
+\end{center}
+    
+\subsection{Evaluating the LOTAAS Machine Learning Algorithm for use with the MWA}
 
 \pagebreak
 % Results Section
@@ -129,7 +168,7 @@ While some pulsars, like the Crab Pulsar \autocite{maoz}, emit electromagnetic w
 \subsection{Pulsar Candidate Training Dataset}
 \subsection{Radio Frequency Interference Training Dataset}
 \subsection{Noise Training Dataset}
-\subsection{Output from LOFAR Algorithm with MWA Data}
+\subsection{Output from Algorithm with MWA Data}
 \subsection{Adaptations to the Machine Learning Algorithm}
 
 \pagebreak

@@ -1,89 +1,85 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduction}{3}% 
+\contentsline {section}{\numberline {1}Introduction}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Aim}{3}% 
+\contentsline {subsection}{\numberline {1.1}Aim}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Structure of this Report}{3}% 
+\contentsline {subsection}{\numberline {1.2}Structure of this Report}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Background Theory}{3}% 
+\contentsline {subsection}{\numberline {1.3}Background Theory}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1}What is a Pulsar Profile?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.1}What is a Pulsar Profile?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.2}What is multi-path scattering?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.2}What is multi-path scattering?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3}What is a Pulsar Dispersion Measure?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.3}What is a Pulsar Dispersion Measure?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.4}What is a Radio Telescope and how do they work?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.4}What is a Radio Telescope and how do they work?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.5}What is the Murchison Widefield Array?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.5}What is the Murchison Widefield Array?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.6}Why are we conducting sky surveys?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.6}Why are we conducting sky surveys?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.7}How is a sky survey conducted with the Murchison Widefield Array?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.7}How is a sky survey conducted with the Murchison Widefield Array?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.8}What is tied-array beamforming?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.8}What is tied-array beamforming?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.9}How many Pulsar candidates are found in a Murchison Widefield Array sky survey?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.9}How many Pulsar candidates are found in a Murchison Widefield Array sky survey?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.10}How long do sky surveys take?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.10}How long do sky surveys take?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.11}How much data is created from a sky survey?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.11}How much data is created from a sky survey?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.12}What is Radio Frequency Interference?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.12}What is Radio Frequency Interference?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.13}What is a Signal-to-Noise Ratio?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.13}What is a Signal-to-Noise Ratio?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.14}What is PRESTO and a .PFD file?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.14}What is PRESTO and a .PFD file?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.15}What is Machine Learning?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.15}What is Machine Learning?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.16}How does Machine Learning work?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.16}How does Machine Learning work?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.17}Why do we need to use Machine Learning in finding new Pulsars?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.17}Why do we need to use Machine Learning in finding new Pulsars?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.18}Why is this particular Machine Learning Classifier used?}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.18}Why is this particular Machine Learning Classifier used?}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Methods}{7}% 
+\contentsline {section}{\numberline {2}Methods}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Developing the MWA Machine Learning Training\\ Datasets}{7}% 
+\contentsline {subsection}{\numberline {2.1}Developing the Machine Learning Training Dataset}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Pulsar Candidate Training Datasets}{7}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Pulsar Candidate Feature Extraction}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}RFI Training Dataset}{7}% 
+\contentsline {subsection}{\numberline {2.2}Evaluating the LOTAAS Machine Learning Algorithm for use with the MWA}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.3}Noise Training Dataset}{7}% 
+\contentsline {section}{\numberline {3}Results}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Evaluating the LOFAR Machine Learning Algorithm for use with the MWA}{7}% 
+\contentsline {subsection}{\numberline {3.1}Pulsar Candidate Training Dataset}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Results}{8}% 
+\contentsline {subsection}{\numberline {3.2}Radio Frequency Interference Training Dataset}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Pulsar Candidate Training Dataset}{8}% 
+\contentsline {subsection}{\numberline {3.3}Noise Training Dataset}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Radio Frequency Interference Training Dataset}{8}% 
+\contentsline {subsection}{\numberline {3.4}Output from Algorithm with MWA Data}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Noise Training Dataset}{8}% 
+\contentsline {subsection}{\numberline {3.5}Adaptations to the Machine Learning Algorithm}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Output from LOFAR Algorithm with MWA Data}{8}% 
+\contentsline {section}{\numberline {4}Discussion}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Adaptations to the Machine Learning Algorithm}{8}% 
+\contentsline {subsection}{\numberline {4.1}How effective are the training datasets?}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Discussion}{9}% 
+\contentsline {subsection}{\numberline {4.2}Why didn't the LOFAR Machine Learning Algorithm work with the MWA?}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}How effective are the training datasets?}{9}% 
+\contentsline {subsection}{\numberline {4.3}What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Why didn't the LOFAR Machine Learning Algorithm work with the MWA?}{9}% 
+\contentsline {section}{\numberline {5}Conclusions}{11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}{9}% 
+\contentsline {section}{\numberline {6}Recommendations}{11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusions}{10}% 
+\contentsline {section}{\numberline {7}References}{12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Recommendations}{10}% 
+\contentsline {section}{\numberline {8}Appendices}{13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}References}{11}% 
+\contentsline {subsection}{\numberline {8.1}Pulsar Feature Lab}{13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Appendices}{12}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Pulsar Feature Lab}{12}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Pulsar Classifier}{12}% 
+\contentsline {subsection}{\numberline {8.2}Pulsar Classifier}{13}%
