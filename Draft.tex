@@ -8,6 +8,7 @@
 \usepackage{listings}
 \usepackage{lmodern}
 \usepackage{xcolor}
+\usepackage{algorithmicx}
 \lstset{
   basicstyle=\ttfamily,
   literate={~} {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}{1},
@@ -28,7 +29,7 @@
 
 % Create the Title 
 \title{Finding New Pulsars Using Machine Learning}
-\author{Jacob Ian Matthews \\ \\ Draft 1}
+\author{Jacob Ian Matthews \\ \\ Draft}
 
 \begin{document}
 
@@ -224,10 +225,131 @@ $ mv ~/pulsars/data/pfd/output.arff ~/pulsars/data/trainingSet.arff
 \end{lstlisting}
 
 The Machine Learning Training Dataset has now been created using Murchison Widefield Array data.
-\\
     
 \subsection{Evaluating the LOTAASClassifier Machine Learning Classification Tool for use with the Murchison Widefield Array}
 
+To address the Candidate Selection Problem discussed in \emph{Section 1.3} of this report, a Java Machine Learning pulsar classification tool named \verb|LOTAASClassifier| was created to classify the pulsar candidates produced by the LOFAR Tied-Array All-sky Survey (LOTAAS) \autocite{lyon}. Due to the similarities between the LOFAR radio telescope and the Murchison Widefield Array (MWA) radio telescope, it is logical to attempt to apply the \verb|LOTAASClassifier| tool to candidates produced by the MWA.
+
+The \verb|LOTAASClassifier| tool contains four machine learning algorithms with which the user can choose to make pulsar classifications. They are: the J48 (C4.5 Decision Tree \autocite{quinlan}), the Multi-Layer Perceptron, the Naive Bayes, and the Support Vector Machines (SVM) algorithms \autocite{lyon}.
+
+To begin evaluating the software, \verb|LOTAASClassifier v1.0| can be downloaded from its GitHub repository \\(\verb|https://github.com/scienceguyrob/LOTAASClassifier|) with the following UNIX terminal commands:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars
+$ git clone https://github.com/scienceguyrob/LOTAASClassifier.git
+\end{lstlisting}
+
+The tool's executable program can then be found by navigating to the following directory in the UNIX terminal:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars/LOTAASClassifier/dist
+\end{lstlisting}
+
+\subsubsection{Creating a Classification Model}
+
+In order to use \verb|LOTAASClassifier| to classify Murchison Widefield Array candidates, we must use the Machine Learning Training Dataset created in \emph{Section 2.1} to create a classification model. This can be completed by running the following commands:
+
+\begin{lstlisting}[numbers=none]
+$ java -jar LOTAASClassifier.jar -t ~/pulsars/data/trainingSet.arff -m ~/pulsars/data/model.m -a 1
+\end{lstlisting}
+
+This instructs \verb|LOTAASClassifier| to create a new classification model for the J48 machine learning algorithm with the previously constructed training dataset.
+
+To ensure that the classification model was created successfully, we can test the model against the same dataset provided by N. Swainston to create the training dataset. Using \verb|PulsarFeatureLab| we can produce a new \verb|output.arff| file with the candidates' class unedited.
+
+\begin{lstlisting}[numbers=none]
+$ docker run --rm -v ~/pulsars/data/pfd:/usr/src/app/PulsarFeatureLab/Data/IO jacobianm/pulsarfeaturelab:1.3.2 -d "/usr/src/app/PulsarFeatureLab/Data/IO" -c 3 -t 6 -f "/usr/src/app/PulsarFeatureLab/Data/IO/output.arff" --arff --meta
+\end{lstlisting}
+
+It is now possible to test the classification model with the candidate feature sets with the following commands:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars/LOTAASClassifier/dist
+$ java -jar LOTAASClassifier.jar -p ~/pulsars/data/pfd/output.arff -m ~/pulsars/data/model.m -a 1
+\end{lstlisting}
+
+The \verb|LOTAASClassifier| tool will output two files: `\verb|output.positive|' and `\verb|output.negative|', in the same location as the input dataset. The J48 classification model was constructed successfully if the candidates inside the `\verb|positive|' file are the known pulsars.
+
+\subsubsection{Evaluating LOTAASClassifier}
+
+With a successfully created machine learning classification model, it is now possible to test \verb|LOTAASClassifier| against a previously unseen (by the classifier) dataset of Murchison Widefield Array candidates whose class is also known. We can first remove the existing candidates from inside the \verb|PFD| files directory and delete the existing \verb|output| files.
+
+The candidates directory can then be populated by new \verb|PFD| files and we can use the `\verb|docker run|' command from \emph{Section 2.2.1} to extract the features from the new candidates.
+
+The \verb|LOTAASClassifier| tool can now make classification predictions on the new candidates by running the UNIX terminal command:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars/LOTAASClassifier/dist
+$ java -jar LOTAASClassifier.jar -p ~/pulsars/data/pfd/output.arff -m ~/pulsars/data/model.m -a 1
+\end{lstlisting}
+
+By inspecting the created `\verb|output.positive|' and `\verb|output.negative|' files and comparing the results to the known pulsars, we can evaluate the performance of the \verb|LOTAASClassifier| tool with Murchison Widefield Array data and make a judgement about further use of the classifier.
+
+\subsubsection{Creating the PulsarClassifier Ensemble Classification Tool}
+
+According to \cite{tan}, using Machine Learning algorithms in ensemble to make pulsar classifications increases the accuracy of classifications, classifying pulsars that were often misclassified such as wide-pulse pulsars.
+
+To build the ensemble classification feature into the existing \verb|LOTAASClassifier| tool, we can first begin by creating a new Java project named \verb|PulsarClassifier| using the free software, Maven (\verb|https://maven.apache.org|).
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars
+$ mkdir PulsarClassifier && cd PulsarClassifier
+$ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+\end{lstlisting}
+
+We can now copy the source code from \verb|LOTAASClassifier| to be included in the \verb|PulsarClassifier| software.
+
+\begin{lstlisting}[numbers=none]
+$ cp -R ~/pulsars/LOTAASClassifier/src/ ~/pulsars/PulsarClassifier/src/main/java
+\end{lstlisting}
+
+To use the WEKA suite of Machine Learning tools, we must then edit the \verb|pom.xml| file inside \verb|PulsarClassifier| to include it as a dependency, and resynchronise the project:\\
+
+\begin{lstlisting}[numbers=none, title=pom.xml, language=xml]
+...
+<dependencies>
+...
+    <dependency>
+        <groupId>nz.ac.waikato.cms.weka</groupId>
+        <artifactId>weka-stable</artifactId>
+        <version>3.8.0</version>
+    </dependency>
+...
+</dependencies>
+...
+\end{lstlisting}
+
+We now have the following basic project directory structure:
+
+\begin{lstlisting}[numbers=none]
+PulsarClassifier/
+    src/
+        main/
+            java/
+                com/jacobianmatthews/pulsarclassifier/
+                com/scienceguyrob/lotaasclassifier/
+        test/
+            java/
+                com/jacobianmatthews/pulsarclassifier
+    target/
+            ...
+    pom.xml
+\end{lstlisting}
+
+Where the new source code will be located under \\\verb|/src/main/java/com/jacobianmatthews/pulsarclassifier|. To introduce the ensemble classification feature, we must write four main Java classes: \\\verb|PulsarClassifier.java|,  \verb|ClassifierBuilder.java|,  \verb|ClassifierValidator.java|,  and \verb|ClassPredictor.java|.
+
+The \verb|LOTAASClassifier| tool accepts a command-line argument \verb|-a| which accepts an integer that denotes the machine learning algorithm to use in building a classification model and making predictions \autocite{lyon}. Therefore, we will add an algorithm into the above listed Java classes that will accept an integer value of \verb|-1| that will activate the ensemble classifier.
+
+To add ensemble classification to the class \verb|ClassifierBuilder.java|, we will use the following algorithm:
+
+\begin{algorithmic}[1]
+
+\end{algorithmic}
+
+
+
+
+\subsubsection{Evaluating PulsarClassifier}
 
 
 
@@ -236,12 +358,7 @@ The Machine Learning Training Dataset has now been created using Murchison Widef
 \section{Results and Outputs}
 \subsection{Machine Learning Training Dataset}
 
-The machine learning training dataset created with candidates detected by the Murchison Widefield Array is as follows:
-
-\begin{lstlisting}[title=trainingSet.arff]
-
-\end{lstlisting}
-
+The machine learning training dataset created with candidates detected by the Murchison Widefield Array can be found under \emph{Appendix 8.3}.
 
 \subsection{Output from LOTAASClassifier with Murchison Widefield Array Data}
 \subsection{Output from PulsarClassifier Machine Learning Classification Tool}
@@ -250,7 +367,8 @@ The machine learning training dataset created with candidates detected by the Mu
 % Results Discussion Section
 \section{Discussion}
 \subsection{How effective are the training datasets?}
-\subsection{Why didn't the LOFAR Machine Learning Algorithm work with the MWA?}
+\subsection{Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}
+\subsection{Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}
 \subsection{What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}
 
 \pagebreak
@@ -270,6 +388,10 @@ The machine learning training dataset created with candidates detected by the Mu
 \section{Appendices}
 \subsection{Pulsar Feature Lab}
 \subsection{Pulsar Classifier}
+
+\pagebreak
+\subsection{Machine Learning Training Dataset}
+\lstinputlisting[title=trainingData.arff, basicstyle=\footnotesize\ttfamily, breaklines=true]{code/trainingSet.arff}
 
 % End the document
 \end{document}
