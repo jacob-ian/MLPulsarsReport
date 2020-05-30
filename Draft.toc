@@ -1,95 +1,129 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduction}{2}% 
+\contentsline {section}{\numberline {1}Introduction}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Aim}{2}% 
+\contentsline {subsection}{\numberline {1.1}Aim}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Structure of this Report}{2}% 
+\contentsline {subsection}{\numberline {1.2}Structure of this Report}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Background Theory}{2}% 
+\contentsline {subsection}{\numberline {1.3}Background Theory}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1}What is a Pulsar Profile?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.1}What is a Pulsar Profile?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.2}What is multi-path scattering?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.2}What is multi-path scattering?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3}What is a Pulsar Dispersion Measure?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.3}What is a Pulsar Dispersion Measure?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.4}What is a Radio Telescope and how do they work?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.4}What is a Radio Telescope and how do they work?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.5}What is the Murchison Widefield Array?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.5}What is the Murchison Widefield Array?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.6}Why are we conducting sky surveys?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.6}Why are we conducting sky surveys?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.7}How is a sky survey conducted with the Murchison Widefield Array?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.7}How is a sky survey conducted with the Murchison Widefield Array?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.8}What is tied-array beamforming?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.8}What is tied-array beamforming?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.9}How many Pulsar candidates are found in a Murchison Widefield Array sky survey?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.9}How many Pulsar candidates are found in a Murchison Widefield Array sky survey?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.10}How long do sky surveys take?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.10}How long do sky surveys take?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.11}How much data is created from a sky survey?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.11}How much data is created from a sky survey?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.12}What is Radio Frequency Interference?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.12}What is Radio Frequency Interference?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.13}What is a Signal-to-Noise Ratio?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.13}What is a Signal-to-Noise Ratio?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.14}What is PRESTO and a .PFD file?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.14}What is PRESTO and a .PFD file?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.15}What is Machine Learning?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.15}What is Machine Learning?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.16}How does Machine Learning work?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.16}How does Machine Learning work?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.17}Why do we need to use Machine Learning in finding new Pulsars?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.17}Why do we need to use Machine Learning in finding new Pulsars?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.18}Why is this particular Machine Learning Classifier used?}{5}% 
+\contentsline {subsubsection}{\numberline {1.3.18}Why is this particular Machine Learning Classifier used?}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Methods}{6}% 
+\contentsline {section}{\numberline {2}Methods}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Developing the Machine Learning Training Dataset}{6}% 
+\contentsline {subsection}{\numberline {2.1}Developing the Machine Learning Training Dataset}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Pulsar Candidate Feature Extraction}{6}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Pulsar Candidate Feature Extraction}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Creating the Training Dataset}{8}% 
+\contentsline {subsubsection}{\numberline {2.1.2}Creating the Training Dataset}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Evaluating the LOTAASClassifier Machine Learning Classification Tool for use with the Murchison Widefield Array}{8}% 
+\contentsline {subsection}{\numberline {2.2}Evaluating the LOTAASClassifier Machine Learning Classification Tool for use with the Murchison Widefield Array}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Creating a Classification Model}{9}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Creating a Pulsar Classifier Output Validation Tool}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Evaluating LOTAASClassifier}{10}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Creating a Classification Model}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Creating the PulsarClassifier Ensemble Classification Tool}{10}% 
+\contentsline {subsubsection}{\numberline {2.2.3}Evaluating LOTAASClassifier}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.4}Evaluating PulsarClassifier}{11}% 
+\contentsline {subsubsection}{\numberline {2.2.4}Creating the PulsarClassifier Ensemble Classification Tool}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Results and Outputs}{12}% 
+\contentsline {subsubsection}{\numberline {2.2.5}Evaluating PulsarClassifier}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Machine Learning Training Dataset}{12}% 
+\contentsline {section}{\numberline {3}Results and Outputs}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Output from LOTAASClassifier with Murchison Widefield Array Data}{12}% 
+\contentsline {subsection}{\numberline {3.1}Machine Learning Training Dataset}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Output from PulsarClassifier Machine Learning Classification Tool}{12}% 
+\contentsline {subsection}{\numberline {3.2}Classification Results from the LOTAASClassifier Algorithms}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Discussion}{13}% 
+\contentsline {subsubsection}{\numberline {3.2.1}The J48 Algorithm}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}How effective are the training datasets?}{13}% 
+\contentsline {subsubsection}{\numberline {3.2.2}The Multi-Layer Perceptron Algorithm}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}{13}% 
+\contentsline {subsubsection}{\numberline {3.2.3}The Na\IeC {\"\i }ve Bayes Tester Algorithm}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}{13}% 
+\contentsline {subsubsection}{\numberline {3.2.4}The Support Vector Machine Algorithm}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}{13}% 
+\contentsline {subsection}{\numberline {3.3}Classification Results from the PulsarClassifier Ensemble Classifier}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusions}{14}% 
+\contentsline {section}{\numberline {4}Discussion and Conclusions}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Recommendations}{14}% 
+\contentsline {subsection}{\numberline {4.1}How effective is the training dataset?}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}References}{15}% 
+\contentsline {subsection}{\numberline {4.2}Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Appendices}{16}% 
+\contentsline {subsection}{\numberline {4.3}Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Pulsar Feature Lab}{16}% 
+\contentsline {subsection}{\numberline {4.4}What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Pulsar Classifier}{16}% 
+\contentsline {section}{\numberline {5}Recommendations}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}Machine Learning Training Dataset}{17}% 
+\contentsline {section}{\numberline {6}References}{25}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Appendices}{26}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Machine Learning Training Dataset}{26}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}PulsarValidator}{28}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.2.1}PulsarValidator.java}{28}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.2.2}ValidationMode.java}{31}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.2.3}utils/Statistic.java}{36}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.2.4}utils/StatisticList.java}{37}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.2.5}utils/Utilities.java}{39}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}PulsarClassifier}{40}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.1}PulsarClasifier.java}{40}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.2}ClassifierBuilder.java}{53}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.3}ClassifierValidator.java}{56}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.4}ClassPredictor.java}{59}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.5}utils/Classification.java}{65}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.6}utils/ClassificationList.java}{66}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.7}utils/Classifiers.java}{70}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.8}utils/Models.java}{71}% 

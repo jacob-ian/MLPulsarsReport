@@ -36,10 +36,16 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\biblatex-chicago.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\biblatex-chicago.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
@@ -118,6 +124,9 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
 OUTPUT j:\pulsars\MLPulsarsReport\Draft-blx.bib
+INPUT j:\pulsars\MLPulsarsReport\Draft.bbl
+INPUT j:\pulsars\MLPulsarsReport\Draft.bbl
+INPUT j:\pulsars\MLPulsarsReport\Draft.bbl
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr8.tfm
@@ -139,9 +148,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
 OUTPUT j:\pulsars\MLPulsarsReport\Draft.pdf
 INPUT C:\Users\jimim\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-OUTPUT j:\pulsars\MLPulsarsReport\Draft.toc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmri10.tfm
+INPUT j:\pulsars\MLPulsarsReport\Draft.toc
+INPUT j:\pulsars\MLPulsarsReport\Draft.toc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr5.tfm
@@ -151,6 +159,9 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmmi5.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmsy7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmsy5.tfm
+OUTPUT j:\pulsars\MLPulsarsReport\Draft.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmri10.tfm
 INPUT images\pulsar.jpg
 INPUT .\images\pulsar.jpg
 INPUT .\images\pulsar.jpg
@@ -166,10 +177,53 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtk10.tfm
-INPUT j:\pulsars\MLPulsarsReport\code\trainingSet.arff
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtt8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtti10.tfm
 INPUT j:\pulsars\MLPulsarsReport\code\trainingSet.arff
 INPUT j:\pulsars\MLPulsarsReport\code\trainingSet.arff
+INPUT j:\pulsars\MLPulsarsReport\code\trainingSet.arff
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\PulsarValidator.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\PulsarValidator.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\PulsarValidator.java
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtk10.tfm
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\ValidationMode.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\ValidationMode.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\ValidationMode.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\Statistic.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\Statistic.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\Statistic.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\StatisticList.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\StatisticList.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\StatisticList.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\Utilities.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\Utilities.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarvalidator\utils\Utilities.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\PulsarClassifier.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\PulsarClassifier.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\PulsarClassifier.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassifierBuilder.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassifierBuilder.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassifierBuilder.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassifierValidator.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassifierValidator.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassifierValidator.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassPredictor.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassPredictor.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\ClassPredictor.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Classification.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Classification.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Classification.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\ClassificationList.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\ClassificationList.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\ClassificationList.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Classifiers.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Classifiers.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Classifiers.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Models.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Models.java
+INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Models.java
 INPUT j:\pulsars\MLPulsarsReport\Draft.aux
 INPUT j:\pulsars\MLPulsarsReport\Draft.run.xml
 OUTPUT j:\pulsars\MLPulsarsReport\Draft.run.xml
@@ -212,3 +266,5 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmtt8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmtt8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmtti10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmtti10.pfb

@@ -8,7 +8,7 @@
 \usepackage{listings}
 \usepackage{lmodern}
 \usepackage{xcolor}
-\usepackage{algorithmicx}
+\usepackage{algorithm, algpseudocode}
 \lstset{
   basicstyle=\ttfamily,
   literate={~} {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}{1},
@@ -245,6 +245,159 @@ The tool's executable program can then be found by navigating to the following d
 $ cd ~/pulsars/LOTAASClassifier/dist
 \end{lstlisting}
 
+\subsubsection{Creating a Pulsar Classifier Output Validation Tool}
+
+In order to accurately evaluate and test the predictions made by the \verb|LOTAASClassifier| tool, we must create a program that will automate the process of checking the outputs of the classifier against the known list of pulsars.
+
+We begin by creating a new Java project using the free software Maven (\verb|https://maven.apache.org|) by running the following commands in a UNIX terminal:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars
+$ mkdir PulsarValidator && cd PulsarValidator
+$ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+\end{lstlisting}
+
+We can then create the following file structure and resynchronise the project:
+
+\begin{lstlisting}[numbers=none]
+PulsarValidator/
+    src/
+        main/
+            java/
+                com/jacobianmatthews/pulsarvalidator/
+                    PulsarValidator.java
+        test/
+            ...
+    target/
+            ...
+    pom.xml
+\end{lstlisting}
+
+The file: \verb|PulsarValidator.java| stands as the entry-point to the software and will be compiled into an executable \verb|JAR| file upon completion of creating the software.
+
+This software will consume a user inputted \verb|String| containing the path to a file with the list of pulsars included in the dataset classified by the machine learning classifier, a user inputted \verb|String| containing the path to the \verb|.positive| file created by the classifier, and a user inputted \verb|String| containing the path to the \verb|.negative| file created by the classifier\footnote{The '.positive' file contains the candidates classified as pulsars, and the '.negative' file contains the candidates classified as non-pulsars.}. These will be inputted as command-line arguments when the user runs the Java executable file.
+
+To access the user inputted arguments, we can include the following function in the \verb|main(String[] args)| method of the \verb|PulsarValidator.java| class:
+
+\begin{algorithm}[H]
+    \caption{getCliVariables(args) (pseudocode)}
+    \begin{algorithmic}
+        \For{Integer $i=0\rightarrow$ number of arguments in $args$}
+            \If{$i$th argument in $args$ is "-v"}
+                \State Let Boolean $ValidationMode$ = true
+                \State Let String $pulsarListPath$ = ($i+1$)th argument in $args$
+                \State Let String $classifierPositive$ = ($i+2$)th argument in $args$
+                \State Let String $classifierNegative$ = ($i+3$)th argument in $args$
+            \EndIf
+        \EndFor
+    \end{algorithmic}
+\end{algorithm}
+
+We can then use a simple conditional statement after this function is ran to check if the \verb|Boolean ValidationMode| has been set to \verb|true|, to determine whether to continue the validation. The complete Java class \verb|PulsarValidator.java| can be seen in \emph{Appendix 7.2.1}.
+
+We can then create a new Java class, \verb|ValidationMode.java|, with the following algorithm to validate the output of the classifier against the list of pulsars:
+
+\begin{algorithm}[H]
+    \caption{ValidationMode.java (pseudocode)}
+    \begin{algorithmic}
+        \State Let $truePositive$ = new List
+        \State Let $falsePositive$ = new List
+        \State Let $trueNegative$ = new List
+        \State Let $falseNegative$ = new List
+        
+        \For{each $item$ in $classifierPositive$ list}
+            \State Let Boolean $found$ = false
+            \State Let Integer $i=0$
+            \While{$found$ is false}
+                \If{$i$th item in $pulsarList$ is $item$}
+                    \State add $item$ to $truePositive$ list
+                    \State $found$ = true
+                \ElsIf{$i$ equals number of items in $pulsarList$}
+                    \State add $item$ to $falsePositive$ list
+                    \State $found$ = true
+                \Else
+                    \State $i$=$i+1$
+                \EndIf
+            \EndWhile
+        \EndFor
+
+        \For{each $item$ in $classifierNegative$ list}
+            \State Let Boolean $found$ = false
+            \State Let Integer $i=0$
+            \While{$found$ is false}
+                \If{$i$th item in $pulsarList$ is $item$}
+                    \State add $item$ to $falseNegative$ list
+                    \State $found$ = true
+                \ElsIf{$i$ equals number of items in $pulsarList$}
+                    \State add $item$ to $truePositive$ list
+                    \State $found$ = true
+                \Else
+                    \State $i$=$i+1$
+                \EndIf
+            \EndWhile
+        \EndFor
+        \State Let $TP$ = number of items in $truePositive$
+        \State Let $TN$ = number of items in $trueNegative$
+        \State Let $FP$ = number of items in $falsePositive$
+        \State Let $FN$ = number of items in $falseNegative$
+        \State Let $Pulsars$ = $TP+FN$
+        \State Let $NonPulsars$ = $TN+FP$
+        \State Output $Pulsars$, $NonPulsars$, $TP$, $FP$, $TN$, $FN$
+    \end{algorithmic}
+\end{algorithm}
+
+The complete Java class for \verb|ValidationMode.java| can be found in \emph{Appendix 7.2.2}, and its supplementary classes in \emph{Appendix 7.2}.
+
+We can now compile the program by first adding the following lines of code to the \verb|pom.xml| file at the root of the Maven project:
+
+\begin{lstlisting}[numbers=none, title=pom.xml]
+<project>
+  ...
+  <build>
+    ...
+    <pluginManagement>
+      ...
+      <plugins>
+        ...
+        <!-- Create a JAR containing the resources and dependencies -->
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <configuration>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <finalName>${project.artifactId}-${project.version}-full</finalName>
+            <appendAssemblyId>false</appendAssemblyId>
+            <archive>
+              <manifest>
+                <mainClass>com.jacobianmatthews.pulsarvalidator.PulsarValidator</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+          <executions>
+            <execution>
+                <id>make-my-jar-with-dependenciess</id>
+                <phase>package</phase>
+                <goals>
+                    <goal>single</goal>
+                </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
+\end{lstlisting}
+
+Which instructs Maven to create a single \verb|JAR| file containing the program's dependencies and resources. The program can then be compiled and built by running the command:
+
+\begin{lstlisting}[numbers=none]
+$ mvn assembly:single
+\end{lstlisting}
+
+This will produce the file: \verb|/target/pulsarvalidator-1.0-full.jar|, which is an executable Java program. The complete source code for \verb|PulsarValidator| can be found in \emph{Appendix 7.2} or at \\\verb|https://github.com/jacob-ian/PulsarValidator.git|.
+
 \subsubsection{Creating a Classification Model}
 
 In order to use \verb|LOTAASClassifier| to classify Murchison Widefield Array candidates, we must use the Machine Learning Training Dataset created in \emph{Section 2.1} to create a classification model. This can be completed by running the following commands:
@@ -283,7 +436,16 @@ $ cd ~/pulsars/LOTAASClassifier/dist
 $ java -jar LOTAASClassifier.jar -p ~/pulsars/data/pfd/output.arff -m ~/pulsars/data/model.m -a 1
 \end{lstlisting}
 
-By inspecting the created `\verb|output.positive|' and `\verb|output.negative|' files and comparing the results to the known pulsars, we can evaluate the performance of the \verb|LOTAASClassifier| tool with Murchison Widefield Array data and make a judgement about further use of the classifier.
+This can be repeated for each machine learning classifier present in the \verb|LOTAASClassifier| software by changing the argument \verb|-a| from 1 through to 4.
+
+We can now run the \verb|PulsarValidator| program created in \emph{Section 2.2.1} to evaluate the accuracy of \verb|LOTAASClassifier|'s algorithms by running the command:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars/PulsarValidator/target
+$ java -jar pulsarvalidator-1.0-full.jar -v ~/pulsars/data/pfd/pulsars.txt ~/pulsars/data/pfd/output_[classifier].positive ~/pulsars/data/pfd/output_[classifier].negative
+\end{lstlisting}
+
+Where the \verb|[classifier]| variable can be changed depending on the name of the classifier algorithm being evaluated. The outputted validation statistics can then be compared across the algorithms to determine their usefulness with the Murchison Widefield Array.
 
 \subsubsection{Creating the PulsarClassifier Ensemble Classification Tool}
 
@@ -340,43 +502,320 @@ Where the new source code will be located under \\\verb|/src/main/java/com/jacob
 
 The \verb|LOTAASClassifier| tool accepts a command-line argument \verb|-a| which accepts an integer that denotes the machine learning algorithm to use in building a classification model and making predictions \autocite{lyon}. Therefore, we will add an algorithm into the above listed Java classes that will accept an integer value of \verb|-1| that will activate the ensemble classifier.
 
-To add ensemble classification to the class \verb|ClassifierBuilder.java|, we will use the following algorithm:
+The class \verb|ClassifierBuilder.java| handles training and building a classification model. To add ensemble classification to this class we will use the following algorithm:
 
-\begin{algorithmic}[1]
+\begin{algorithm}[H]
+    \caption{ClassifierBuilder (pseudocode)}
+    \begin{algorithmic}[1]
+        \If{$algorithm = -1$}
+            \For{each algorithm $i=1\rightarrow 4$}
+                \Comment Loop through all classifiers
+                \State buildClassifier($i$, $trainingSet$, $modelsDirectory$)
+            \EndFor
+        \Else 
+            \Comment Build individual classifier
+            \State buildClassifier($algorithm$, $trainingSet$, $modelPath$)
+            
+        \EndIf
+        
+    \end{algorithmic}
+\end{algorithm}
 
-\end{algorithmic}
+\emph{See Section 8.4.1} for complete \verb|ClassifierBuilder.java| class. 
 
+The class \verb|ClassifierValidator.java| handles validating and testing the existing classification models. To implement the ensemble classifier into this class, we will use the following, similar algorithm:
 
+\begin{algorithm}[H]
+    \caption{ClassifierValidator (pseudocode)}
+    \begin{algorithmic}[1]
+        \If{$algorithm = -1$}
+            \For{each algorithm $i=1\rightarrow 4$}
+                \Comment Loop through all classifiers
+                \State testClassifier($i$, $testSet$, $modelsDirectory$)
+            \EndFor
+        \Else 
+            \Comment Test individual classifier
+            \State testClassifier($algorithm$, $testSet$, $modelPath$)
+        \EndIf
+        
+    \end{algorithmic}
+\end{algorithm}
 
+\emph{See Section 8.4.2} for complete \verb|ClassifierValidator.java| class. 
+
+The class \verb|ClassPredictor.java| handles making the classification predictions on new data using existing classifier models. We can add the ensemble classification feature to this class with the following algorithm:
+
+\begin{algorithm}[H]
+    \caption{ClassPredictor (pseudocode)}
+    \begin{algorithmic}[1]
+        \If{$algorithm = -1$}
+            \State list = new OutputFileList()
+            \For{algorithm $i=1\rightarrow4$}
+                \Comment Loop through all classifiers
+                \State makePredictions($i$, $inputData$, $modelsDirectory$)
+                \State list.add(ClassifierOutputFiles)
+                \Comment Add output filepaths to list
+            \EndFor
+            \State positiveList = new ClassificationsList()
+            \State negativeList = new ClassificationsList()
+            \Comment Create classification lists
+            \For{each OutputFile from list}
+                \If{OutputFile is .positive}
+                    \For{each line in OutputFile}
+                        \State positiveList.add(line)
+                        \Comment Add to +ve classifications
+                    \EndFor
+                \ElsIf{OutputFile is .negative}
+                    \For{each line in OutputFile}
+                        \State negativeList.add(line)
+                        \Comment Add to -ve classifications
+                    \EndFor
+                \EndIf
+            \EndFor
+            \For{each classification in positiveList}
+                \If{classification.occurrences $< 3$}
+                    \State negativeList.add(classification)
+                    \Comment cut-off at $< 3$ classifications
+                \Else
+                    \State positiveOutput(classification)
+                    \Comment Output classified as Pulsar
+                \EndIf
+            \EndFor
+            \For{each classification in negativeList}
+                \State negativeOutput(classification)
+                \Comment Output classified as non-Pulsar
+            \EndFor
+
+        \Else 
+            \State makePredictions($algorithm$)
+            \Comment Use individual classifier
+        \EndIf
+        
+    \end{algorithmic}
+\end{algorithm}
+
+The above algorithm preserves the individual classifiers' predictions and also makes an ensemble prediction based on all of the classifiers' predictions. According to \cite{tan}, it is common for ensemble machine learning classifiers to use a cut-off of three concurrent positive predictions in separate classifiers to make a positive ensemble classification. Therefore, for a candidate to be classified as a pulsar with the ensemble classifier it must first be classified as a pulsar by three of the underlying machine learning classifiers. \emph{See Section 8.4.3} for the complete \verb|ClassPredictor.java| class.
+
+The final class to add the ensemble classifier feature to is the entry point of the program, \verb|PulsarClassifier.java|. This class only requires changes to the command-line inputs and outputs, so the completed Java class can be found in \emph{Section 8.4.4}. The complete source code to the \verb|PulsarClassifier| contains the following classes:
+
+\begin{lstlisting}[numbers=none]
+src/
+    main/
+        java/
+            com/jacobianmatthews/pulsarclassifier/
+                utils/
+                    Classification.java
+                    ClassificationList.java
+                    Classifiers.java
+                    Models.java
+                PulsarClassifier.java
+                ClassifierBuilder.java
+                ClassifierValidator.java
+                ClassPredictor.java
+
+            com/scienceguyrob/lotaasclassifier/
+                ...
+
+\end{lstlisting}
+
+Now that the source code for the package is complete, we can add the following lines to the \verb|pom.xml| file at the root of the project:
+
+\pagebreak
+\begin{lstlisting}[numbers=none, language=xml, title=pom.xml, basicstyle=\footnotesize\ttfamily]
+<project>
+    ...
+    <build>
+      <pluginManagement>
+        <plugins>
+          ...
+
+          <!-- Create a JAR containing the resources and dependencies -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+              <archive>
+                <manifest>
+                  <addClasspath>true</addClasspath>
+                  <mainClass>com.jacobianmatthews.pulsarclassifier.PulsarClassifier</mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
+          ...
+        </plugins>
+      </pluginManagement>
+    </build>
+    ...
+</project>
+\end{lstlisting}
+
+This will instruct Maven to build a Java \verb|JAR| file containing the package and its WEKA library dependency. To build the package, we can run the following commands in the UNIX terminal:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars/PulsarClassifier
+$ mvn assembly:single
+\end{lstlisting}
+
+The complete source code and build of \verb|PulsarClassifier| can be found at \verb|https://github.com/jacob-ian/PulsarClassifier.git|, or in \emph{Appendix 7.3}.
 
 \subsubsection{Evaluating PulsarClassifier}
 
+Now that we have successfully built \verb|PulsarClassifier|, we can evaluate its usage with the Murchison Widefield Array's (MWA) candidates. We begin by:
+\begin{enumerate}[label=\roman*.] 
+    \item deleting the previous \verb|output.positive| and \verb|output.negative| files from the \verb|PFD| candidates directory; and
+    \item deleting the previous \verb|model.m| file created by the \verb|LOTAASClassifier| software.
+\end{enumerate}
 
+We can now build the ensemble classification model with the training dataset created earlier, by running the following commands:
+
+\begin{lstlisting}[numbers=none]
+$ cd target
+$ java -jar pulsarclassifier-1.0-jar-with-dependencies.jar -t ~/pulsars/data/trainingSet.arff -m ~/pulsars/data/models -a -1
+\end{lstlisting}
+
+Where the argument \verb|-m| now denotes the path to a directory to store the various classifier models. Now that we have all of the classification models created, we can use the ensemble classifier to predict the class of new candidates. Using the feature extracted candidates compiled from \emph{Section 2.2.2}, we can run the following command:
+
+\begin{lstlisting}[numbers=none]
+$ java -jar pulsarclassifier-1.0-jar-with-dependencies.jar -p ~/pulsars/data/pfd/output.arff -m ~/pulsars/data/models -a -1
+\end{lstlisting}
+
+\verb|PulsarClassifier| will create the prediction output files for each classifier, and then the \verb|output_ensemble.positive| and \verb|output_ensemble.negative| files for the ensemble classifier. We can validate the ensemble classifier with the \verb|PulsarValidator| program created in \emph{Section 2.2.1} by running the commands:
+
+\begin{lstlisting}[numbers=none]
+$ cd ~/pulsars/PulsarValidator/target
+$ java -jar pulsarvalidator-1.0-full.jar -v ~/pulsars/data/pfd/pulsars.txt ~/pulsars/data/pfd/output_ensemble.positive ~/pulsars/data/pfd/output_ensemble.negative
+\end{lstlisting}
+
+The outputted validation statistics can then be compared to those created for the \verb|LOTAASClassifier| algorithms and an opinion can be formed in regards to the utility of \verb|PulsarClassifier| with the Murchison Widefield Array.
 
 \pagebreak
 % Results Section
 \section{Results and Outputs}
 \subsection{Machine Learning Training Dataset}
 
-The machine learning training dataset created with candidates detected by the Murchison Widefield Array can be found under \emph{Appendix 8.3}.
+The machine learning training dataset created with candidates detected by the Murchison Widefield Array can be found under \emph{Appendix 7.1}.
 
-\subsection{Output from LOTAASClassifier with Murchison Widefield Array Data}
-\subsection{Output from PulsarClassifier Machine Learning Classification Tool}
+\subsection{Classification Results from the LOTAASClassifier Algorithms}
+
+\subsubsection{The J48 Algorithm}
+
+The output created by \verb|PulsarValidator| on analysis of the classification results of the J48 (C4.5 Decision Tree) algorithm is as follows:
+
+\begin{lstlisting}[numbers=none]
+Number of Pulsars: 147
+Pulsars Detected: 146
+True Positives: 131
+False Positives: 15
+
+Number of Non-Pulsars: 87
+Non-Pulsars Detected: 88
+True Negatives: 72
+False Negatives: 16
+\end{lstlisting}
+
+\subsubsection{The Multi-Layer Perceptron Algorithm}
+
+The output created by \verb|PulsarValidator| on analysis of the classification results of the Multi-Layer Perceptron algorithm is as follows:
+
+\begin{lstlisting}[numbers=none]
+Number of Pulsars: 147
+Pulsars Detected: 125
+True Positives: 123
+False Positives: 2
+
+Number of Non-Pulsars: 87
+Non-Pulsars Detected: 109
+True Negatives: 85
+False Negatives: 24
+\end{lstlisting}
+
+\subsubsection{The Naïve Bayes Tester Algorithm}
+
+The output created by \verb|PulsarValidator| on analysis of the classification results of the Naïve Bayes algorithm is as follows:
+
+\begin{lstlisting}[numbers=none]
+Number of Pulsars: 147
+Pulsars Detected: 119
+True Positives: 118
+False Positives: 1
+
+Number of Non-Pulsars: 87
+Non-Pulsars Detected: 115
+True Negatives: 86
+False Negatives: 29
+\end{lstlisting}
+
+\subsubsection{The Support Vector Machine Algorithm}
+
+The output created by \verb|PulsarValidator| on analysis of the classification results of the Naïve Bayes algorithm is as follows:
+
+\begin{lstlisting}[numbers=none]
+Number of Pulsars: 147
+Pulsars Detected: 97
+True Positives: 97
+False Positives: 0
+
+Number of Non-Pulsars: 87
+Non-Pulsars Detected: 137
+True Negatives: 87
+False Negatives: 50
+\end{lstlisting}
+
+\subsection{Classification Results from the PulsarClassifier Ensemble Classifier}
+
+The output created by \verb|PulsarValidator| on analysis of the classification results of the \verb|PulsarClassifier| ensemble classifier is as follows:
+
+\begin{lstlisting}[numbers=none]
+Number of Pulsars: 165
+Pulsars Detected: 112
+True Positives: 112
+False Positives: 0
+
+Number of Non-Pulsars: 87
+Non-Pulsars Detected: 140
+True Negatives: 87
+False Negatives: 53
+\end{lstlisting}
 
 \pagebreak
 % Results Discussion Section
-\section{Discussion}
-\subsection{How effective are the training datasets?}
+\section{Discussion and Conclusions}
+\subsection{How effective is the training dataset?}
 \subsection{Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}
 \subsection{Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}
 \subsection{What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}
 
-\pagebreak
-% FINAL CONCLUSTIONS SECTION
-\section{Conclusions}
-
 % RECOMMENDATIONS SECTION
 \section{Recommendations}
+
+For further development of the Machine Learning classifiers and strategies used in this project, I would recommend undertaking the following tasks:
+
+\begin{enumerate}
+    \item Investigate and fix the Python \verb|Traceback| Error produced by the software \verb|PulsarFeatureLab v1.3.2|:
+
+    During the usage of this feature extraction software, some \verb|PFD| candidate files would cause a \verb|Traceback| error to be produced, causing the feature extraction to fail for that particular candidate. In the \verb|PFD| datasets that I used, the only commonality between the failed feature extraction candidates was that the candidates were not pulsars - they were either examples of Radio Frequency Interference (RFI) or Noise. The result of these failures was that there was a smaller dataset to train the machine learning classifiers on, or a smaller dataset to make machine learning classification predictions on.
+
+    \item Build the Radio Frequency Interference (RFI) classification feature discussed by \cite{tan} into \verb|PulsarClassifier|:
+    
+    According to \cite{tan}, by also including the classification category of RFI, the accuracy of the machine learning ensemble classifier was increased. The result of this feature would be three classifier output files: \verb|output.pulsars|, \verb|output.rfi|, and \verb|output.other|.
+
+    \item Use a more diverse Training Dataset:
+
+    Due to constraints on the available \verb|PFD| candidate data during this project, I was unable to use a large set of pulsar and non-pulsar candidates in the training dataset. By using a training dataset that is more diverse, the \verb|PulsarClassifier| will be more accurate in its predictions.
+\end{enumerate}
 
 \pagebreak
 % REFERENCES SECTION
@@ -386,12 +825,64 @@ The machine learning training dataset created with candidates detected by the Mu
 \pagebreak
 % APPENDICES SECTION
 \section{Appendices}
-\subsection{Pulsar Feature Lab}
-\subsection{Pulsar Classifier}
+\subsection{Machine Learning Training Dataset}
+\lstinputlisting[title=trainingData.arff, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/trainingSet.arff}
 
 \pagebreak
-\subsection{Machine Learning Training Dataset}
-\lstinputlisting[title=trainingData.arff, basicstyle=\footnotesize\ttfamily, breaklines=true]{code/trainingSet.arff}
+\subsection{PulsarValidator}
+\subsubsection{PulsarValidator.java}
+\lstinputlisting[title=PulsarValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/PulsarValidator.java}
+
+\pagebreak
+\subsubsection{ValidationMode.java}
+\lstinputlisting[title=ValidationMode.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/ValidationMode.java}
+
+\pagebreak
+\subsubsection{utils/Statistic.java}
+\lstinputlisting[title=utils/Statistic.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/Statistic.java}
+
+\pagebreak
+\subsubsection{utils/StatisticList.java}
+\lstinputlisting[title=utils/StatisticList.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/StatisticList.java}
+
+\pagebreak
+\subsubsection{utils/Utilities.java}
+\lstinputlisting[title=utils/Utilities.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/Utilities.java}
+
+\pagebreak
+\subsection{PulsarClassifier}
+
+\subsubsection{PulsarClasifier.java}
+\lstinputlisting[title=PulsarClassifier.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java}
+
+\pagebreak
+\subsubsection{ClassifierBuilder.java}
+\lstinputlisting[title=ClassifierBuilder.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java}
+
+\pagebreak
+\subsubsection{ClassifierValidator.java}
+\lstinputlisting[title=ClassifierValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java}
+
+\pagebreak
+\subsubsection{ClassPredictor.java}
+\lstinputlisting[title=ClassPredictor.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassPredictor.java}
+
+\pagebreak
+\subsubsection{utils/Classification.java}
+\lstinputlisting[title=utils/Classification.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true,framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Classification.java}
+
+\pagebreak
+\subsubsection{utils/ClassificationList.java}
+\lstinputlisting[title=utils/ClassificationList.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true,framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/ClassificationList.java}
+
+\pagebreak
+\subsubsection{utils/Classifiers.java}
+\lstinputlisting[title=utils/Classifiers.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Classifiers.java}
+
+\pagebreak
+\subsubsection{utils/Models.java}
+\lstinputlisting[title=utils/Models.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Models.java}
+
 
 % End the document
 \end{document}
