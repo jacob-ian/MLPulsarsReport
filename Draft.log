@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.20)  30 MAY 2020 22:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.20)  30 MAY 2020 22:24
 entering extended mode
 **j:/pulsars/MLPulsarsReport/Draft.tex
 (j:/pulsars/MLPulsarsReport/Draft.tex
@@ -645,7 +645,7 @@ Overfull \hbox (2.61029pt too wide) in paragraph at lines 696--697
  []
 
 [21] [22] [23] [24] [25]
-Overfull \hbox (1.72537pt too wide) in paragraph at lines 877--877
+Overfull \hbox (1.72537pt too wide) in paragraph at lines 881--881
 []\OT1/lmr/bx/n/12 Evaluating Curtin In-sti-tute of Ra-dio As-tron-omy's Pul-
  []
 
@@ -765,7 +765,7 @@ Overfull \hbox (1274.14206pt too wide) in paragraph at lines 46--47
  []
 
 )
-Overfull \hbox (1252.86607pt too wide) in paragraph at lines 47--910
+Overfull \hbox (1252.86607pt too wide) in paragraph at lines 47--914
 [][][][] 
  []
 
@@ -828,7 +828,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  49i,11n,76p,1273b,3767s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
-Output written on j:/pulsars\MLPulsarsReport\Draft.pdf (76 pages, 583883 bytes).
+Output written on j:/pulsars\MLPulsarsReport\Draft.pdf (76 pages, 583948 bytes).
 PDF statistics:
  325 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
