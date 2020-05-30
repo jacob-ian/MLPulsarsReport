@@ -130,11 +130,16 @@ public class ClassPredictor extends com.scienceguyrob.lotaasclassifier.mvc.Class
                         // Get the key of the classification
                         String key = negative.getKey();
 
-                        // Append it to the output file
-                        if( !Writer.append(ensembleNegative, key+"\n") )
+                        // Make sure that it isn't already in the positive or negative output files
+                        if( !Reader.checkStringIsInFile(ensembleNegative, key) && !Reader.checkStringIsInFile(ensemblePositive, key))
                         {
-                            // Log the error 
-                            log.sout("Couldn't add "+key+" to the negative ensemble classifier output file.", true);
+                            // Append it to the output file
+                            if( !Writer.append(ensembleNegative, key+"\n") )
+                            {
+                                // Log the error 
+                                log.sout("Couldn't add "+key+" to the negative ensemble classifier output file.", true);
+
+                            }
 
                         }
                     }

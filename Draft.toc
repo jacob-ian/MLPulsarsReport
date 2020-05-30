@@ -64,7 +64,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.5}Evaluating PulsarClassifier}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Results and Outputs}{22}% 
+\contentsline {section}{\numberline {3}Results and Analyses}{22}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Machine Learning Training Dataset}{22}% 
 \defcounter {refsection}{0}\relax 
@@ -74,56 +74,58 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.2}The Multi-Layer Perceptron Algorithm}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3}The Na\IeC {\"\i }ve Bayes Tester Algorithm}{22}% 
+\contentsline {subsubsection}{\numberline {3.2.3}The Na\IeC {\"\i }ve Bayes Tester Algorithm}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.4}The Support Vector Machine Algorithm}{23}% 
+\contentsline {subsubsection}{\numberline {3.2.4}The Support Vector Machine Algorithm}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Classification Results from the PulsarClassifier Ensemble Classifier}{23}% 
+\contentsline {subsection}{\numberline {3.3}Classification Results from the PulsarClassifier Ensemble Classifier}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Discussion and Conclusions}{24}% 
+\contentsline {subsection}{\numberline {3.4}Combined Analyses}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}How effective is the training dataset?}{24}% 
+\contentsline {section}{\numberline {4}Discussion and Conclusions}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}{24}% 
+\contentsline {subsection}{\numberline {4.1}How effective is the chosen training dataset?}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}{24}% 
+\contentsline {subsection}{\numberline {4.2}Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}{24}% 
+\contentsline {subsection}{\numberline {4.3}Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Recommendations}{24}% 
+\contentsline {subsection}{\numberline {4.4}What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}{26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}References}{25}% 
+\contentsline {section}{\numberline {5}Recommendations}{27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Appendices}{26}% 
+\contentsline {section}{\numberline {6}References}{28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Machine Learning Training Dataset}{26}% 
+\contentsline {section}{\numberline {7}Appendices}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}PulsarValidator}{28}% 
+\contentsline {subsection}{\numberline {7.1}Machine Learning Training Dataset}{29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.1}PulsarValidator.java}{28}% 
+\contentsline {subsection}{\numberline {7.2}PulsarValidator}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.2}ValidationMode.java}{31}% 
+\contentsline {subsubsection}{\numberline {7.2.1}PulsarValidator.java}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.3}utils/Statistic.java}{36}% 
+\contentsline {subsubsection}{\numberline {7.2.2}ValidationMode.java}{34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.4}utils/StatisticList.java}{37}% 
+\contentsline {subsubsection}{\numberline {7.2.3}utils/Statistic.java}{39}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.5}utils/Utilities.java}{39}% 
+\contentsline {subsubsection}{\numberline {7.2.4}utils/StatisticList.java}{40}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}PulsarClassifier}{40}% 
+\contentsline {subsubsection}{\numberline {7.2.5}utils/Utilities.java}{42}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.1}PulsarClasifier.java}{40}% 
+\contentsline {subsection}{\numberline {7.3}PulsarClassifier}{43}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.2}ClassifierBuilder.java}{53}% 
+\contentsline {subsubsection}{\numberline {7.3.1}PulsarClasifier.java}{43}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.3}ClassifierValidator.java}{56}% 
+\contentsline {subsubsection}{\numberline {7.3.2}ClassifierBuilder.java}{56}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.4}ClassPredictor.java}{59}% 
+\contentsline {subsubsection}{\numberline {7.3.3}ClassifierValidator.java}{59}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.5}utils/Classification.java}{65}% 
+\contentsline {subsubsection}{\numberline {7.3.4}ClassPredictor.java}{62}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.6}utils/ClassificationList.java}{66}% 
+\contentsline {subsubsection}{\numberline {7.3.5}utils/Classification.java}{68}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.7}utils/Classifiers.java}{70}% 
+\contentsline {subsubsection}{\numberline {7.3.6}utils/ClassificationList.java}{69}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.8}utils/Models.java}{71}% 
+\contentsline {subsubsection}{\numberline {7.3.7}utils/Classifiers.java}{73}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.8}utils/Models.java}{74}% 

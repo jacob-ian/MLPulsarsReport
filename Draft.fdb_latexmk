@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex Draft"] 1590821077 "Draft.aux" "Draft.bbl" "Draft" 1590821776
+["bibtex Draft"] 1590847724 "Draft.aux" "Draft.bbl" "Draft" 1590847834
   "C:/Program Files/MiKTeX 2.9/bibtex/bst/biblatex/biblatex.bst" 1575215190 65050 5c39e6f144c843a658dad8c93d2a6f3c ""
-  "Draft-blx.bib" 1590821773 352 5112d8b2531db72db4adbce1b65692dc "pdflatex"
-  "Draft.aux" 1590821775 16499 e82e29000d9b82d5c31ebbd4bc510c9e "pdflatex"
+  "Draft-blx.bib" 1590847830 352 5112d8b2531db72db4adbce1b65692dc "pdflatex"
+  "Draft.aux" 1590847832 17065 04a6ae353f857f0bddd495853347a68d "pdflatex"
   "references.bib" 1590414428 2103 a58300e68ec3d7b9b473cc5682c0f586 ""
   (generated)
   "Draft.blg"
   "Draft.bbl"
-["pdflatex"] 1590821771 "j:/pulsars/MLPulsarsReport/Draft.tex" "j:/pulsars/MLPulsarsReport/Draft.pdf" "Draft" 1590821776
+["pdflatex"] 1590847827 "j:/pulsars/MLPulsarsReport/Draft.tex" "j:/pulsars/MLPulsarsReport/Draft.pdf" "Draft" 1590847834
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc" 1254938640 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -91,6 +91,7 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty" 1561039820 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty" 1569083170 45259 743c52a37a6e5ed83cfe0e128b2da10d ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
+  "C:/Program Files/MiKTeX 2.9/tex/latex/framed/framed.sty" 1338542172 22449 7ec15c16d0d66790f28e90343c5434a3 ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg" 1465894292 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg" 1465894292 1224 978390e9c2234eab29404bc21b268d1e ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def" 1515448300 17334 520b9b85ad8a2a48eda3f643e27a5179 ""
@@ -121,12 +122,12 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/xstring/xstring.sty" 1543858404 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/jimim/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1561011862 4235384 4b8af73e56e887f2a704bd7f2e711f52 ""
   "C:/Users/jimim/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1561009685 80453 73224248f0a73acd005b5611945eaaa6 ""
-  "Draft.aux" 1590821775 16499 e82e29000d9b82d5c31ebbd4bc510c9e "pdflatex"
-  "Draft.bbl" 1590821077 7644 1152ea4536ad164b726bd1e3e24dd1aa "bibtex Draft"
-  "Draft.run.xml" 1590821775 2760 685d6b235d94bb890c444dec37cbf522 "pdflatex"
-  "Draft.tex" 1590821770 47390 e4fd2bf104341f3026e0de4ec7c92fa2 ""
-  "Draft.toc" 1590821775 8171 b781c05204ae2cbae65775793f67c10c "pdflatex"
-  "code/jacobianmatthews/pulsarclassifier/ClassPredictor.java" 1590635680 10263 d608522276d9910439f628f0261d0f48 ""
+  "Draft.aux" 1590847832 17065 04a6ae353f857f0bddd495853347a68d "pdflatex"
+  "Draft.bbl" 1590847724 7644 1152ea4536ad164b726bd1e3e24dd1aa "bibtex Draft"
+  "Draft.run.xml" 1590847832 2760 685d6b235d94bb890c444dec37cbf522 "pdflatex"
+  "Draft.tex" 1590847825 50945 698c4b1b135dabb895e837165b3fddc5 ""
+  "Draft.toc" 1590847832 8285 1f203339f8098edcb7613a2f6e349c6c "pdflatex"
+  "code/jacobianmatthews/pulsarclassifier/ClassPredictor.java" 1590844310 10574 6e01a3120268c4c8bd8395c3c9efdc64 ""
   "code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java" 1590635680 4308 ef8afdb8f3dcc8fbff7df0f14613d98b ""
   "code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java" 1590635680 5355 168252bee5c541b11b1848f6d6a2fd22 ""
   "code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java" 1590635680 24921 4d491adf38b5491590920c6cef0db43d ""
@@ -141,8 +142,8 @@
   "code/jacobianmatthews/pulsarvalidator/utils/Utilities.java" 1590766909 897 91de31dfc5e0ac47fb40a77d949aa403 ""
   "code/trainingSet.arff" 1590383263 11883 876ee0f892fbab736d932f59e4d372cd ""
   "images/pulsar.jpg" 1590374123 38222 5a7f7ecbe61b709c82206afa5194b38c ""
-  "j:/pulsars/MLPulsarsReport/Draft.aux" 1590821775 16499 e82e29000d9b82d5c31ebbd4bc510c9e ""
-  "j:/pulsars/MLPulsarsReport/Draft.tex" 1590821770 47390 e4fd2bf104341f3026e0de4ec7c92fa2 ""
+  "j:/pulsars/MLPulsarsReport/Draft.aux" 1590847832 17065 04a6ae353f857f0bddd495853347a68d ""
+  "j:/pulsars/MLPulsarsReport/Draft.tex" 1590847825 50945 698c4b1b135dabb895e837165b3fddc5 ""
   (generated)
   "Draft.aux"
   "Draft.toc"

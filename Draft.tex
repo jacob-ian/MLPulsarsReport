@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyphenat}
 \usepackage{enumitem}
+\usepackage{framed}
 \usepackage{graphicx}
 
 % Coding packages
@@ -703,7 +704,7 @@ The outputted validation statistics can then be compared to those created for th
 
 \pagebreak
 % Results Section
-\section{Results and Outputs}
+\section{Results and Analyses}
 \subsection{Machine Learning Training Dataset}
 
 The machine learning training dataset created with candidates detected by the Murchison Widefield Array can be found under \emph{Appendix 7.1}.
@@ -726,6 +727,16 @@ True Negatives: 72
 False Negatives: 16
 \end{lstlisting}
 
+We can therefore calculate the pulsar classification success rate to be:
+
+$$ R_{p} = \frac{TP}{N_p} = \frac{131}{147} =  0.8911 = 89.11\%,$$
+
+where $N_p$ is the number of pulsars in the testing dataset and $TP$ is the number of true positive classifications. The non-pulsar classification success rate can be found as:
+
+$$R_{np} = \frac{TN}{N_{np}} = \frac{72}{87} = 0.8275 = 82.75\%,$$
+
+where $N_{np}$ is the number of non-pulsars in the testing dataset and $TN$ is the number of true negative classifications.
+
 \subsubsection{The Multi-Layer Perceptron Algorithm}
 
 The output created by \verb|PulsarValidator| on analysis of the classification results of the Multi-Layer Perceptron algorithm is as follows:
@@ -741,6 +752,16 @@ Non-Pulsars Detected: 109
 True Negatives: 85
 False Negatives: 24
 \end{lstlisting}
+
+We can therefore calculate the pulsar classification success rate to be:
+
+$$ R_{p} = \frac{TP}{N} = \frac{123}{147} =  0.8367 = 83.67\%,$$
+
+where $N$ is the number of pulsars in the testing dataset, and $TP$ is the number of true positive classifications. The non-pulsar classification success rate can be found as:
+
+$$R_{np} = \frac{TN}{N_{np}} = \frac{85}{87} = 0.9770 = 97.70\%,$$
+
+where $N_{np}$ is the number of non-pulsars in the testing dataset and $TN$ is the number of true negative classifications.
 
 \subsubsection{The Naïve Bayes Tester Algorithm}
 
@@ -758,6 +779,16 @@ True Negatives: 86
 False Negatives: 29
 \end{lstlisting}
 
+We can therefore calculate the pulsar classification success rate to be:
+
+$$ R_{p} = \frac{TP}{N} = \frac{118}{147} =  0.8027 = 80.27\%,$$
+
+where $N$ is the number of pulsars in the testing dataset, and $TP$ is the number of true positive classifications. The non-pulsar classification success rate can be found as:
+
+$$R_{np} = \frac{TN}{N_{np}} = \frac{86}{87} = 0.9885 = 98.85\%,$$
+
+where $N_{np}$ is the number of non-pulsars in the testing dataset and $TN$ is the number of true negative classifications.
+
 \subsubsection{The Support Vector Machine Algorithm}
 
 The output created by \verb|PulsarValidator| on analysis of the classification results of the Naïve Bayes algorithm is as follows:
@@ -774,30 +805,80 @@ True Negatives: 87
 False Negatives: 50
 \end{lstlisting}
 
+We can therefore calculate the pulsar classification success rate to be:
+
+$$ R_{p} = \frac{TP}{N} = \frac{97}{147} =  0.6598 = 65.98\%,$$
+
+where $N$ is the number of pulsars in the testing dataset, and $TP$ is the number of true positive classifications. The non-pulsar classification success rate can be found as:
+
+$$R_{np} = \frac{TN}{N_{np}} = \frac{87}{87} = 1.00 = 100.00\%,$$
+
+where $N_{np}$ is the number of non-pulsars in the testing dataset and $TN$ is the number of true negative classifications.
+
 \subsection{Classification Results from the PulsarClassifier Ensemble Classifier}
 
 The output created by \verb|PulsarValidator| on analysis of the classification results of the \verb|PulsarClassifier| ensemble classifier is as follows:
 
 \begin{lstlisting}[numbers=none]
-Number of Pulsars: 165
+Number of Pulsars: 147
 Pulsars Detected: 112
 True Positives: 112
 False Positives: 0
 
 Number of Non-Pulsars: 87
-Non-Pulsars Detected: 140
+Non-Pulsars Detected: 122
 True Negatives: 87
-False Negatives: 53
+False Negatives: 35
 \end{lstlisting}
+
+We can therefore calculate the pulsar classification success rate to be:
+
+$$ R_{p} = \frac{TP}{N} = \frac{112}{147} =  0.7619 = 76.19\%,$$
+
+where $N$ is the number of pulsars in the testing dataset, and $TP$ is the number of true positive classifications. The non-pulsar classification success rate can be found as:
+
+$$R_{np} = \frac{TN}{N_{np}} = \frac{87}{87} = 1.00 = 100.00\%,$$
+
+where $N_{np}$ is the number of non-pulsars in the testing dataset and $TN$ is the number of true negative classifications.
+
+\subsection{Combined Analyses}
+
+A table containing the pulsar and non-pulsar classification success rates of all algorithms and the ensemble classifier can be found below:
+
+\begin{table}[H]
+    \centering
+    
+    \caption{Success Rates of Each Pulsar Classifier}
+
+    \begin{framed}
+        \begin{tabular}{l c c c}
+            Classifier & $R_p$ & $R_{np}$ & $Combined$ \\
+            \hline
+            \hline
+            LOTAASClassifier &  &  & \\
+            \hline
+            J48 & 89.11\% & 82.75\% & 85.93\% \\
+            MLP & 83.67\% & 97.70\% & 90.69\% \\
+            NB & 80.27\% & 98.85\% & 89.56\%\\
+            SVM & 65.98\% & 100.00\% & 82.99\% \\
+            \hline
+            PulsarClassifier &  &  & \\
+            \hline
+            Ensemble & 76.19\% & 100.00\% & 88.10\% \\
+        \end{tabular}
+    \end{framed}
+    \label{tab:analyses}
+\end{table}
 
 \pagebreak
 % Results Discussion Section
 \section{Discussion and Conclusions}
-\subsection{How effective is the training dataset?}
+\subsection{How effective is the chosen training dataset?}
 \subsection{Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}
 \subsection{Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}
 \subsection{What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}
 
+\pagebreak
 % RECOMMENDATIONS SECTION
 \section{Recommendations}
 
@@ -808,9 +889,9 @@ For further development of the Machine Learning classifiers and strategies used 
 
     During the usage of this feature extraction software, some \verb|PFD| candidate files would cause a \verb|Traceback| error to be produced, causing the feature extraction to fail for that particular candidate. In the \verb|PFD| datasets that I used, the only commonality between the failed feature extraction candidates was that the candidates were not pulsars - they were either examples of Radio Frequency Interference (RFI) or Noise. The result of these failures was that there was a smaller dataset to train the machine learning classifiers on, or a smaller dataset to make machine learning classification predictions on.
 
-    \item Build the Radio Frequency Interference (RFI) classification feature discussed by \cite{tan} into \verb|PulsarClassifier|:
+    \item Build the Radio Frequency Interference (RFI) classification feature discussed by \textcite{tan} into \verb|PulsarClassifier|:
     
-    According to \cite{tan}, by also including the classification category of RFI, the accuracy of the machine learning ensemble classifier was increased. The result of this feature would be three classifier output files: \verb|output.pulsars|, \verb|output.rfi|, and \verb|output.other|.
+    According to \textcite{tan}, by also including the classification category of RFI, the accuracy of the machine learning ensemble classifier was increased. The result of this feature would be three classifier output files: \verb|output.pulsars|, \verb|output.rfi|, and \verb|output.other|.
 
     \item Use a more diverse Training Dataset:
 
