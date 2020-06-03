@@ -4,6 +4,7 @@
 \usepackage{enumitem}
 \usepackage{framed}
 \usepackage{graphicx}
+\usepackage[title,toc,page]{appendix}
 
 % Coding packages
 \usepackage{listings}
@@ -29,8 +30,8 @@
 \addbibresource{references}
 
 % Create the Title 
-\title{Finding New Pulsars Using Machine Learning}
-\author{Jacob Ian Matthews \\ \\ Draft}
+\title{\large{Curtin University} \\ \large{Curtin Institute of Radio Astronomy} \\ \large{Physics Project 1} \\ \vspace*{20px} \textbf{\LARGE{Finding New Pulsars Using Machine Learning}}\vspace*{10px}}
+\author{\vspace*{20px} Jacob Ian Matthews \\ \\ Draft}
 
 \begin{document}
 
@@ -39,8 +40,16 @@
 \begin{titlepage}
     
     \maketitle
+    
+    \vspace*{20px}
 
-    \section*{Abstract}
+    \begin{abstract}
+
+
+
+    \end{abstract}
+
+
 
 \end{titlepage}
 
@@ -62,22 +71,24 @@ This project consists of three aims:
 \begin{enumerate}[label=\roman*.]
     \item Investigate the use of Machine Learning (ML) techniques in surveying pulsars;
     \item Create a training dataset for a Machine Learning algorithm to find pulsars in data obtained by the Murchison Widefield Array (MWA); and
-    \item Evaluate the utility of the Machine Learning algorithm used by the LOFAR Telescope for the Murchison Widefield Array, and adjust the algorithm as necessary to achieve optimum pulsar candidate generation.
+    \item Evaluate the utility of the Machine Learning algorithms used by the LOFAR Telescope for the Murchison Widefield Array, and adjust the algorithms as necessary to achieve optimum pulsar candidate classification.
 \end{enumerate}
 
 \subsection{Structure of this Report}
 
-In this report, I will first explain in \emph{Section 1.3} how Pulsars, Radio Astronomy, and Machine learning work, and then explain what has been dubbed the ``Candidate Selection Problem" \autocite{lyon} and why Machine Learning is necessary in completing future pulsar surveys.
+In this report, I will first explain in \emph{Section 1.3} how Pulsars, Radio Astronomy, and Machine learning work, and then explain the ``Candidate Selection Problem" \autocite{lyon} and why Machine Learning is necessary in completing future pulsar surveys.
 
-In \emph{Section 2} I discuss the methods undertook in: (i) developing the machine learning training dataset for the Murchison Widefield Array algorithm, and (ii) evaluating the machine learning algorithm used by the LOFAR surveys for use with the Murchison Widefield Array.
+In \emph{Section 2}, I discuss the methods undertaken in: (i) developing the machine learning training dataset for the Murchison Widefield Array, (ii) developing software to validate the output of machine learning classifiers, (iii) evaluating the machine learning algorithms used by the LOFAR surveys for use with the Murchison Widefield Array, and (iv) developing an ensemble machine learning classifier to be used with the Murchison Widefield Array and other radio telescopes.
 
-In \emph{Section 3} I analyse the results and findings obtained by the methods described in \emph{Section 2}, and in \emph{Section 4} I will discuss (i) the efficacy of the training datasets, and (ii) the usefulness of the LOFAR machine learning algorithm with the Murchison Widefield Array and why changes were made to the algorithm.
+In \emph{Section 3}, I analyse the results and findings obtained by the methods described in \emph{Section 2}, and in \emph{Section 4} I will discuss (i) the current pulsar classification methods used at the Curtin Institute of Radio Astronomy, (ii) the efficacy of the machine learning classifiers and training dataset produced in this report, and (iii) my concluding remarks about the utility of the machine learning classifiers with the Murchison Widefield Array.
 
-This report will end with my final conclusions on the use of machine learning in discovering new pulsars (\emph{Section 5}), and my recommendations to future researchers undertaking a similar project (\emph{Section 6}).
+This report will conclude with my recommendations for areas of further development in \emph{Section 5}, and the detailed methodologies in creating the results of this project, and entirety of the source code created undertaking this project, in the \emph{Appendices}.
 
 \subsection{Background Theory}
 
-To answer the question of "what is a pulsar?" we must first investigate the evolution and death of stars.
+\subsubsection{Pulsars}
+
+To answer the question of ``what is a pulsar?" we must first investigate the evolution and death of stars.
 
 A star can form when a cloud of hydrogen gas in the interstellar medium (ISM) collects mass over millions of years; as the mass of the gas cloud increases, its gravitational pull to gather more mass also increases \autocite{maoz}. This proto-star will eventually reach a critical mass in which the pressure of gravity within the gas causes enough friction between the gas particles to generate the required heat (thermal pressure) to begin fusing the hydrogen atoms into helium \autocite{maoz}. This marks the beginning of the star's main sequence lifetime. Once the star has fused all of the available hydrogen gas in its core, the star will begin fusing helium into carbon and its outer envelope will expand, moving the star into its "red-giant" phase \autocite{maoz}. If the initial mass of the star was greater than 8 times the mass of the Sun (i.e. $8M_{\odot}$), the star will continue to fuse the elements in its core until it reaches a core of iron. At this point phenomena called nuclear photodisintegration and neutronization occurs, the latter of which causes electrons and photons to combine and form neutrons and anti-neutrinos \autocite{maoz}. Neutronization can be shown as:
 
@@ -158,16 +169,16 @@ To maximise the accuracy of the machine learning algorithm, the input data (incl
     Subint_{\mu}, Subint_{\sigma}, Subint_{S}, Subint_{k}
 \end{equation}
 
-Where candidate features are calculated from the: (1) Integrated Pulsar Profile, (2) the Dispersion Measure -- Signal-to-Noise Ratio Curve (DM-S/N), (3) the correlation coefficients between each sub-band and the integrated pulsar profile, and from the (4) correlation coefficients between each sub-integration and the integrated pulsar profile. See \emph{Appendix 2A} for formulae to calculate each feature.
+Where candidate features are calculated from the: (1) Integrated Pulsar Profile, (2) the Dispersion Measure -- Signal-to-Noise Ratio Curve (DM-S/N), (3) the correlation coefficients between each sub-band and the integrated pulsar profile, and from the (4) correlation coefficients between each sub-integration and the integrated pulsar profile. 
 
 To extract the 20 above features from each classification candidate, we can use the software 
 \verb|PulsarFeatureLab| \autocite{lyon}.
 
 \subsubsection{Pulsar Candidate Feature Extraction}
 
-The Python software tool \verb|PulsarFeatureLab| can be used to consume pulsar candidate files of the PRESTO Prepfold \verb|PFD| filetype and output the 20 above features for each candidate into a single file of WEKA Data Mining \verb|ARFF| filetype \autocite{lyon}.
+The Python software tool \verb|PulsarFeatureLab| can be used to process pulsar candidate files of the PRESTO Prepfold \verb|PFD| filetype and output the 20 above features for each candidate into a single file of WEKA Data Mining \verb|ARFF| filetype \autocite{lyon}.
 
-To create a closed software environment in which the dependencies of the \verb|PulsarFeatureLab| software are unaffected by the host operating system, a containerised virtual operating system can be created using the free software Docker (\verb|https://docker.com|).
+To create a closed software environment in which the dependencies of the \verb|PulsarFeatureLab| software are unaffected by the host operating system, a containerised virtual operating system was created using the free software Docker (\verb|https://docker.com|).
 
 First, a directory to store the Dockerfile and pulsar candidate data is created by completing the following commands in a UNIX terminal:
 
@@ -247,7 +258,7 @@ $ cd ~/pulsars/LOTAASClassifier/dist
 \end{lstlisting}
 
 \subsubsection{Creating a Pulsar Classifier Output Validation Tool}
-
+\label{sec:methodvalidate}
 In order to accurately evaluate and test the predictions made by the \verb|LOTAASClassifier| tool, we must create a program that will automate the process of checking the outputs of the classifier against the known list of pulsars.
 
 We begin by creating a new Java project using the free software Maven (\verb|https://maven.apache.org|) by running the following commands in a UNIX terminal:
@@ -294,7 +305,7 @@ To access the user inputted arguments, we can include the following function in 
     \end{algorithmic}
 \end{algorithm}
 
-We can then use a simple conditional statement after this function is ran to check if the \verb|Boolean ValidationMode| has been set to \verb|true|, to determine whether to continue the validation. The complete Java class \verb|PulsarValidator.java| can be seen in \emph{Appendix 7.2.1}.
+We can then use a simple conditional statement after this function is ran to check if the \verb|Boolean ValidationMode| has been set to \verb|true|, to determine whether to continue the validation. The complete Java class \verb|PulsarValidator.java| can be seen in \emph{Appendix \ref{sec:pulsarvalidator}.1}.
 
 We can then create a new Java class, \verb|ValidationMode.java|, with the following algorithm to validate the output of the classifier against the list of pulsars:
 
@@ -449,7 +460,7 @@ $ java -jar pulsarvalidator-1.0-full.jar -v ~/pulsars/data/pfd/pulsars.txt ~/pul
 Where the \verb|[classifier]| variable can be changed depending on the name of the classifier algorithm being evaluated. The outputted validation statistics can then be compared across the algorithms to determine their usefulness with the Murchison Widefield Array.
 
 \subsubsection{Creating the PulsarClassifier Ensemble Classification Tool}
-
+\label{sec:methodensemble}
 According to \cite{tan}, using Machine Learning algorithms in ensemble to make pulsar classifications increases the accuracy of classifications, classifying pulsars that were often misclassified such as wide-pulse pulsars.
 
 To build the ensemble classification feature into the existing \verb|LOTAASClassifier| tool, we can first begin by creating a new Java project named \verb|PulsarClassifier| using the free software, Maven (\verb|https://maven.apache.org|).
@@ -522,7 +533,7 @@ The class \verb|ClassifierBuilder.java| handles training and building a classifi
     \end{algorithmic}
 \end{algorithm}
 
-\emph{See Section 8.4.1} for complete \verb|ClassifierBuilder.java| class. 
+See \emph{Appendix \ref{sec:pulsarclassifier}.2} for the complete \verb|ClassifierBuilder.java| class. 
 
 The class \verb|ClassifierValidator.java| handles validating and testing the existing classification models. To implement the ensemble classifier into this class, we will use the following, similar algorithm:
 
@@ -542,7 +553,7 @@ The class \verb|ClassifierValidator.java| handles validating and testing the exi
     \end{algorithmic}
 \end{algorithm}
 
-\emph{See Section 8.4.2} for complete \verb|ClassifierValidator.java| class. 
+See \emph{Appendix \ref{sec:pulsarclassifier}.3} for the complete \verb|ClassifierValidator.java| class. 
 
 The class \verb|ClassPredictor.java| handles making the classification predictions on new data using existing classifier models. We can add the ensemble classification feature to this class with the following algorithm:
 
@@ -595,9 +606,9 @@ The class \verb|ClassPredictor.java| handles making the classification predictio
     \end{algorithmic}
 \end{algorithm}
 
-The above algorithm preserves the individual classifiers' predictions and also makes an ensemble prediction based on all of the classifiers' predictions. According to \cite{tan}, it is common for ensemble machine learning classifiers to use a cut-off of three concurrent positive predictions in separate classifiers to make a positive ensemble classification. Therefore, for a candidate to be classified as a pulsar with the ensemble classifier it must first be classified as a pulsar by three of the underlying machine learning classifiers. \emph{See Section 8.4.3} for the complete \verb|ClassPredictor.java| class.
+The above algorithm preserves the individual classifiers' predictions and also makes an ensemble prediction based on all of the classifiers' predictions. According to \cite{tan}, it is common for ensemble machine learning classifiers to use a cut-off of three concurrent positive predictions in separate classifiers to make a positive ensemble classification. Therefore, for a candidate to be classified as a pulsar with the ensemble classifier it must first be classified as a pulsar by three of the underlying machine learning classifiers. See \emph{Appendix \ref{sec:pulsarclassifier}.4} for the complete \verb|ClassPredictor.java| class.
 
-The final class to add the ensemble classifier feature to is the entry point of the program, \verb|PulsarClassifier.java|. This class only requires changes to the command-line inputs and outputs, so the completed Java class can be found in \emph{Section 8.4.4}. The complete source code to the \verb|PulsarClassifier| contains the following classes:
+The final class to add the ensemble classifier feature to is the entry point of the program, \verb|PulsarClassifier.java|. This class only requires changes to the command-line inputs and outputs, so the completed Java class can be found in \emph{Appendix \ref{sec:pulsarclassifier}.1}. The complete source code to the \verb|PulsarClassifier| contains the following classes:
 
 \begin{lstlisting}[numbers=none]
 src/
@@ -670,7 +681,7 @@ $ cd ~/pulsars/PulsarClassifier
 $ mvn assembly:single
 \end{lstlisting}
 
-The complete source code and build of \verb|PulsarClassifier| can be found at \verb|https://github.com/jacob-ian/PulsarClassifier.git|, or in \emph{Appendix 7.3}.
+The complete source code and build of \verb|PulsarClassifier| can be found at \verb|https://github.com/jacob-ian/PulsarClassifier.git|, or in \emph{Appendix \ref{sec:pulsarclassifier}}.
 
 \subsubsection{Evaluating PulsarClassifier}
 
@@ -693,7 +704,7 @@ Where the argument \verb|-m| now denotes the path to a directory to store the va
 $ java -jar pulsarclassifier-1.0-jar-with-dependencies.jar -p ~/pulsars/data/pfd/output.arff -m ~/pulsars/data/models -a -1
 \end{lstlisting}
 
-\verb|PulsarClassifier| will create the prediction output files for each classifier, and then the \verb|output_ensemble.positive| and \verb|output_ensemble.negative| files for the ensemble classifier. We can validate the ensemble classifier with the \verb|PulsarValidator| program created in \emph{Section 2.2.1} by running the commands:
+\verb|PulsarClassifier| will create the prediction output files for each classifier, and then the \verb|output_ensemble.positive| and \verb|output_ensemble.negative| files for the ensemble classifier. We can validate the ensemble classifier with the \verb|PulsarValidator| program created in \emph{Section \ref{sec:methodvalidate}} by running the commands:
 
 \begin{lstlisting}[numbers=none]
 $ cd ~/pulsars/PulsarValidator/target
@@ -707,7 +718,7 @@ The outputted validation statistics can then be compared to those created for th
 \section{Results and Analyses}
 \subsection{Machine Learning Training Dataset}
 
-The machine learning training dataset created with candidates detected by the Murchison Widefield Array can be found under \emph{Appendix 7.1}.
+The machine learning training dataset created with candidates detected by the Murchison Widefield Array can be found under \emph{Appendix \ref{sec:training}}.
 
 \subsection{Classification Results from the LOTAASClassifier Algorithms}
 
@@ -877,10 +888,43 @@ A table containing the pulsar and non-pulsar classification success rates of all
 \pagebreak
 % Results Discussion Section
 \section{Discussion and Conclusions}
-\subsection{How effective is the chosen training dataset?}
 \subsection{Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}
-\subsection{Why did/didn't the LOFAR Machine Learning Algorithm work with the MWA?}
-\subsection{What changes to the algorithm were necessary for it to successfully classify Pulsars from the MWA?}
+
+A pulsar classification pipeline can be defined as the process undertaken to classify a candidate as a pulsar \autocite{swainston}. The current pipeline at the Curtin Institute of Radio Astronomy (CIRA) for pulsar classification is as follows:
+\begin{enumerate}[label=\roman*.]
+    \item Generate pulsar candidates through the SMART (Southern-sky MWA Rapid Two-metre) survey;
+    \item Extract machine learning features from the pulsar candidates using \\\verb|PulsarFeatureLab|;
+    \item Use the LOFAR Tied-Array All-Sky machine learning pulsar classifier, \verb|LOTAASClassifier|, to to eliminate a large number of pulsar candidates; and
+    \item Manually inspect the remaining pulsar candidates to confirm pulsar discovery.
+\end{enumerate}
+\autocite{swainston}. While the classification pipeline itself appears to be optimal, I have identified a few issues with the previous attempts at CIRA in using the machine learning classifier.
+
+The first issue revolves around the use of mislabelled and incomplete software. In the research completed by \textcite{tan}, the original \\\verb|LOTAASClassifier|, created by \textcite{lyon}, was upgraded to include two major new features: (i) ensemble classification, and (ii) radio frequency interference (RFI) classification. The machine learning feature set was also expanded from 8 features in \textcite{lyon} to 20 features in \textcite{tan}, greatly improving the accuracy of classification. Upon analysis of the source code of \verb|LOTAASClassifier|, it appears that the two new classification features were not released publicly, despite the software being labelled as \verb|LOTAASClassifier v2.0| in its main Java class, the same name referenced by \textcite{tan}. Despite this, the new, expanded set of machine learning features was released with \verb|PulsarFeatureLab Version 1.3.2|. This created a mismatch between the feature extraction software and the machine learning classifier, which leads to the next issue in the CIRA pipeline: the training dataset.
+
+In the pipeline provided by \textcite{swainston}, it appears that CIRA has been attempting to use the training dataset generated for the LOFAR Tied-Array All-Sky Survey included with the \verb|LOTAASClassifier| software, for pulsar candidates generated in the SMART survey. In itself, this may not present issues, however due to the unknown mismatch in the machine learning software, an issue of feature dimensions occurs. The included training dataset creates a classification model with the original 8 machine learning features, therefore any predictions on new candidates would require the same 8 machine learning features to have been extracted prior to classification. Due to the mislabelled software, CIRA has been extracting the set of 20 features from pulsar candidates and attempting to make classifications against a set of 8 features, preventing classifications from occurring in \verb|LOTAASClassifier| due to a mismatch in dimensions. This issue can be fixed by creating a training dataset with the same set of extracted features as will be present in the candidates for classification.
+
+The final issue arising in the CIRA pipeline also spouts from the mislabelling of the \verb|LOTAASClassifier| software. The CIRA pipeline expects that the ensemble classifier created in the upgraded software from \textcite{tan} will be used. Without the latest version of \verb|LOTAASClassifier| having been released, the CIRA pipeline defaults to using the J48 machine learning classification algorithm. As seen in Table \ref{tab:analyses} from \emph{Section 3.4}, the J48 algorithm does not appear to be optimal in combined pulsar and non-pulsar classification. To fix this issue, an ensemble machine learning classifier was created in \emph{Section 2.2.4} to replace the \verb|LOTAASClassifier| software.
+
+\subsection{Evaluating the Training Dataset and Machine Learning Classifiers}
+
+An evaluation of the machine learning classifiers: \verb|LOTAASClassifier| and its algorithms, and \verb|PulsarClassfier|, will in its nature be subject to the quality of the training dataset used. By inspecting the data produced in \emph{Section 3.2}, we can see the success rates of pulsar and non-pulsar classification, which are defined as the ratio of the number of true positive (true negative) classifications with the number of pulsars (non-pulsars). The success rates of each classifier are then compiled into Table \ref{tab:analyses}. Another metric, the combined success rate, is also introduced as the mean of the two success rates. The combined success rate can be used to rank the total accuracy of the classifiers, however this metric does not contain ample information. The classifiers can thus be ranked in order of highest total accuracy:
+
+\begin{enumerate}
+    \item Multi-Layered Perceptron (90.69\%)
+    \item Naïve Bayes Test (89.56\%)
+    \item Ensemble Classifier (88.10\%)
+    \item J48 (C4.5 Decision Tree) (85.93\%)
+    \item Support Vector Machine (82.99\%)
+\end{enumerate}
+
+Despite being ranked third in combined success rates, the \verb|PulsarClassifier|'s Ensemble Classifier was only one of two classifiers that correctly classified all examples of noise and radio frequency interference as \emph{non-pulsar}, the other successful classifier being the Support Vector Machine. As a result of this, there were no false positive classifications completed by the Ensemble classifier, i.e. everything classified as a pulsar actually was a pulsar. The Ensemble Classifier was let down by misclassifying 35 pulsars, having the second-lowest success rate of pulsar classification - the lowest being the Support Vector Machine which misclassified 50 pulsars, and the highest being the J48 Classifier having misclassified only 16 pulsars. 
+
+For the use case of classifying pulsar candidates generated from the Murchison Widefield Array, the most important metric to be considered when evaluating a machine learning classifier is the pulsar classification success rate. It is more important to not miss the classification of a pulsar and less important if a non-pulsar is classified as a pulsar. For this reason, the objective is to maximise the rate of true positive classifications and minimise the rate of false negative classifications.
+
+The training dataset created in this project contained 11 examples of pulsars and 12 examples of noise and radio frequency interference (RFI). While the training dataset appeared to have a satisfactory variety of noise and RFI, contributing to the ensemble classifier's perfect rate of non-pulsar classification, the set of pulsars appeared to be unsatisfactory. In order to improve the success rate of pulsar classification (positive success rate) in the ensemble classifier, we must use a modified training dataset that will improve the positive success rate in the worst performing individual classifiers: the Support Vector Machine (65.98\%), and the Naïve Bayes Test (80.27\%), whilst maintaining the higher positive success rates of the other classifiers. By doing so, more pulsars will survive the ensemble classifier's individual classification criteria of 3 or more, and thus the positive success rate will improve. This modification to the training dataset could involve changing the included set of pulsars to include a subset of pulsars of ordinary appearing features, and the remaining subset of pulsars should exhibit unusual or difficult to discern features.
+
+In conclusion, I believe that the machine learning classifiers in the \\\verb|LOTAASClassifier| software, particularly used in ensemble such as with the \verb|PulsarClassifier| software created for this project, are of great utility for current and future Murchison Widefield Array pulsar surveys. As discussed in \textcite{lyon}, the number of pulsar candidates generated in pulsar surveys stands to grow exponentially beyond the economical capacity of data storage and viability of manual examination. This problem requires a solution to filter out the non-pulsars from the group of candidates to maximise the discovery of pulsars, and I believe that the \verb|PulsarClassifier| software is another step forward in solving the problem. While the training dataset does require further development to maximise the success of the Ensemble Classifier, the Machine Learning techniques themselves proved to be extremely valuable in pulsar classification.
+
 
 \pagebreak
 % RECOMMENDATIONS SECTION
@@ -889,9 +933,9 @@ A table containing the pulsar and non-pulsar classification success rates of all
 For further development of the Machine Learning classifiers and strategies used in this project, I would recommend undertaking the following tasks:
 
 \begin{enumerate}
-    \item Investigate and fix the Python \verb|Traceback| Error produced by the software \verb|PulsarFeatureLab v1.3.2|:
+    \item Investigate and fix the Python \verb|Traceback Error| produced by the software \verb|PulsarFeatureLab v1.3.2|:
 
-    During the usage of this feature extraction software, some \verb|PFD| candidate files would cause a \verb|Traceback| error to be produced, causing the feature extraction to fail for that particular candidate. In the \verb|PFD| datasets that I used, the only commonality between the failed feature extraction candidates was that the candidates were not pulsars - they were either examples of Radio Frequency Interference (RFI) or Noise. The result of these failures was that there was a smaller dataset to train the machine learning classifiers on, or a smaller dataset to make machine learning classification predictions on.
+    During the usage of this feature extraction software, some \verb|PFD| candidate files would cause a \verb|Traceback| error to be produced, causing the feature extraction to fail for that particular candidate. The result of these failures was that there was a smaller dataset to train the machine learning classifiers on, and a smaller dataset to make machine learning classification predictions on.
 
     \item Build the Radio Frequency Interference (RFI) classification feature discussed by \textcite{tan} into \verb|PulsarClassifier|:
     
@@ -909,65 +953,82 @@ For further development of the Machine Learning classifiers and strategies used 
 
 \pagebreak
 % APPENDICES SECTION
-\section{Appendices}
-\subsection{Machine Learning Training Dataset}
-\lstinputlisting[title=trainingData.arff, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/trainingSet.arff}
+\begin{appendices}
 
-\pagebreak
-\subsection{PulsarValidator}
-\subsubsection{PulsarValidator.java}
-\lstinputlisting[title=PulsarValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/PulsarValidator.java}
+    \section{Methods}
+    \begin{subappendices}
+        \subsection{Feature Extraction with PulsarFeatureLab}
 
-\pagebreak
-\subsubsection{ValidationMode.java}
-\lstinputlisting[title=ValidationMode.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/ValidationMode.java}
+        \subsection{Using PulsarValidator}
 
-\pagebreak
-\subsubsection{utils/Statistic.java}
-\lstinputlisting[title=utils/Statistic.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/Statistic.java}
+    \end{subappendices}
 
-\pagebreak
-\subsubsection{utils/StatisticList.java}
-\lstinputlisting[title=utils/StatisticList.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/StatisticList.java}
+    \section{Results}
+    \subsection{Machine Learning Training Dataset}
+    \label{sec:training}
+    \lstinputlisting[title=trainingData.arff, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em, literate={,}{{,\allowbreak}}1]{code/trainingSet.arff}
 
-\pagebreak
-\subsubsection{utils/Utilities.java}
-\lstinputlisting[title=utils/Utilities.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/Utilities.java}
+    \pagebreak
+    \section{Pulsar Validator}
+    \begin{subappendices}
+        \label{sec:pulsarvalidator} 
+        \subsection{PulsarValidator.java}
+        \lstinputlisting[title=PulsarValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/PulsarValidator.java}
 
-\pagebreak
-\subsection{PulsarClassifier}
+        \pagebreak
+        \subsection{ValidationMode.java}
+        \lstinputlisting[title=ValidationMode.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/ValidationMode.java}
 
-\subsubsection{PulsarClasifier.java}
-\lstinputlisting[title=PulsarClassifier.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java}
+        \pagebreak
+        \subsection{utils/Statistic.java}
+        \lstinputlisting[title=utils/Statistic.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/Statistic.java}
 
-\pagebreak
-\subsubsection{ClassifierBuilder.java}
-\lstinputlisting[title=ClassifierBuilder.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java}
+        \pagebreak
+        \subsection{utils/StatisticList.java}
+        \lstinputlisting[title=utils/StatisticList.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/StatisticList.java}
 
-\pagebreak
-\subsubsection{ClassifierValidator.java}
-\lstinputlisting[title=ClassifierValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java}
+        \pagebreak
+        \subsection{utils/Utilities.java}
+        \lstinputlisting[title=utils/Utilities.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/utils/Utilities.java}
 
-\pagebreak
-\subsubsection{ClassPredictor.java}
-\lstinputlisting[title=ClassPredictor.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassPredictor.java}
+    \end{subappendices}
+    
+    \pagebreak
+    \section{Pulsar Classifier}
+    \begin{subappendices}
+        \label{sec:pulsarclassifier}
+        \subsection{PulsarClassifier.java}
+        \lstinputlisting[title=PulsarClassifier.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java}
 
-\pagebreak
-\subsubsection{utils/Classification.java}
-\lstinputlisting[title=utils/Classification.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true,framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Classification.java}
+        \pagebreak
+        \subsection{ClassifierBuilder.java}
+        \lstinputlisting[title=ClassifierBuilder.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java}
 
-\pagebreak
-\subsubsection{utils/ClassificationList.java}
-\lstinputlisting[title=utils/ClassificationList.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true,framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/ClassificationList.java}
+        \pagebreak
+        \subsection{ClassifierValidator.java}
+        \lstinputlisting[title=ClassifierValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java}
 
-\pagebreak
-\subsubsection{utils/Classifiers.java}
-\lstinputlisting[title=utils/Classifiers.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Classifiers.java}
+        \pagebreak
+        \subsection{ClassPredictor.java}
+        \lstinputlisting[title=ClassPredictor.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassPredictor.java}
 
-\pagebreak
-\subsubsection{utils/Models.java}
-\lstinputlisting[title=utils/Models.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Models.java}
+        \pagebreak
+        \subsection{utils/Classification.java}
+        \lstinputlisting[title=utils/Classification.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true,framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Classification.java}
 
+        \pagebreak
+        \subsection{utils/ClassificationList.java}
+        \lstinputlisting[title=utils/ClassificationList.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true,framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/ClassificationList.java}
+
+        \pagebreak
+        \subsection{utils/Classifiers.java}
+        \lstinputlisting[title=utils/Classifiers.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Classifiers.java}
+
+        \pagebreak
+        \subsection{utils/Models.java}
+        \lstinputlisting[title=utils/Models.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/utils/Models.java}
+    \end{subappendices}
+\end{appendices}
 
 % End the document
 \end{document}
