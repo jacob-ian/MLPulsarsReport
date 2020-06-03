@@ -177,6 +177,8 @@ INPUT .\images\pulsar.jpg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtt10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr17.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtt8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtt8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
@@ -186,8 +188,6 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtk10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtt8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtti10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr17.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT j:\pulsars\MLPulsarsReport\code\trainingSet.arff
 INPUT j:\pulsars\MLPulsarsReport\code\trainingSet.arff
 INPUT j:\pulsars\MLPulsarsReport\code\trainingSet.arff

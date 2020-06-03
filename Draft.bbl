@@ -134,34 +134,6 @@
     \field{year}{2016}
   \endentry
 
-  \entry{quinlan}{article}{}
-    \name{author}{1}{}{%
-      {{hash=QJR}{%
-         family={Quinlan},
-         familyi={Q\bibinitperiod},
-         given={J.\bibnamedelima R.},
-         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {University of California, Irvine}%
-    }
-    \strng{namehash}{QJR1}
-    \strng{fullhash}{QJR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1987}
-    \field{labeldatesource}{}
-    \field{sortinit}{Q}
-    \field{sortinithash}{Q}
-    \field{pages}{31\bibrangedash 37}
-    \field{title}{Decision Trees as Probabilistic Classifiers}
-    \field{volume}{1}
-    \field{journaltitle}{Proceedings of the Fourth International Workshop of
-  Machine Learning}
-    \field{year}{1987}
-  \endentry
-
   \entry{swainston}{thesis}{}
     \name{author}{1}{}{%
       {{hash=SN}{%
