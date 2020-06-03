@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.20)  3 JUN 2020 12:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.20)  3 JUN 2020 16:22
 entering extended mode
 **j:/pulsars/MLPulsarsReport/Draft.tex
 (j:/pulsars/MLPulsarsReport/Draft.tex
@@ -404,4 +404,339 @@ File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'chicago-authordate'...
 Package biblatex Info: ... file 'chicago-authordate.bbx' found.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex-chicago\chicago-authordate.bbx"
-File: chi
+File: chicago-authordate.bbx 2020/04/20 v 3.14 biblatex bibliography style
+\lositemsep=\skip70
+\cms@tempcnta=\count302
+\cms@tempcntb=\count303
+\c@bbx:relatedcount=\count304
+\c@bbx:relatedtotal=\count305
+)
+Package biblatex Info: Trying to load citation style 'chicago-authordate'...
+Package biblatex Info: ... file 'chicago-authordate.cbx' found.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex-chicago\chicago-authordate.cbx"
+File: chicago-authordate.cbx 2020/04/20 v 3.14 biblatex citation style
+Package biblatex Info: Trying to load citation style 'chicago-dates-common'...
+Package biblatex Info: ... file 'chicago-dates-common.cbx' found.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex-chicago\chicago-dates-common.cbx"
+File: chicago-dates-common.cbx 2020/04/20 v 3.14 biblatex citation style
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footfullcite'.
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Delimiter 'dateeradelim' in context '' already defined, overwriting.
+Package biblatex Info: Patching 'autolang=other' option.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.cfg"
+File: biblatex.cfg 
+))
+
+Package biblatex Warning: 'babel' option is deprecated.
+(biblatex)                Please use 'autolang' instead.
+
+)
+\@quotelevel=\count306
+\@quotereset=\count307
+ (j:/pulsars\MLPulsarsReport\Draft.aux)
+\openout1 = `Draft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 36.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count308
+\scratchdimen=\dimen114
+\scratchbox=\box32
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen115
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks24
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\c@lstlisting=\count314
+Package biblatex Info: Trying to load language 'english' -> 'cms-american'...
+Package biblatex Info: ... file 'cms-american.lbx' found.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex-chicago\cms-american.lbx"
+File: cms-american.lbx 2020/04/20 v 3.14 biblatex localization
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/lbx\american.lbx"
+File: american.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/lbx\english.lbx"
+File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/lbx\english.lbx"
+File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' specified.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `Draft-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Draft.bbl' found.
+ (j:/pulsars\MLPulsarsReport\Draft.bbl)
+Package biblatex Info: Reference section=0 on input line 36.
+Package biblatex Info: Reference segment=0 on input line 36.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 42.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 42.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 42.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 42.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 42.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 42.
+ [1
+
+{C:/Users/jimim/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (j:/pulsars\MLPulsarsReport\Draft.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 5.
+ [1])
+\tf@toc=\write4
+\openout4 = `Draft.toc'.
+
+ [2]
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 93.
+
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 93.
+
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 93.
+
+[3]
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 97.
+
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 97.
+
+[4]
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 115.
+
+<./images/pulsar.jpg, id=29, 234.8775pt x 185.94469pt>
+File: ./images/pulsar.jpg Graphic file (type jpg)
+<use ./images/pulsar.jpg>
+Package pdftex.def Info: ./images/pulsar.jpg  used on input line 119.
+(pdftex.def)             Requested size: 234.87692pt x 185.94421pt.
+[5 <./images/pulsar.jpg>] [6]
+
+Package biblatex Warning: '\smartcite' not defined by citation style.
+(biblatex)                Falling back to '\cite' on input line 153.
+
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 175.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmtt.fd"
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 179.
+
+[7]
+Overfull \hbox (22.44415pt too wide) in paragraph at lines 211--212
+[]\OT1/lmr/m/n/10 install [][]\OT1/lmtt/m/n/10 PulsarFeatureLab[]\OT1/lmr/m/n/10 's li-brary de-pen-den-cies ([][]\OT1/lmtt/m/n/10 NumPy, SciPy, matplotlib
+ []
+
+
+Overfull \hbox (0.83218pt too wide) in paragraph at lines 221--222
+[]\OT1/lmr/m/n/10 Candidate [][]\OT1/lmtt/m/n/10 PFD []\OT1/lmr/m/n/10 files of known pul-sars and non-pulsars de-tected by the Murchi-
+ []
+
+[8]
+Overfull \hbox (8.08336pt too wide) in paragraph at lines 243--244
+\OT1/lmr/m/n/10 port, a Java Ma-chine Learn-ing pul-sar clas-si-fi-ca-tion tool named [][]\OT1/lmtt/m/n/10 LOTAASClassifier
+ []
+
+[9]
+Overfull \hbox (28.94516pt too wide) in paragraph at lines 262--263
+\OT1/lmr/m/n/10 In or-der to ac-cu-rately eval-u-ate and test the pre-dic-tions made by the [][]\OT1/lmtt/m/n/10 LOTAASClassifier
+ []
+
+[10]
+Overfull \hbox (17.96297pt too wide) in paragraph at lines 308--309
+\OT1/lmr/m/n/10 whether to con-tinue the val-i-da-tion. The com-plete Java class [][]\OT1/lmtt/m/n/10 PulsarValidator.java
+ []
+
+[11] [12] [13]
+Overfull \hbox (1.52634pt too wide) in paragraph at lines 411--412
+[]\OT1/lmr/m/n/10 This will pro-duce the file: [][]\OT1/lmtt/m/n/10 /target/pulsarvalidator-1.0-full.jar[]\OT1/lmr/m/n/10 , which
+ []
+
+[14]
+Overfull \hbox (10.6387pt too wide) in paragraph at lines 466--467
+[]\OT1/lmr/m/n/10 To build the en-sem-ble clas-si-fi-ca-tion fea-ture into the ex-ist-ing [][]\OT1/lmtt/m/n/10 LOTAASClassifier
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 489.
+
+Overfull \hbox (5.71207pt too wide) in paragraph at lines 513--514
+[][]\OT1/lmtt/m/n/10 /src/main/java/com/jacobianmatthews/pulsarclassifier[]\OT1/lmr/m/n/10 . To in-tro-duce the
+ []
+
+
+Overfull \hbox (19.97113pt too wide) in paragraph at lines 513--514
+[][]\OT1/lmtt/m/n/10 PulsarClassifier.java[]\OT1/lmr/m/n/10 , [][]\OT1/lmtt/m/n/10 ClassifierBuilder.java[]\OT1/lmr/m/n/10 , [][]\OT1/lmtt/m/n/10 ClassifierValidator.java[]\OT1/lmr/m/n/10 ,
+ []
+
+[16] [17] [18] [19] [20]
+Overfull \hbox (2.61029pt too wide) in paragraph at lines 707--708
+\OT1/lmr/m/n/10 and then the [][]\OT1/lmtt/m/n/10 output_ensemble.positive []\OT1/lmr/m/n/10 and [][]\OT1/lmtt/m/n/10 output_ensemble.negative []\OT1/lmr/m/n/10 files
+ []
+
+[21] [22] [23] [24] [25]
+Overfull \hbox (1.72537pt too wide) in paragraph at lines 891--891
+[]\OT1/lmr/bx/n/12 Evaluating Curtin In-sti-tute of Ra-dio As-tron-omy's Pul-
+ []
+
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 900.
+
+
+Overfull \hbox (1.02763pt too wide) in paragraph at lines 902--903
+\OT1/lmr/m/n/10 re-leased pub-licly, de-spite the soft-ware be-ing la-belled as [][]\OT1/lmtt/m/n/10 LOTAASClassifier v2.0
+ []
+
+[26]
+Overfull \hbox (6.72237pt too wide) in paragraph at lines 920--921
+[]\OT1/lmr/m/n/10 Despite be-ing ranked third in com-bined suc-cess rates, the [][]\OT1/lmtt/m/n/10 PulsarClassifier[]\OT1/lmr/m/n/10 's
+ []
+
+[27] [28] [29] [30]
+Overfull \hbox (1.61626pt too wide) in paragraph at lines 960--960
+[]\OT1/lmr/bx/n/12 Feature Ex-trac-tion with Pul-sar-Fea-ture-Lab 
+ []
+
+(j:/pulsars\MLPulsarsReport\code/trainingSet.arff [31] [32] [33]) [34] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/PulsarValidator.java
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 1.
+ [35] [36]) [37] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/ValidationMode.java [38] [39] [40] [41]) [42] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/Statistic.java) [43] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/StatisticList.java [44]) [45] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/Utilities.java) [46] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java [47] [48] [49] [50] [51] [52] [53] [54]
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 409--410
+[][] 
+ []
+
+
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 413--414
+[][] 
+ []
+
+
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 422--423
+[][] 
+ []
+
+
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 426--427
+[][] 
+ []
+
+[55] [56]
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 484--485
+[][] 
+ []
+
+[57]
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 489--490
+[][] 
+ []
+
+
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 498--499
+[][] 
+ []
+
+
+Overfull \hbox (41.34973pt too wide) in paragraph at lines 506--508
+[][] 
+ []
+
+[58]) [59] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java [60] [61]) [62] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java [63] [64]) [65] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassPredictor.java [66] [67] [68] [69] [70]) [71] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Classification.java) [72] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/ClassificationList.java [73] [74] [75]) [76] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Classifiers.java) [77] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Models.java [78]) [79] (j:/pulsars\MLPulsarsReport\Draft.aux)
+Package logreq Info: Writing requests to 'Draft.run.xml'.
+\openout1 = `Draft.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14526 strings out of 492895
+ 257933 string characters out of 3133479
+ 1327984 words of memory out of 3000000
+ 18212 multiletter control sequences out of 15000+200000
+ 61345 words of font info for 51 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 49i,11n,76p,1602b,3767s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
+Output written on j:/pulsars\MLPulsarsReport\Draft.pdf (80 pages, 630319 bytes).
+PDF statistics:
+ 342 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

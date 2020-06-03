@@ -128,6 +128,9 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
 OUTPUT j:\pulsars\MLPulsarsReport\Draft-blx.bib
+INPUT j:\pulsars\MLPulsarsReport\Draft.bbl
+INPUT j:\pulsars\MLPulsarsReport\Draft.bbl
+INPUT j:\pulsars\MLPulsarsReport\Draft.bbl
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
@@ -153,8 +156,8 @@ OUTPUT j:\pulsars\MLPulsarsReport\Draft.pdf
 INPUT C:\Users\jimim\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
-OUTPUT j:\pulsars\MLPulsarsReport\Draft.toc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmri10.tfm
+INPUT j:\pulsars\MLPulsarsReport\Draft.toc
+INPUT j:\pulsars\MLPulsarsReport\Draft.toc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr5.tfm
@@ -164,6 +167,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmmi5.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmsy7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmsy5.tfm
+OUTPUT j:\pulsars\MLPulsarsReport\Draft.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmri10.tfm
 INPUT images\pulsar.jpg
 INPUT .\images\pulsar.jpg
 INPUT .\images\pulsar.jpg
@@ -256,6 +261,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr9.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr9.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy10.pfb
