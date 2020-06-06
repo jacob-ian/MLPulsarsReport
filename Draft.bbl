@@ -17,6 +17,155 @@
 \endgroup
 
 \datalist[entry]{cms/global//global/global}
+  \entry{dietterich}{article}{}
+    \name{author}{1}{}{%
+      {{hash=D}{%
+         family={Dietterich},
+         familyi={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{D1}
+    \strng{fullhash}{D1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1162/089976698300017197
+    \endverb
+    \field{number}{7}
+    \field{pages}{1895\bibrangedash 1923}
+    \field{title}{Approximate Statistical Tests for Comparing Supervised
+  Classification Learning Algorithms}
+    \field{volume}{10}
+    \field{journaltitle}{Neural Computation}
+    \field{year}{1998}
+  \endentry
+
+  \entry{gold:pulsar}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GT}{%
+         family={Gold},
+         familyi={G\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GT1}
+    \strng{fullhash}{GT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1969}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1038/221025a0
+    \endverb
+    \field{pages}{25\bibrangedash 27}
+    \field{title}{Rotating Neutron Stars and the Nature of Pulsars}
+    \field{volume}{221}
+    \field{journaltitle}{Nature}
+    \field{year}{1969}
+  \endentry
+
+  \entry{helfand:profiles}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HDJ}{%
+         family={{Helfand}},
+         familyi={H\bibinitperiod},
+         given={D.\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MRN}{%
+         family={{Manchester}},
+         familyi={M\bibinitperiod},
+         given={R.\bibnamedelima N.},
+         giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=TJH}{%
+         family={{Taylor}},
+         familyi={T\bibinitperiod},
+         given={J.\bibnamedelima H.},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \keyw{Propagation Modes, Pulsars, Radio Emission, Long Term Effects,
+  Numerical Stability, Radio Astronomy, Secular Variations, Astronomy}
+    \strng{namehash}{HDJMRNTJH1}
+    \strng{fullhash}{HDJMRNTJH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1086/153644
+    \endverb
+    \field{pages}{661\bibrangedash 670}
+    \field{title}{{Observations of pulsar radio emission. III. Stability of
+  integrated profiles.}}
+    \field{volume}{198}
+    \field{journaltitle}{Astrophysical Journal}
+    \field{month}{06}
+    \field{year}{1975}
+  \endentry
+
+  \entry{hewish:pulsar}{article}{}
+    \name{author}{5}{}{%
+      {{hash=HA}{%
+         family={Hewish},
+         familyi={H\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BSJ}{%
+         family={Bell},
+         familyi={B\bibinitperiod},
+         given={S.\bibnamedelima J.},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PJDH}{%
+         family={Pilkington},
+         familyi={P\bibinitperiod},
+         given={J.\bibnamedelima D.\bibnamedelima H.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  H\bibinitperiod},
+      }}%
+      {{hash=SPF}{%
+         family={Scott},
+         familyi={S\bibinitperiod},
+         given={P.\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=CRA}{%
+         family={Collins},
+         familyi={C\bibinitperiod},
+         given={R.\bibnamedelima A.},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HA+1}
+    \strng{fullhash}{HABSJPJDHSPFCRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1968}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1038/217709a0
+    \endverb
+    \field{pages}{709\bibrangedash 713}
+    \field{title}{Observation of Rapidly Pulsating Radio Source}
+    \field{volume}{217}
+    \field{journaltitle}{Nature}
+    \field{year}{1968}
+  \endentry
+
   \entry{lorimer}{book}{}
     \name{author}{2}{}{%
       {{hash=LDR}{%
@@ -134,6 +283,137 @@
     \field{year}{2016}
   \endentry
 
+  \entry{matsakis:pulars}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MDN}{%
+         family={Matsakis},
+         familyi={M\bibinitperiod},
+         given={D.\bibnamedelima N.},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=TJH}{%
+         family={Taylor},
+         familyi={T\bibinitperiod},
+         given={J.\bibnamedelima H.},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=ETM}{%
+         family={Eubanks},
+         familyi={E\bibinitperiod},
+         given={T.\bibnamedelima M.},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MDNTJHETM1}
+    \strng{fullhash}{MDNTJHETM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1997}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{924\bibrangedash 928}
+    \field{title}{A statistic for describing pulsar and clock stabilities.}
+    \field{volume}{326}
+    \field{journaltitle}{Astronomy and Astrophysics}
+    \field{year}{1997}
+  \endentry
+
+  \entry{ostriker:pulsar}{article}{}
+    \name{author}{2}{}{%
+      {{hash=OJP}{%
+         family={{Ostriker}},
+         familyi={O\bibinitperiod},
+         given={J.\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=GJE}{%
+         family={{Gunn}},
+         familyi={G\bibinitperiod},
+         given={J.\bibnamedelima E.},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OJPGJE1}
+    \strng{fullhash}{OJPGJE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1969}
+    \field{labeldatesource}{}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.1086/150160
+    \endverb
+    \field{pages}{1395}
+    \field{title}{{On the Nature of Pulsars. I. Theory}}
+    \field{volume}{157}
+    \field{journaltitle}{Astrophysical Journal}
+    \field{month}{09}
+    \field{year}{1969}
+  \endentry
+
+  \entry{swainston:git}{online}{}
+    \name{author}{2}{}{%
+      {{hash=SK}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Keegan},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Swainston},
+         familyi={S\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SKSN1}
+    \strng{fullhash}{SKSN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{MWA Search Classifier Nextflow Script}
+    \verb{url}
+    \verb https://github.com/NickSwainston/mwa_search/blob/master/nextflow/clas
+    \verb sifier.nf
+    \endverb
+    \field{year}{2019}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{swainston:data}{online}{}
+    \name{author}{1}{}{%
+      {{hash=SN}{%
+         family={Swainston},
+         familyi={S\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Curtin Institute of Radio Astronomy}%
+    }
+    \strng{namehash}{SN1}
+    \strng{fullhash}{SN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{extradate}{1}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Classifier Training Dataset V1}
+    \verb{url}
+    \verb https://www.dropbox.com/sh/dwd50nzfb41es8k/AABAJ28UkgRLHnNc8WOaeOBwa?
+    \verb dl=0
+    \endverb
+    \field{year}{2020}
+  \endentry
+
   \entry{swainston}{thesis}{}
     \name{author}{1}{}{%
       {{hash=SN}{%
@@ -148,6 +428,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2020}
+    \field{extradate}{2}
     \field{labeldatesource}{}
     \field{sortinit}{S}
     \field{sortinithash}{S}
@@ -229,6 +510,34 @@
     \field{volume}{474}
     \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
     \field{year}{2017}
+  \endentry
+
+  \entry{valiant}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VLG}{%
+         family={Valiant},
+         familyi={V\bibinitperiod},
+         given={L.\bibnamedelima G.},
+         giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VLG1}
+    \strng{fullhash}{VLG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1984}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.1145/1968.1972
+    \endverb
+    \field{number}{11}
+    \field{pages}{1134\bibrangedash 1142}
+    \field{title}{A Theory of the Learnable}
+    \field{volume}{27}
+    \field{journaltitle}{Communications of the ACM}
+    \field{year}{1984}
   \endentry
 \enddatalist
 \endinput

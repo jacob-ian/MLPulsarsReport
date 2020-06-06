@@ -1,0 +1,50 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Aim}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Structure of this Report}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Background Theory}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Pulsars}{subsection.1.3}% 5
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Sky Surveys}{subsection.1.3}% 6
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Machine Learning}{subsection.1.3}% 7
+\BOOKMARK [1][-]{section.2}{Methods}{}% 8
+\BOOKMARK [2][-]{subsection.2.1}{Developing the Machine Learning Training Dataset}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.2}{Developing a Machine Learning Classifier Validation Tool}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Developing an Ensemble Machine Learning Classifier}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.4}{Evaluating the Machine Learning Classifiers}{section.2}% 12
+\BOOKMARK [1][-]{section.3}{Results and Analyses}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Machine Learning Training Dataset}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Classification Results from the LOTAASClassifier Algorithms}{section.3}% 15
+\BOOKMARK [3][-]{subsubsection.3.2.1}{The J48 Algorithm}{subsection.3.2}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.2}{The Multi-Layer Perceptron Algorithm}{subsection.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.3}{The Na\357ve Bayes Tester Algorithm}{subsection.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.4}{The Support Vector Machine Algorithm}{subsection.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.3}{Classification Results from the PulsarClassifier Ensemble Classifier}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.4}{Compilation of Results and Analyses}{section.3}% 21
+\BOOKMARK [1][-]{section.4}{Discussion and Conclusions}{}% 22
+\BOOKMARK [2][-]{subsection.4.1}{Evaluating Curtin Institute of Radio Astronomy's Pulsar Classification Pipeline}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.2}{Evaluating the Training Dataset and Machine Learning Classifiers}{section.4}% 24
+\BOOKMARK [1][-]{section.5}{Recommendations}{}% 25
+\BOOKMARK [1][-]{section.6}{References}{}% 26
+\BOOKMARK [1][-]{section*.2}{Appendices}{}% 27
+\BOOKMARK [1][-]{appendix.a.A}{Methods}{}% 28
+\BOOKMARK [2][-]{subsection.b.A.A}{Feature Extraction with PulsarFeatureLab}{appendix.a.A}% 29
+\BOOKMARK [2][-]{subsection.b.A.B}{Developing PulsarValidator}{appendix.a.A}% 30
+\BOOKMARK [2][-]{subsection.b.A.C}{Developing PulsarClassifier}{appendix.a.A}% 31
+\BOOKMARK [2][-]{subsection.b.A.D}{Using PulsarClassifier}{appendix.a.A}% 32
+\BOOKMARK [2][-]{subsection.b.A.E}{Using PulsarValidator}{appendix.a.A}% 33
+\BOOKMARK [1][-]{appendix.b.B}{Results}{}% 34
+\BOOKMARK [2][-]{subsection.b.B.1}{Machine Learning Training Dataset}{appendix.b.B}% 35
+\BOOKMARK [1][-]{appendix.b.C}{Pulsar Validator}{}% 36
+\BOOKMARK [2][-]{subsection.c.C.A}{PulsarValidator.java}{appendix.b.C}% 37
+\BOOKMARK [2][-]{subsection.c.C.B}{ValidationMode.java}{appendix.b.C}% 38
+\BOOKMARK [2][-]{subsection.c.C.C}{utils/Statistic.java}{appendix.b.C}% 39
+\BOOKMARK [2][-]{subsection.c.C.D}{utils/StatisticList.java}{appendix.b.C}% 40
+\BOOKMARK [2][-]{subsection.c.C.E}{utils/Utilities.java}{appendix.b.C}% 41
+\BOOKMARK [1][-]{appendix.c.D}{Pulsar Classifier}{}% 42
+\BOOKMARK [2][-]{subsection.d.D.A}{PulsarClassifier.java}{appendix.c.D}% 43
+\BOOKMARK [2][-]{subsection.d.D.B}{ClassifierBuilder.java}{appendix.c.D}% 44
+\BOOKMARK [2][-]{subsection.d.D.C}{ClassifierValidator.java}{appendix.c.D}% 45
+\BOOKMARK [2][-]{subsection.d.D.D}{ClassPredictor.java}{appendix.c.D}% 46
+\BOOKMARK [2][-]{subsection.d.D.E}{utils/Classification.java}{appendix.c.D}% 47
+\BOOKMARK [2][-]{subsection.d.D.F}{utils/ClassificationList.java}{appendix.c.D}% 48
+\BOOKMARK [2][-]{subsection.d.D.G}{utils/Classifiers.java}{appendix.c.D}% 49
+\BOOKMARK [2][-]{subsection.d.D.H}{utils/Models.java}{appendix.c.D}% 50

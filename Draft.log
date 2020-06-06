@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.20)  4 JUN 2020 00:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.20)  5 JUN 2020 23:58
 entering extended mode
 **j:/pulsars/MLPulsarsReport/Draft.tex
 (j:/pulsars/MLPulsarsReport/Draft.tex
@@ -66,24 +66,144 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count90
 \c@@ppsavesec=\count91
 \c@@ppsaveapp=\count92
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
-\lst@mode=\count93
-\lst@gtempboxa=\box28
-\lst@token=\toks19
-\lst@length=\count94
-\lst@currlwidth=\dimen110
-\lst@column=\count95
-\lst@pos=\count96
-\lst@lostspace=\dimen111
-\lst@width=\dimen112
-\lst@newlines=\count97
-\lst@lineno=\count98
-\lst@maxwidth=\dimen113
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/arydshln\arydshln.sty"
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen110
+\dashlinegap=\dimen111
+\adl@box=\box28
+\adl@height=\dimen112
+\adl@heightsave=\dimen113
+\adl@depth=\dimen114
+\adl@depthsave=\dimen115
+\adl@finaldepth=\dimen116
+\adl@columns=\count93
+\adl@ncol=\count94
+\adl@currentcolumn=\count95
+\adl@currentcolumnsave=\count96
+\adl@totalheight=\count97
+\adl@totalheightsave=\count98
+\adl@dash=\count99
+\adl@gap=\count100
+\adl@cla=\count101
+\adl@clb=\count102
+\adl@everyvbox=\toks19
+\adl@LTpagetotal=\dimen117
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen118
+\Hy@linkcounter=\count103
+\Hy@pagecounter=\count104
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count105
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count106
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen119
+\Fld@menulength=\count107
+\Field@Width=\dimen120
+\Fld@charsize=\dimen121
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count108
+\c@Item=\count109
+\c@Hfootnote=\count110
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count111
+\c@bookmark@seq@number=\count112
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+)
+\Hy@SectionHShift=\skip45
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+\lst@mode=\count113
+\lst@gtempboxa=\box29
+\lst@token=\toks20
+\lst@length=\count114
+\lst@currlwidth=\dimen122
+\lst@column=\count115
+\lst@pos=\count116
+\lst@lostspace=\dimen123
+\lst@width=\dimen124
+\lst@newlines=\count117
+\lst@lineno=\count118
+\lst@maxwidth=\dimen125
  ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count99
-\lst@skipnumbers=\count100
-\lst@framebox=\box29
+\c@lstnumber=\count119
+\lst@skipnumbers=\count120
+\lst@framebox=\box30
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
@@ -141,142 +261,113 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  ("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count101
-\float@exts=\toks20
-\float@box=\box30
-\@float@everytoks=\toks21
-\@floatcapt=\box31
+\c@float@type=\count121
+\float@exts=\toks21
+\float@box=\box31
+\@float@everytoks=\toks22
+\@floatcapt=\box32
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks22
-\c@algorithm=\count102
+\@float@every@algorithm=\toks23
+\c@algorithm=\count122
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/algorithmicx\algpseudocode.sty"
 Package: algpseudocode 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/algorithmicx\algorithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count103
-\c@ALG@rem=\count104
-\c@ALG@nested=\count105
-\ALG@tlm=\skip45
-\ALG@thistlm=\skip46
-\c@ALG@Lnr=\count106
-\c@ALG@blocknr=\count107
-\c@ALG@storecount=\count108
-\c@ALG@tmpcounter=\count109
-\ALG@tmplength=\skip47
+\c@ALG@line=\count123
+\c@ALG@rem=\count124
+\c@ALG@nested=\count125
+\ALG@tlm=\skip46
+\ALG@thistlm=\skip47
+\c@ALG@Lnr=\count126
+\c@ALG@blocknr=\count127
+\c@ALG@storecount=\count128
+\c@ALG@tmpcounter=\count129
+\ALG@tmplength=\skip48
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex-chicago\biblatex-chicago.sty"
 Package: biblatex-chicago 2020/04/20 v 3.14 biblatex style
  ("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count110
+\etb@tempcnta=\count130
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
- ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\refcount.sty"
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-) ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)) ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
- ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)))))
-\c@section@level=\count111
-LaTeX Info: Redefining \ref on input line 355.
-LaTeX Info: Redefining \pageref on input line 355.
+)
+\c@section@level=\count131
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/xstring\xstring.sty" ("C:\Program Files\MiKTeX 2.9\tex/generic/xstring\xstring.tex"
-\integerpart=\count112
-\decimalpart=\count113
+\integerpart=\count132
+\decimalpart=\count133
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.sty"
 Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count114
+\lrq@indent=\count134
  ("C:\Program Files\MiKTeX 2.9\tex/latex/logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
-\Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-\c@tabx@nest=\count115
-\c@listtotal=\count116
-\c@listcount=\count117
-\c@liststart=\count118
-\c@liststop=\count119
-\c@citecount=\count120
-\c@citetotal=\count121
-\c@multicitecount=\count122
-\c@multicitetotal=\count123
-\c@instcount=\count124
-\c@maxnames=\count125
-\c@minnames=\count126
-\c@maxitems=\count127
-\c@minitems=\count128
-\c@citecounter=\count129
-\c@maxcitecounter=\count130
-\c@savedcitecounter=\count131
-\c@uniquelist=\count132
-\c@uniquename=\count133
-\c@refsection=\count134
-\c@refsegment=\count135
-\c@maxextratitle=\count136
-\c@maxextratitleyear=\count137
-\c@maxextraname=\count138
-\c@maxextradate=\count139
-\c@maxextraalpha=\count140
-\c@abbrvpenalty=\count141
-\c@highnamepenalty=\count142
-\c@lownamepenalty=\count143
-\c@maxparens=\count144
-\c@parenlevel=\count145
-\blx@tempcnta=\count146
-\blx@tempcntb=\count147
-\blx@tempcntc=\count148
-\blx@maxsection=\count149
-\blx@maxsegment@0=\count150
-\blx@notetype=\count151
-\blx@parenlevel@text=\count152
-\blx@parenlevel@foot=\count153
-\blx@sectionciteorder@0=\count154
-\blx@entrysetcounter=\count155
-\labelnumberwidth=\skip48
-\labelalphawidth=\skip49
-\biblabelsep=\skip50
-\bibitemsep=\skip51
-\bibnamesep=\skip52
-\bibinitsep=\skip53
-\bibparsep=\skip54
-\bibhang=\skip55
+))
+\c@tabx@nest=\count135
+\c@listtotal=\count136
+\c@listcount=\count137
+\c@liststart=\count138
+\c@liststop=\count139
+\c@citecount=\count140
+\c@citetotal=\count141
+\c@multicitecount=\count142
+\c@multicitetotal=\count143
+\c@instcount=\count144
+\c@maxnames=\count145
+\c@minnames=\count146
+\c@maxitems=\count147
+\c@minitems=\count148
+\c@citecounter=\count149
+\c@maxcitecounter=\count150
+\c@savedcitecounter=\count151
+\c@uniquelist=\count152
+\c@uniquename=\count153
+\c@refsection=\count154
+\c@refsegment=\count155
+\c@maxextratitle=\count156
+\c@maxextratitleyear=\count157
+\c@maxextraname=\count158
+\c@maxextradate=\count159
+\c@maxextraalpha=\count160
+\c@abbrvpenalty=\count161
+\c@highnamepenalty=\count162
+\c@lownamepenalty=\count163
+\c@maxparens=\count164
+\c@parenlevel=\count165
+\blx@tempcnta=\count166
+\blx@tempcntb=\count167
+\blx@tempcntc=\count168
+\blx@maxsection=\count169
+\blx@maxsegment@0=\count170
+\blx@notetype=\count171
+\blx@parenlevel@text=\count172
+\blx@parenlevel@foot=\count173
+\blx@sectionciteorder@0=\count174
+\blx@entrysetcounter=\count175
+\labelnumberwidth=\skip49
+\labelalphawidth=\skip50
+\biblabelsep=\skip51
+\bibitemsep=\skip52
+\bibnamesep=\skip53
+\bibinitsep=\skip54
+\bibparsep=\skip55
+\bibhang=\skip56
 \blx@bcfin=\read1
 \blx@bcfout=\write3
 \blx@langwohyphens=\language83
-\c@mincomprange=\count156
-\c@maxcomprange=\count157
-\c@mincompwidth=\count158
+\c@mincomprange=\count176
+\c@maxcomprange=\count177
+\c@mincompwidth=\count178
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\blx-dm.def"
@@ -286,88 +377,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'chicago-authordate.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count159
-\c@savedafterword=\count160
-\c@annotator=\count161
-\c@savedannotator=\count162
-\c@author=\count163
-\c@savedauthor=\count164
-\c@bookauthor=\count165
-\c@savedbookauthor=\count166
-\c@commentator=\count167
-\c@savedcommentator=\count168
-\c@editor=\count169
-\c@savededitor=\count170
-\c@editora=\count171
-\c@savededitora=\count172
-\c@editorb=\count173
-\c@savededitorb=\count174
-\c@editorc=\count175
-\c@savededitorc=\count176
-\c@foreword=\count177
-\c@savedforeword=\count178
-\c@holder=\count179
-\c@savedholder=\count180
-\c@introduction=\count181
-\c@savedintroduction=\count182
-\c@namea=\count183
-\c@savednamea=\count184
-\c@nameb=\count185
-\c@savednameb=\count186
-\c@namec=\count187
-\c@savednamec=\count188
-\c@translator=\count189
-\c@savedtranslator=\count190
-\c@shortauthor=\count191
-\c@savedshortauthor=\count192
-\c@shorteditor=\count193
-\c@savedshorteditor=\count194
-\c@labelname=\count195
-\c@savedlabelname=\count196
-\c@institution=\count197
-\c@savedinstitution=\count198
-\c@lista=\count199
-\c@savedlista=\count266
-\c@listb=\count267
-\c@savedlistb=\count268
-\c@listc=\count269
-\c@savedlistc=\count270
-\c@listd=\count271
-\c@savedlistd=\count272
-\c@liste=\count273
-\c@savedliste=\count274
-\c@listf=\count275
-\c@savedlistf=\count276
-\c@location=\count277
-\c@savedlocation=\count278
-\c@organization=\count279
-\c@savedorganization=\count280
-\c@origlocation=\count281
-\c@savedoriglocation=\count282
-\c@origpublisher=\count283
-\c@savedorigpublisher=\count284
-\c@publisher=\count285
-\c@savedpublisher=\count286
-\c@language=\count287
-\c@savedlanguage=\count288
-\c@origlanguage=\count289
-\c@savedoriglanguage=\count290
-\c@pageref=\count291
-\c@savedpageref=\count292
-\shorthandwidth=\skip56
-\shortjournalwidth=\skip57
-\shortserieswidth=\skip58
-\shorttitlewidth=\skip59
-\shortauthorwidth=\skip60
-\shorteditorwidth=\skip61
-\locallabelnumberwidth=\skip62
-\locallabelalphawidth=\skip63
-\localshorthandwidth=\skip64
-\localshortjournalwidth=\skip65
-\localshortserieswidth=\skip66
-\localshorttitlewidth=\skip67
-\localshortauthorwidth=\skip68
-\localshorteditorwidth=\skip69
+\c@afterword=\count179
+\c@savedafterword=\count180
+\c@annotator=\count181
+\c@savedannotator=\count182
+\c@author=\count183
+\c@savedauthor=\count184
+\c@bookauthor=\count185
+\c@savedbookauthor=\count186
+\c@commentator=\count187
+\c@savedcommentator=\count188
+\c@editor=\count189
+\c@savededitor=\count190
+\c@editora=\count191
+\c@savededitora=\count192
+\c@editorb=\count193
+\c@savededitorb=\count194
+\c@editorc=\count195
+\c@savededitorc=\count196
+\c@foreword=\count197
+\c@savedforeword=\count198
+\c@holder=\count199
+\c@savedholder=\count266
+\c@introduction=\count267
+\c@savedintroduction=\count268
+\c@namea=\count269
+\c@savednamea=\count270
+\c@nameb=\count271
+\c@savednameb=\count272
+\c@namec=\count273
+\c@savednamec=\count274
+\c@translator=\count275
+\c@savedtranslator=\count276
+\c@shortauthor=\count277
+\c@savedshortauthor=\count278
+\c@shorteditor=\count279
+\c@savedshorteditor=\count280
+\c@labelname=\count281
+\c@savedlabelname=\count282
+\c@institution=\count283
+\c@savedinstitution=\count284
+\c@lista=\count285
+\c@savedlista=\count286
+\c@listb=\count287
+\c@savedlistb=\count288
+\c@listc=\count289
+\c@savedlistc=\count290
+\c@listd=\count291
+\c@savedlistd=\count292
+\c@liste=\count293
+\c@savedliste=\count294
+\c@listf=\count295
+\c@savedlistf=\count296
+\c@location=\count297
+\c@savedlocation=\count298
+\c@organization=\count299
+\c@savedorganization=\count300
+\c@origlocation=\count301
+\c@savedoriglocation=\count302
+\c@origpublisher=\count303
+\c@savedorigpublisher=\count304
+\c@publisher=\count305
+\c@savedpublisher=\count306
+\c@language=\count307
+\c@savedlanguage=\count308
+\c@origlanguage=\count309
+\c@savedoriglanguage=\count310
+\c@pageref=\count311
+\c@savedpageref=\count312
+\shorthandwidth=\skip57
+\shortjournalwidth=\skip58
+\shortserieswidth=\skip59
+\shorttitlewidth=\skip60
+\shortauthorwidth=\skip61
+\shorteditorwidth=\skip62
+\locallabelnumberwidth=\skip63
+\locallabelalphawidth=\skip64
+\localshorthandwidth=\skip65
+\localshortjournalwidth=\skip66
+\localshortserieswidth=\skip67
+\localshorttitlewidth=\skip68
+\localshortauthorwidth=\skip69
+\localshorteditorwidth=\skip70
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\blx-compat.def"
@@ -387,29 +478,29 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.def"
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count293
-\c@textcitetotal=\count294
-\c@textcitemaxnames=\count295
-\c@biburlbigbreakpenalty=\count296
-\c@biburlbreakpenalty=\count297
-\c@biburlnumpenalty=\count298
-\c@biburlucpenalty=\count299
-\c@biburllcpenalty=\count300
+\c@textcitecount=\count313
+\c@textcitetotal=\count314
+\c@textcitemaxnames=\count315
+\c@biburlbigbreakpenalty=\count316
+\c@biburlbreakpenalty=\count317
+\c@biburlnumpenalty=\count318
+\c@biburlucpenalty=\count319
+\c@biburllcpenalty=\count320
 \biburlbigskip=\muskip11
 \biburlnumskip=\muskip12
 \biburlucskip=\muskip13
 \biburllcskip=\muskip14
-\c@smartand=\count301
+\c@smartand=\count321
 )
 Package biblatex Info: Trying to load bibliography style 'chicago-authordate'...
 Package biblatex Info: ... file 'chicago-authordate.bbx' found.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex-chicago\chicago-authordate.bbx"
 File: chicago-authordate.bbx 2020/04/20 v 3.14 biblatex bibliography style
-\lositemsep=\skip70
-\cms@tempcnta=\count302
-\cms@tempcntb=\count303
-\c@bbx:relatedcount=\count304
-\c@bbx:relatedtotal=\count305
+\lositemsep=\skip71
+\cms@tempcnta=\count322
+\cms@tempcntb=\count323
+\c@bbx:relatedcount=\count324
+\c@bbx:relatedtotal=\count325
 )
 Package biblatex Info: Trying to load citation style 'chicago-authordate'...
 Package biblatex Info: ... file 'chicago-authordate.cbx' found.
@@ -444,52 +535,61 @@ Package biblatex Warning: 'babel' option is deprecated.
 (biblatex)                Please use 'autolang' instead.
 
 )
-\@quotelevel=\count306
-\@quotereset=\count307
+\@quotelevel=\count326
+\@quotereset=\count327
  (j:/pulsars\MLPulsarsReport\Draft.aux)
 \openout1 = `Draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 45.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen114
-\scratchbox=\box32
-\nofMPsegments=\count309
-\nofMParguments=\count310
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen115
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count328
+\scratchdimen=\dimen126
+\scratchbox=\box33
+\nofMPsegments=\count329
+\nofMParguments=\count330
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count331
+\MPscratchDim=\dimen127
+\MPnumerator=\count332
+\makeMPintoPDFobject=\count333
+\everyMPtoPDFconversion=\toks25
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@lstlisting=\count314
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring ON on input line 45.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
+ (j:/pulsars\MLPulsarsReport\Draft.out) (j:/pulsars\MLPulsarsReport\Draft.out)
+\@outlinefile=\write4
+\openout4 = `Draft.out'.
+
+\c@lstlisting=\count334
 Package biblatex Info: Trying to load language 'english' -> 'cms-american'...
 Package biblatex Info: ... file 'cms-american.lbx' found.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex-chicago\cms-american.lbx"
@@ -518,27 +618,33 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Draft.bbl' found.
- (j:/pulsars\MLPulsarsReport\Draft.bbl)
-Package biblatex Info: Reference section=0 on input line 36.
-Package biblatex Info: Reference segment=0 on input line 36.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 42.
+ (j:/pulsars\MLPulsarsReport\Draft.bbl
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'swainston:git':
+(biblatex)                - Invalid format of field 'urldate'.
+
+)
+Package biblatex Info: Reference section=0 on input line 45.
+Package biblatex Info: Reference segment=0 on input line 45.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 52.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 42.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 52.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 42.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 52.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 42.
+(Font)              <12> on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 42.
+(Font)              <8> on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 42.
+(Font)              <6> on input line 52.
  [1
 
 {C:/Users/jimim/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (j:/pulsars\MLPulsarsReport\Draft.toc
@@ -548,89 +654,127 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 5.
- [1])
-\tf@toc=\write4
-\openout4 = `Draft.toc'.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.75 ...ulsarValidator.java}{41}{subsection.c.C.A}
+                                                  % [1])
+\tf@toc=\write5
+\openout5 = `Draft.toc'.
 
- [2]
+ [2] [3]
 
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 94.
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 105.
 
+<./images/pulsar.jpg, id=342, 234.8775pt x 185.94469pt>
+File: ./images/pulsar.jpg Graphic file (type jpg)
+<use ./images/pulsar.jpg>
+Package pdftex.def Info: ./images/pulsar.jpg  used on input line 109.
+(pdftex.def)             Requested size: 234.87692pt x 185.94421pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 94.
-
-
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 94.
-
-[3]
-
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 98.
-
-
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 98.
-
-[4]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.115 
+       <./images/pulsar.jpg>]
 
 Package biblatex-chicago Warning: Empty Ibidem citation on input line 116.
 
-<./images/pulsar.jpg, id=29, 234.8775pt x 185.94469pt>
-File: ./images/pulsar.jpg Graphic file (type jpg)
-<use ./images/pulsar.jpg>
-Package pdftex.def Info: ./images/pulsar.jpg  used on input line 120.
-(pdftex.def)             Requested size: 234.87692pt x 185.94421pt.
-[5 <./images/pulsar.jpg>] [6]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 175.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmtt.fd"
+<./images/PSR_0459-0210-profile.jpg, id=361, 408.77719pt x 274.02374pt>
+File: ./images/PSR_0459-0210-profile.jpg Graphic file (type jpg)
+<use ./images/PSR_0459-0210-profile.jpg>
+Package pdftex.def Info: ./images/PSR_0459-0210-profile.jpg  used on input line 120.
+(pdftex.def)             Requested size: 142.26378pt x 95.36618pt.
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 129.
+
+<./images/rfi.png, id=370, 292.09125pt x 197.23688pt>
+File: ./images/rfi.png Graphic file (type png)
+<use ./images/rfi.png>
+Package pdftex.def Info: ./images/rfi.png  used on input line 133.
+(pdftex.def)             Requested size: 142.26378pt x 96.06606pt.
+<./images/noise.png, id=372, 297.36093pt x 199.49532pt>
+File: ./images/noise.png Graphic file (type png)
+<use ./images/noise.png>
+Package pdftex.def Info: ./images/noise.png  used on input line 134.
+(pdftex.def)             Requested size: 142.26378pt x 95.44006pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.142 
+       <./images/PSR_0459-0210-profile.jpg>]
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 143.
+
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 143.
+
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 151.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [7] [8] [9] [10] [11] [12] [13] [14] [15] [16]
-Overfull \hbox (1.72537pt too wide) in paragraph at lines 516--516
+) [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.156     \item t
+                 he Support Vector Machine. <./images/rfi.png> <./images/noise.png>] [7] [8]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 205.
+ [9] [10] [11] [12] [13] [14] [15] [16] [17pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.569 
+      ] [18pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.572 \section
+              {Discussion and Conclusions}]
+Overfull \hbox (1.72537pt too wide) in paragraph at lines 573--573
 []\OT1/lmr/bx/n/12 Evaluating Curtin In-sti-tute of Ra-dio As-tron-omy's Pul-
  []
 
 
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 525.
-
-
-Overfull \hbox (1.02763pt too wide) in paragraph at lines 527--528
+Overfull \hbox (1.02763pt too wide) in paragraph at lines 584--585
 \OT1/lmr/m/n/10 re-leased pub-licly, de-spite the soft-ware be-ing la-belled as [][]\OT1/lmtt/m/n/10 LOTAASClassifier v2.0
  []
 
-[17]
-Overfull \hbox (6.72237pt too wide) in paragraph at lines 545--546
+[19]
+Overfull \hbox (6.72237pt too wide) in paragraph at lines 602--603
 []\OT1/lmr/m/n/10 Despite be-ing ranked third in com-bined suc-cess rates, the [][]\OT1/lmtt/m/n/10 PulsarClassifier[]\OT1/lmr/m/n/10 's
  []
 
-[18] [19] [20] [21]
-Overfull \hbox (1.61626pt too wide) in paragraph at lines 585--585
+[20] [21] [22] [23] [24]
+Overfull \hbox (1.61626pt too wide) in paragraph at lines 642--642
 []\OT1/lmr/bx/n/12 Feature Ex-trac-tion with Pul-sar-Fea-ture-Lab 
  []
 
 
-Overfull \hbox (22.44415pt too wide) in paragraph at lines 616--617
+Overfull \hbox (22.44415pt too wide) in paragraph at lines 673--674
 []\OT1/lmr/m/n/10 install [][]\OT1/lmtt/m/n/10 PulsarFeatureLab[]\OT1/lmr/m/n/10 's li-brary de-pen-den-cies ([][]\OT1/lmtt/m/n/10 NumPy, SciPy, matplotlib
  []
 
-[22]
-Overfull \hbox (90.52878pt too wide) in paragraph at lines 636--637
-\OT1/lmr/m/n/10 We be-gin by cre-at-ing a new Java project us-ing the free soft-ware Maven ([][]\OT1/lmtt/m/n/10 https://maven.apache.org[]\OT1/lmr/m/n/10 )
+[25]
+Overfull \hbox (77.11241pt too wide) in paragraph at lines 693--694
+\OT1/lmr/m/n/10 We be-gin by cre-at-ing a new Java project us-ing the free soft-ware Maven (https://maven.apache.org)
  []
 
-[23]
-
-LaTeX Warning: Reference `sec:pulsarvalidator' on page 24 undefined on input line 680.
-
-
-Overfull \hbox (17.96297pt too wide) in paragraph at lines 680--681
+[26]
+Overfull \hbox (17.96297pt too wide) in paragraph at lines 737--738
 \OT1/lmr/m/n/10 whether to con-tinue the val-i-da-tion. The com-plete Java class [][]\OT1/lmtt/m/n/10 PulsarValidator.java
  []
 
-[24] [25] [26]
-Overfull \hbox (1.52634pt too wide) in paragraph at lines 783--784
+[27] [28] [29]
+Overfull \hbox (1.52634pt too wide) in paragraph at lines 840--841
 []\OT1/lmr/m/n/10 This will pro-duce the file: [][]\OT1/lmtt/m/n/10 /target/pulsarvalidator-1.0-full.jar[]\OT1/lmr/m/n/10 , which
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--802
+Underfull \hbox (badness 10000) in paragraph at lines 858--859
 
  []
 
@@ -640,101 +784,53 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 810.
- [27]
-Overfull \hbox (5.71207pt too wide) in paragraph at lines 834--835
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 867.
+ [30]
+Overfull \hbox (5.71207pt too wide) in paragraph at lines 891--892
 [][]\OT1/lmtt/m/n/10 /src/main/java/com/jacobianmatthews/pulsarclassifier[]\OT1/lmr/m/n/10 . To in-tro-duce the
  []
 
 
-Overfull \hbox (19.97113pt too wide) in paragraph at lines 834--835
+Overfull \hbox (19.97113pt too wide) in paragraph at lines 891--892
 [][]\OT1/lmtt/m/n/10 PulsarClassifier.java[]\OT1/lmr/m/n/10 , [][]\OT1/lmtt/m/n/10 ClassifierBuilder.java[]\OT1/lmr/m/n/10 , [][]\OT1/lmtt/m/n/10 ClassifierValidator.java[]\OT1/lmr/m/n/10 ,
  []
 
-
-LaTeX Warning: Reference `sec:pulsarclassifier' on page 28 undefined on input line 857.
-
-[28]
-
-LaTeX Warning: Reference `sec:pulsarclassifier' on page 29 undefined on input line 877.
-
-[29]
-
-LaTeX Warning: Reference `sec:pulsarclassifier' on page 30 undefined on input line 930.
-
-
-LaTeX Warning: Reference `sec:pulsarclassifier' on page 30 undefined on input line 932.
-
-[30] [31]
-Overfull \hbox (2.61029pt too wide) in paragraph at lines 1028--1029
+[31] [32] [33] [34]
+Overfull \hbox (2.61029pt too wide) in paragraph at lines 1085--1086
 \OT1/lmr/m/n/10 and then the [][]\OT1/lmtt/m/n/10 output_ensemble.positive []\OT1/lmr/m/n/10 and [][]\OT1/lmtt/m/n/10 output_ensemble.negative []\OT1/lmr/m/n/10 files
  []
 
-[32] (j:/pulsars\MLPulsarsReport\code/trainingSet.arff [33] [34] [35]) [36] [37] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+[35] (j:/pulsars\MLPulsarsReport\code/trainingSet.arff [36] [37] [38]) [39] [40] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/PulsarValidator.java
 LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <8> not available
 (Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 1.
- [38] [39]) [40] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/ValidationMode.java [41] [42] [43] [44]) [45] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/Statistic.java) [46] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/StatisticList.java [47]) [48] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/Utilities.java) [49] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java [50] [51] [52] [53] [54] [55] [56] [57]
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 409--410
-[][] 
- []
-
-
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 413--414
-[][] 
- []
-
-
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 422--423
-[][] 
- []
-
-
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 426--427
-[][] 
- []
-
-[58] [59]
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 484--485
-[][] 
- []
-
-[60]
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 489--490
-[][] 
- []
-
-
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 498--499
-[][] 
- []
-
-
-Overfull \hbox (41.34973pt too wide) in paragraph at lines 506--508
-[][] 
- []
-
-[61]) [62] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java [63] [64]) [65] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java [66] [67]) [68] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassPredictor.java [69] [70] [71] [72] [73]) [74] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Classification.java) [75] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/ClassificationList.java [76] [77] [78]) [79] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Classifiers.java) [80] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Models.java [81]) [82] (j:/pulsars\MLPulsarsReport\Draft.aux)
-
-LaTeX Warning: There were undefined references.
-
+ [41] [42]) [43] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/ValidationMode.java [44] [45] [46] [47]) [48] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/Statistic.java) [49] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/StatisticList.java [50]) [51] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarvalidator/utils/Utilities.java) [52] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63]) [64] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java [65] [66]) [67] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java [68] [69]) [70] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/ClassPredictor.java [71] [72] [73] [74] [75]) [76] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Classification.java) [77] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/ClassificationList.java [78] [79] [80]) [81] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Classifiers.java) [82] (j:/pulsars\MLPulsarsReport\code/jacobianmatthews/pulsarclassifier/utils/Models.java [83])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1174.
+ [84]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1174.
+ (j:/pulsars\MLPulsarsReport\Draft.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1174.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1174.
+Package rerunfilecheck Info: File `Draft.out' has not changed.
+(rerunfilecheck)             Checksum: F0898A69FDD73711BE3A4E7655995392;3900.
 Package logreq Info: Writing requests to 'Draft.run.xml'.
 \openout1 = `Draft.run.xml'.
 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1174.
  ) 
 Here is how much of TeX's memory you used:
- 14520 strings out of 492895
- 257909 string characters out of 3133479
- 1327971 words of memory out of 3000000
- 18206 multiletter control sequences out of 15000+200000
+ 20556 strings out of 492895
+ 351568 string characters out of 3133479
+ 1199762 words of memory out of 3000000
+ 21834 multiletter control sequences out of 15000+200000
  61345 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,11n,76p,1724b,3767s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
-Output written on j:/pulsars\MLPulsarsReport\Draft.pdf (83 pages, 634303 bytes).
+ 49i,12n,78p,1724b,3767s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
+Output written on j:/pulsars\MLPulsarsReport\Draft.pdf (85 pages, 1060156 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3592 PDF objects out of 4296 (max. 8388607)
+ 2395 named destinations out of 2487 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

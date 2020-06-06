@@ -28,6 +28,31 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\arydshln\arydshln.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\arydshln\arydshln.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
@@ -56,37 +81,17 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def
@@ -116,8 +121,14 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
+OUTPUT j:\pulsars\MLPulsarsReport\Draft.pdf
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
+OUTPUT j:\pulsars\MLPulsarsReport\Draft.out
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\cms-american.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\cms-american.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex-chicago\cms-american.lbx
@@ -150,15 +161,14 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmsy6.tfm
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmex10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr9.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx9.tfm
-OUTPUT j:\pulsars\MLPulsarsReport\Draft.pdf
 INPUT C:\Users\jimim\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT j:\pulsars\MLPulsarsReport\Draft.toc
 INPUT j:\pulsars\MLPulsarsReport\Draft.toc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmr5.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\lmmi10.tfm
@@ -174,6 +184,21 @@ INPUT .\images\pulsar.jpg
 INPUT .\images\pulsar.jpg
 INPUT .\images\pulsar.jpg
 INPUT .\images\pulsar.jpg
+INPUT images\PSR_0459-0210-profile.jpg
+INPUT .\images\PSR_0459-0210-profile.jpg
+INPUT .\images\PSR_0459-0210-profile.jpg
+INPUT .\images\PSR_0459-0210-profile.jpg
+INPUT .\images\PSR_0459-0210-profile.jpg
+INPUT images\rfi.png
+INPUT .\images\rfi.png
+INPUT .\images\rfi.png
+INPUT .\images\rfi.png
+INPUT .\images\rfi.png
+INPUT images\noise.png
+INPUT .\images\noise.png
+INPUT .\images\noise.png
+INPUT .\images\noise.png
+INPUT .\images\noise.png
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\rm-lmtt10.tfm
@@ -234,12 +259,13 @@ INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Mo
 INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Models.java
 INPUT j:\pulsars\MLPulsarsReport\code\jacobianmatthews\pulsarclassifier\utils\Models.java
 INPUT j:\pulsars\MLPulsarsReport\Draft.aux
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
+INPUT j:\pulsars\MLPulsarsReport\Draft.out
 INPUT j:\pulsars\MLPulsarsReport\Draft.run.xml
 OUTPUT j:\pulsars\MLPulsarsReport\Draft.run.xml
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-rmtt.enc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathsy.enc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathex.enc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmbx10.pfb
@@ -247,8 +273,6 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmbx9.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmbx9.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmex10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi7.pfb

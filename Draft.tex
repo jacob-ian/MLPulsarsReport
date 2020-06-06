@@ -5,6 +5,15 @@
 \usepackage{framed}
 \usepackage{graphicx}
 \usepackage[title,toc,page]{appendix}
+\usepackage{arydshln}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    linktoc=all,
+    citecolor=black
+}
 
 % Coding packages
 \usepackage{listings}
@@ -31,7 +40,7 @@
 
 % Create the Title 
 \title{\large{Curtin University} \\ \large{Curtin Institute of Radio Astronomy} \\ \large{Physics Project 1} \\ \vspace*{20px} \textbf{\LARGE{Finding New Pulsars Using Machine Learning}}\vspace*{10px}}
-\author{\vspace*{20px} Jacob Ian Matthews \\ \\ Draft}
+\author{\vspace*{20px} Jacob Ian Matthews}
 
 \begin{document}
 
@@ -42,6 +51,9 @@
     \maketitle
     \thispagestyle{empty}
     
+    \centering
+    \textbf{Supervisors} \\\vspace*{5px}Dr Sam McSweeney and Dr Ramesh Bhat\\
+
     \vspace*{20px}
 
     \begin{abstract}
@@ -85,35 +97,12 @@ In \emph{Section 3}, I analyse the results and findings obtained by the methods 
 
 This report will conclude with my recommendations for areas of further development in \emph{Section 5}, and the detailed methodologies in creating the results of this project, and entirety of the source code created undertaking this project, in the \emph{Appendices}.
 
+\pagebreak
 \subsection{Background Theory}
 
 \subsubsection{Pulsars}
 
-To answer the question of ``what is a pulsar?" we must first investigate the evolution and death of stars.
-
-A star can form when a cloud of hydrogen gas in the interstellar medium (ISM) collects mass over millions of years; as the mass of the gas cloud increases, its gravitational pull to gather more mass also increases \autocite{maoz}. This proto-star will eventually reach a critical mass in which the pressure of gravity within the gas causes enough friction between the gas particles to generate the required heat (thermal pressure) to begin fusing the hydrogen atoms into helium \autocite{maoz}. This marks the beginning of the star's main sequence lifetime. Once the star has fused all of the available hydrogen gas in its core, the star will begin fusing helium into carbon and its outer envelope will expand, moving the star into its "red-giant" phase \autocite{maoz}. If the initial mass of the star was greater than 8 times the mass of the Sun (i.e. $8M_{\odot}$), the star will continue to fuse the elements in its core until it reaches a core of iron. At this point phenomena called nuclear photodisintegration and neutronization occurs, the latter of which causes electrons and photons to combine and form neutrons and anti-neutrinos \autocite{maoz}. Neutronization can be shown as:
-
-$$ e^{-}+p\rightarrow n + \nu_e$$
-
-This process removes the electron degeneracy pressure in the core of the star (a pressure which balances the star's gravitational pressure), causing the star to collapse under its own gravity in a timeframe of 0.1 seconds \autocite{maoz}. The gravitational collapse stops once the gravitational pressure of the star is balanced by the neutron degeneracy pressure, i.e. the pressure from pushing neutrons together. The remaining star is incredibly dense, with a mass of approximately $1.4M_{\odot}$ and a radius of around 11km. This is called a neutron star \autocite{maoz}.
-
-Prior to the collapse of the star, we can imagine the star to be rotating at an angular velocity of $\omega_1$. We know from the conservation of angular momentum that when the radius of a rotating object decreases, the angular velocity will increase (a spinning ice skater pulling their arms in close increases the speed of their spinning). We can therefore show that the angular velocity of the star after the gravitational collapse, $\omega_2$, is much greater than the prior angular velocity:
-
-$$L_1 = L_2$$ where $L$ is the angular momentum, $L_1=I_1\omega_1$ and $L_2=I_2\omega_2$. Therefore:
-
-$$ I_1 \omega_1 = I_2 \omega_2 $$
-
-$$\omega_2 = \frac{I_1}{I_2}\omega_1$$
-
-Assuming the star is a sphere, its moment of inertia, $I$ is:
-
-$$I = \frac{2}{5}MR^2$$ where $M$ is the mass of the star and $R$ is the radius of the star. We can thus show:
-
-$$\omega_2 = \frac{\frac{2}{5}MR_1^2}{\frac{2}{5}MR_2^2}\omega_1$$
-
-$$\omega_2 = \left(\frac{R_1}{R_2}\right)^2\omega_1$$ where $R_1 \gg R_2$. We are left with a neutron star with a very large angular velocity. Analogous to the angular velocity of the star, the magnetic field of the star is also amplified. The ionised gas in the iron core of the star, which generates a magnetic field, is compressed by the gravitational collapse, forcing the flux of the magnetic field to be amplified such that the field strength is approximately $10^{10}$ times stronger in the neutron star compared to during the star's main sequence lifetime \autocite{maoz}.
-
-If the rotation of the neutron star is misaligned with the axis of the magnetic field by an angle $\theta$, the spinning magnetic dipole will radiate electromagnetic waves \autocite{maoz}. As the neutron star rotates, the radiated electromagnetic waves will periodically sweep across the line of sight of an observer, creating a pulse of light. See Figure \ref{fig:pulsar1}. We can therefore define a pulsar as a rapidly rotating neutron star that appears to periodically emit electromagnetic waves \autocite{maoz,lorimer,swainston}.
+Pulsars were first detected in 1967 at the Mullard Radio Astronomy Observatory when a periodically pulsing radio source was discovered \autocite{hewish:pulsar}. The pulsing radio source was found to not be man-made or of terrestrial nature, as it could only be observed at a particular declination and right ascension \autocite{hewish:pulsar}. Pulsars were thus suggested to be either rotating white dwarf stars or neutron stars \autocite{hewish:pulsar,gold:pulsar}, the latter suggestion of which was later supported by the works of \textcite{gold:pulsar}. \textcite{gold:pulsar} found that pulsars were more often detected in supernova areas -- supernovae being the producers of neutron stars -- and that pulsars with faster rotations corresponded to younger neutron stars. The theory that a pulsar is a rapidly rotating neutron star was further confirmed by the works of \textcite{ostriker:pulsar}, as well as discovering that pulsars possess a dipole magnetic field that isn't parallel to its rotation axis. A diagram of a pulsar and its magnetic field can be seen in \emph{Figure \ref{fig:pulsar1}}.
 
 \begin{figure}[h!]
     \centering
@@ -122,27 +111,54 @@ If the rotation of the neutron star is misaligned with the axis of the magnetic 
     \label{fig:pulsar1}
 \end{figure}
 
-While some pulsars, like the Crab Pulsar \autocite{maoz}, emit electromagnetic waves in the visible spectrum and can therefore be detected by an optical telescope, the majority of pulsar emission is invisible to the human eye and requires a radio telescope to be detected.
+When a star reaches the end of its life, if its initial mass was greater than eight times the mass of the sun, i.e. $8M_{\odot}$, the star will likely supernova, exploding its outer envelope into the surrounding space, leaving the gravitationally collapsed core of the star \autocite{maoz}. This is a neutron star. Using the conservation of angular momentum, we can prove that the collapsed neutron star will have a speed of rotation much greater than the star did prior to the its gravitational collapse. If one considers an ice skater rotating with their arms stretched out, we intuitively know that their speed of rotation will increase if their arms are brought in closer to their body. The same effect applies for a star: if prior to the star's collapse it is rotating at an angular velocity $\omega_1$, the angular velocity $\omega_2$ after the star collapses to a radius of ~11km from a radius thousands of times larger, will be much greater \autocite{maoz}. 
 
-\subsubsection{What is a Pulsar Profile?}
-\subsubsection{What is multi-path scattering?}
-\subsubsection{What is a Pulsar Dispersion Measure?}
-\subsubsection{What is a Radio Telescope and how do they work?}
-\subsubsection{What is the Murchison Widefield Array?}
-\subsubsection{Why are we conducting sky surveys?}
-\subsubsection{How is a sky survey conducted with the Murchison Widefield Array?}
-\subsubsection{What is tied-array beamforming?}
-\subsubsection{How many Pulsar candidates are found in a Murchison Widefield Array sky survey?}
-\subsubsection{How long do sky surveys take?}
-\subsubsection{How much data is created from a sky survey?}
-\subsubsection{What is Radio Frequency Interference?}
-\subsubsection{What is a Signal-to-Noise Ratio?}
-\subsubsection{What is PRESTO and a .PFD file?}
-\subsubsection{What is Machine Learning?}
-\subsubsection{How does Machine Learning work?}
-\subsubsection{Why do we need to use Machine Learning in finding new Pulsars?}
-\subsubsection{Why is this particular Machine Learning Classifier used?}
+Despite our understanding of the formation of neutron stars and their rotation, the nature of their electromagnetic wave emission is still an active area of research \autocite{lorimer}. The reason that pulsars appear to emit a pulse of radio waves is due to a process called the `lighthouse effect': as the neutron star rotates, the radiated electromagnetic waves sweep across the sky, crossing the line of sight of an observer and producing a pulse-like effect \autocite{lorimer}. When the radio wave passes the line of sight of a radio telescope, the pulse can be recorded. An Integrated Pulse Profile can then be generated from the pulse recorded by the telescope by a process called folding, where a number of separate observations of the pulse can be `stacked' on top of each other to produce a clear representation of the pulse \autocite{helfand:profiles}. An example of an integrated pulse profile can be seen in \emph{Figure \ref{fig:profile}}.
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=5cm]{PSR_0459-0210-profile.jpg}
+    \begin{center}
+    \caption{Integrated Pulse Profile of Pulsar 0459-0210 \autocite{swainston:data}.}
+    \label{fig:profile}
+    \end{center}
+\end{figure}
+
+\subsubsection{Sky Surveys}
+
+When completing sky surveys in radio astronomy, it is common to detect many examples of radio frequency interference and noise \autocite{hewish:pulsar,lorimer,lyon,tan}. Radio frequency interference (RFI) is any radio signal that has been unintentionally detected; it normally arises from electrical devices with a periodic nature, such as devices with AC currents, communication systems like radar, or from electrical storms \autocite{lorimer}. Noise, on the other hand, can be detections of the Cosmic Microwave Background (depending on the sensitivity of the radio telescope), or detections of radio waves produced by the electronics of the telescope \autocite{lorimer}. An example of an integrated pulse profile produced by radio frequency interference and noise can be seen in \emph{Figure \ref{fig:rfinoise}}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=5cm]{rfi.png}
+    \includegraphics[width=5cm]{noise.png}
+    \begin{center}
+    \caption{Examples of RFI (left) and Noise (right) \autocite{swainston:data}.}
+    \label{fig:rfinoise}
+    \end{center}
+\end{figure}
+
+It is scientifically important to survey the skies to find new pulsars for a multitude of reasons. For example: due to their extremely reliable periodicity, pulsars can be used as astronomical clocks of high accuracy \autocite{matsakis:pulars}. Also, due to the massive gravitational fields surrounding pulsars, binary pulsars are the definitive area in which to test gravitational theories in the strong-field, such as Einstein's theory of General Relativity, and future research into quantum gravity \autocite{lorimer}.
+
+Throughout the history of pulsar discovery, as the sky survey techniques of detection and radio telescope technology has improved, the number of candidates detected has grown at a very fast rate \autocite{lyon}. The growth rate of the number of candidates stands to increase further with the development of extremely large radio telescopes such as the Square Kilometre Array (SKA) \autocite{lyon}. This introduces a new problem to sky surveying: the candidate selection problem. The candidate selection problem occurs when there are too many detected pulsar candidates to be classified as pulsar or as a non-pulsar than can be feasibly examined by human eyes \autocite{lyon}.
+
+To attempt to solve the candidate selection problem, \textcite{lyon} turned to using a machine learning classifier as an intelligent filter that will filter out the candidates that are radio frequency interference or noise, reducing the candidates to be classified by a human to a more manageable number.
+
+\subsubsection{Machine Learning}
+
+\textcite{valiant} first described machine learning as a function in which a computer completes a task that hasn't been explicitly programmed, it has instead learned to do so. A supervised learning classifier is a function in which a machine learns examples of a particular class and then classifies other inputted data based on the learned model \autocite{dietterich}.
+
+In addressing the candidate selection problem, \textcite{lyon} created a program named \verb|LOTAASClassifier| which contains four separate machine learning algorithms that can be chosen from:
+\begin{enumerate}
+    \item The C4.5 Decision Tree;
+    \item the Multilayered Perceptron;
+    \item the Naive Bayes classifier; and
+    \item the Support Vector Machine.
+\end{enumerate}
+
+The machine learning classifiers from \verb|LOTAASClassifier| generate a classification model from an inputted training dataset, and then they can make classification predictions on the class of pulsar candidates \autocite{lyon}. The training dataset used by \textcite{lyon} contained a set of pulsars, radio frequency interference, and noise. This allows the machine learning classifiers to distinctly identify what is and isn't a pulsar.
+
+By using the machine learning classifiers, \textcite{lyon} was able to accurately predict the class of the candidates 97.1\%. of the time, reducing the number of candidates that had to be manually classified.
 
 \pagebreak
 % Methods Section
@@ -172,7 +188,7 @@ To maximise the accuracy of the machine learning algorithm, the input data (incl
 
 Where candidate features are calculated from the: (1) Integrated Pulsar Profile, (2) the Dispersion Measure -- Signal-to-Noise Ratio Curve (DM-S/N curve), (3) the correlation coefficients between each sub-band and the integrated pulsar profile, and (4) from the correlation coefficients between each sub-integration and the integrated pulsar profile. 
 
-A set of 12 pulsar and 13 non-pulsar candidates from the SMART survey were provided by N. Swainston to become the machine learning training dataset. The free Python software created by \textcite{lyon}, \verb|PulsarFeatureLab|, was used to process the PRESTO Prepfold \verb|PFD| pulsar candidate files, extracting the above 20 machine learning features from each candidate into a single file of WEKA Data Mining \verb|ARFF| filetype. To create a closed software environment in which the dependencies of the \verb|PulsarFeatureLab| software were unaffected by the host operating system, a containerised virtual operating system was created using the free software Docker (\verb|https://docker.com|) and the pulsar feature extraction software was thus ran using a bind mounted volume. For further details on how this was achieved, see \emph{Appendix \ref{apndx:pulsarfeaturelab}}.
+A set of 12 pulsar and 13 non-pulsar candidates from the SMART survey were provided by N. Swainston to become the machine learning training dataset. The free Python software created by \textcite{lyon}, \verb|PulsarFeatureLab|, was used to process the PRESTO Prepfold \verb|PFD| pulsar candidate files, extracting the above 20 machine learning features from each candidate into a single file of WEKA Data Mining \verb|ARFF| filetype. To create a closed software environment in which the dependencies of the \verb|PulsarFeatureLab| software were unaffected by the host operating system, a containerised virtual operating system was created using the free software Docker (\href{https://docker.com}{https://docker.com}) and the pulsar feature extraction software was thus ran using a bind mounted volume. For further details on how this was achieved, see \emph{Appendix \ref{apndx:pulsarfeaturelab}}.
 
 The file outputted by \verb|PulsarFeatureLab| containing the feature extracted candidates was then edited, removing the `?' character and appending a `1' or `0' to the end of each candidate's line depending on whether the candidate was a pulsar or non-pulsar respectively. This tells the machine learning classifier that candidates with features similar to those preceding the appended binary classification belong to a pulsar (or a non-pulsar). The remaining file constitutes the machine learning training dataset.
 
@@ -183,7 +199,7 @@ In order to automate the evaluation of predictions made by the machine learning 
 
 \verb|PulsarValidator| was designed to load the positive and negative output files generated from the machine learning classification of a controlled testing dataset of pulsar candidates, and compare these files to a list of the pulsars included in the testing dataset. The software outputs the following statistics: the number of pulsars and non-pulsars, the number of detected pulsars and non-pulsars, and the number of true positives (TP), false positives (FP), true negatives (TN), and false negatives (FN). 
 
-This was achieved by first creating individual Java `ArrayList's to contain the filenames of each candidate found to be a True Positive, False Positive, True Negative, or False Negative classification. The positive and negative output files generated by the classifier (positive denoting pulsars and negative denoting non-pulsars), and the list of pulsars in the testing dataset are then also converted to Java `ArrayList's. The items inside the positive and negative `ArrayList's are then iterated over, checking each item against the list of pulsars. If an item in the positive list is found in the list of pulsars, it is added to the True Positive list, otherwise it is added to the False Positive list. If an item in the negative list is found in the list of pulsars, it is added to the False Negative list, otherwise it is added to the True Negative list. The number of items inside each list is then outputted to the user. This process can be seen in \emph{Algorithm \ref{alg:validator}}. Further details on the development of this software can be found in \emph{Appendix \ref{apndx:pulsarvalidator}}, and the full Java source code can be found in \emph{Appendix \ref{src:pulsarvalidator}} or on GitHub (\verb|https://github.com/jacob-ian/PulsarValidator.git|).
+This was achieved by first creating individual Java `ArrayList's to contain the filenames of each candidate found to be a True Positive, False Positive, True Negative, or False Negative classification. The positive and negative output files generated by the classifier (positive denoting pulsars and negative denoting non-pulsars), and the list of pulsars in the testing dataset are then also converted to Java `ArrayList's. The items inside the positive and negative `ArrayList's are then iterated over, checking each item against the list of pulsars. If an item in the positive list is found in the list of pulsars, it is added to the True Positive list, otherwise it is added to the False Positive list. If an item in the negative list is found in the list of pulsars, it is added to the False Negative list, otherwise it is added to the True Negative list. The number of items inside each list is then outputted to the user. This process can be seen in \emph{Algorithm \ref{alg:validator}}. Further details on the development of this software can be found in \emph{Appendix \ref{apndx:pulsarvalidator}}, and the full Java source code can be found in \emph{Appendix \ref{src:pulsarvalidator}} or on GitHub (\href{https://github.com/jacob-ian/PulsarValidator.git}{https://github.com/jacob-ian/PulsarValidator.git}).
 
 \begin{algorithm}
     \caption{Pulsar Validator (pseudocode)}
@@ -328,7 +344,7 @@ The Java class `ClassPredictor' was modified such that if the user chooses to us
     \end{algorithmic}
 \end{algorithm}
 
-The final modification that was made included changing the Java class `PulsarClassifier' to include the ensemble classifier as an option in the user selectable algorithms. Further details on the development of this software can be found in \emph{Appendix \ref{apndx:pulsarclassifier}} and the full Java source code can be found in \emph{Appendix \ref{src:pulsarclassifier}} or on GitHub (\verb|https://github.com/jacob-ian/PulsarClassifier.git|).
+The final modification that was made included changing the Java class `PulsarClassifier' to include the ensemble classifier as an option in the user selectable algorithms. Further details on the development of this software can be found in \emph{Appendix \ref{apndx:pulsarclassifier}} and the full Java source code can be found in \emph{Appendix \ref{src:pulsarclassifier}} or on GitHub (\href{https://github.com/jacob-ian/PulsarClassifier.git}{https://github.com/jacob-ian/PulsarClassifier.git}).
 
 \subsection{Evaluating the Machine Learning Classifiers}
 
@@ -477,9 +493,45 @@ $$R_{np} = \frac{TN}{N_{np}} = \frac{87}{87} = 1.00 = 100.00\%,$$
 
 where $N_{np}$ is the number of non-pulsars in the testing dataset and $TN$ is the number of true negative classifications.
 
-\subsection{Combined Analyses}
+\subsection{Compilation of Results and Analyses}
 
-A table containing the pulsar and non-pulsar classification success rates of all algorithms and the ensemble classifier can be found below:
+A table containing the number of true and false positives and negatives for each classifier can be found below in \emph{Table \ref{tab:compiled}}:
+
+\begin{table}[H]
+    \centering
+    
+    \caption{Compiled Results of the Machine Learning Classifiers}
+
+    \begin{framed}
+        \begin{tabular}{l c c c c}
+            & \multicolumn{2}{c}{Pulsars} & \multicolumn{2}{c}{Non-Pulsars} \\
+            Classifier & TP & FN & TN & FP \\
+            \hline
+            \hline
+            LOTAASClassifier &  &  & \\
+            \hline
+            J48 & 131 & 16 & 72 & 15 \\
+            MLP & 123 & 24 & 85 & 2 \\
+            NB & 118 & 29 & 86 & 1 \\
+            SVM & 97 & 50 & 87 & 0 \\
+            \hline
+            PulsarClassifier &  &  & \\
+            \hline
+            Ensemble & 112 & 35 & 87 & 0 \\
+            \hline
+            \hline
+        \end{tabular}
+
+        \vspace{8px}
+        TP: Number of True Positives.\\
+        FN: Number of False Negatives.\\
+        TN: Number of True Negatives.\\
+        FP: Number of False Positives. \\
+    \end{framed}
+    \label{tab:compiled}
+\end{table}
+
+A table containing the pulsar and non-pulsar classification success rates of all algorithms and the ensemble classifier can be found below in \emph{Table \ref{tab:analyses}}:
 
 \begin{table}[H]
     \centering
@@ -497,15 +549,20 @@ A table containing the pulsar and non-pulsar classification success rates of all
             MLP & 83.67\% & 97.70\% & 90.69\% \\
             NB & 80.27\% & 98.85\% & 89.56\%\\
             SVM & 65.98\% & 100.00\% & 82.99\% \\
+            \hdashline 
+            \emph{Average} & 79.76\% & 94.83\% & 87.30\% \\
             \hline
             PulsarClassifier &  &  & \\
             \hline
             Ensemble & 76.19\% & 100.00\% & 88.10\% \\
+            \hline
+            \hline
         \end{tabular}
 
-        \vspace{5px}
+        \vspace{8px}
         $R_p$: Success rate of pulsar classification.\\
         $R_{np}$: Success rate of non-pulsar classification. \\
+        $Combined$: Combined success rate (total accuracy).\\
     \end{framed}
     \label{tab:analyses}
 \end{table}
@@ -522,13 +579,13 @@ A pulsar classification pipeline can be defined as the process undertaken to cla
     \item Use the LOFAR Tied-Array All-Sky machine learning pulsar classifier, \verb|LOTAASClassifier|, to to eliminate a large number of pulsar candidates; and
     \item Manually inspect the remaining pulsar candidates to confirm pulsar discovery.
 \end{enumerate}
-\autocite{swainston}. While the classification pipeline itself appears to be optimal, I have identified a few issues with the previous attempts at CIRA in using the machine learning classifier.
+\autocite{swainston:git}. While the classification pipeline itself appears to be optimal, I have identified a few issues with the previous attempts at CIRA in using the machine learning classifier.
 
 The first issue revolves around the use of mislabelled and incomplete software. In the research completed by \textcite{tan}, the original \\\verb|LOTAASClassifier|, created by \textcite{lyon}, was upgraded to include two major new features: (i) ensemble classification, and (ii) radio frequency interference (RFI) classification. The machine learning feature set was also expanded from 8 features in \textcite{lyon} to 20 features in \textcite{tan}, greatly improving the accuracy of classification. Upon analysis of the source code of \verb|LOTAASClassifier|, it appears that the two new classification features were not released publicly, despite the software being labelled as \verb|LOTAASClassifier v2.0| in its main Java class, the same name referenced by \textcite{tan}. Despite this, the new, expanded set of machine learning features was released with \verb|PulsarFeatureLab Version 1.3.2|. This created a mismatch between the feature extraction software and the machine learning classifier, which leads to the next issue in the CIRA pipeline: the training dataset.
 
-In the pipeline provided by \textcite{swainston}, it appears that CIRA has been attempting to use the training dataset generated for the LOFAR Tied-Array All-Sky Survey included with the \verb|LOTAASClassifier| software, for pulsar candidates generated in the SMART survey. In itself, this may not present issues, however due to the unknown mismatch in the machine learning software, an issue of feature dimensions occurs. The included training dataset creates a classification model with the original 8 machine learning features, therefore any predictions on new candidates would require the same 8 machine learning features to have been extracted prior to classification. Due to the mislabelled software, CIRA has been extracting the set of 20 features from pulsar candidates and attempting to make classifications against a set of 8 features, preventing classifications from occurring in \verb|LOTAASClassifier| due to a mismatch in dimensions. This issue can be fixed by creating a training dataset with the same set of extracted features as will be present in the candidates for classification.
+In the pipeline provided by \textcite{swainston:git}, it appears that CIRA has been attempting to use the training dataset generated for the LOFAR Tied-Array All-Sky Survey included with the \verb|LOTAASClassifier| software, for pulsar candidates generated in the SMART survey. In itself, this may not present issues, however due to the unknown mismatch in the machine learning software, an issue of feature dimensions occurs. The included training dataset creates a classification model with the original 8 machine learning features, therefore any predictions on new candidates would require the same 8 machine learning features to have been extracted prior to classification. Due to the mislabelled software, CIRA has been extracting the set of 20 features from pulsar candidates and attempting to make classifications against a set of 8 features, preventing classifications from occurring in \verb|LOTAASClassifier| due to a mismatch in dimensions. This issue can be fixed by creating a training dataset with the same set of extracted features as will be present in the candidates for classification.
 
-The final issue arising in the CIRA pipeline also spouts from the mislabelling of the \verb|LOTAASClassifier| software. The CIRA pipeline expects that the ensemble classifier created in the upgraded software from \textcite{tan} will be used. Without the latest version of \verb|LOTAASClassifier| having been released, the CIRA pipeline defaults to using the J48 machine learning classification algorithm. As seen in Table \ref{tab:analyses} from \emph{Section 3.4}, the J48 algorithm does not appear to be optimal in combined pulsar and non-pulsar classification. To fix this issue, an ensemble machine learning classifier was created in \emph{Section 2.2.4} to replace the \verb|LOTAASClassifier| software.
+The final issue arising in the CIRA pipeline also spouts from the mislabelling of the \verb|LOTAASClassifier| software. The CIRA pipeline expects that the ensemble classifier created in the upgraded software from \textcite{tan} will be used. Without the latest version of \verb|LOTAASClassifier| having been released, the CIRA pipeline defaults to using the J48 machine learning classification algorithm. As seen in Table \ref{tab:analyses} from \emph{Section 3.4}, the J48 algorithm does not appear to be optimal in combined pulsar and non-pulsar classification. To fix this issue, an ensemble machine learning classifier was created in \emph{Section 2.3} to replace the \verb|LOTAASClassifier| software.
 
 \subsection{Evaluating the Training Dataset and Machine Learning Classifiers}
 
@@ -609,7 +666,7 @@ ENTRYPOINT ["python", "./PulsarFeatureLab/Src/PulsarFeatureLab.py"]
 
         The above \verb|Dockerfile| instructs Docker to:
         \begin{enumerate}[label=\roman*.]
-            \item use an image of Alpine Linux with \verb|git| preinstalled to download the \verb|PulsarFeatureLab| software from GitHub \\(\verb|https://github.com/scienceguyrob/PulsarFeatureLab|);
+            \item use an image of Alpine Linux with \verb|git| preinstalled to download the \verb|PulsarFeatureLab| software from GitHub \\(https://github.com/scienceguyrob/PulsarFeatureLab);
             \item create a directory inside the downloaded software to store the input and output data;
             \item create a Docker image based on Python 2.7;
             \item transfer the \verb|PulsarFeatureLab| software into the Python 2.7 image; and
@@ -623,7 +680,7 @@ $ docker build -t jacobianm/pulsarfeaturelab:1.3.2 .
 $ mkdir ~/pulsars/data/pfd
         \end{lstlisting}
 
-        For future development of this project, the Docker image \\\verb|jacobianm/pulsarfeaturelab:1.3.2| is available on Docker Hub\\(\verb|https://hub.docker.com|) and will be automatically downloaded when running the \verb|docker run| command below. Candidate \verb|PFD| files of known pulsars and non-pulsars detected by the Murchison Widefield Array (MWA) can now populate the above created directory, and the following command can be ran to extract the features from the candidates:
+        For future development of this project, the Docker image \\\verb|jacobianm/pulsarfeaturelab:1.3.2| is available on Docker Hub\\(https://hub.docker.com) and will be automatically downloaded when running the \verb|docker run| command below. Candidate \verb|PFD| files of known pulsars and non-pulsars detected by the Murchison Widefield Array (MWA) can now populate the above created directory, and the following command can be ran to extract the features from the candidates:
 
         \begin{lstlisting}[numbers=none]
 $ docker run --rm -v ~/pulsars/data/pfd:/usr/src/app/PulsarFeatureLab/Data/IO jacobianm/pulsarfeaturelab:1.3.2 -d "/usr/src/app/PulsarFeatureLab/Data/IO" -c 3 -t 6 -f "/usr/src/app/PulsarFeatureLab/Data/IO/output.arff" --arff --meta
@@ -633,7 +690,7 @@ $ docker run --rm -v ~/pulsars/data/pfd:/usr/src/app/PulsarFeatureLab/Data/IO ja
 
         \subsection{Developing PulsarValidator}
         \label{apndx:pulsarvalidator}
-        We begin by creating a new Java project using the free software Maven (\verb|https://maven.apache.org|) by running the following commands in a UNIX terminal:
+        We begin by creating a new Java project using the free software Maven (https://maven.apache.org) by running the following commands in a UNIX terminal:
 
         \begin{lstlisting}[numbers=none]
 $ cd ~/pulsars
@@ -677,7 +734,7 @@ PulsarValidator/
             \end{algorithmic}
         \end{algorithm}
         
-        We can then use a simple conditional statement after this function is ran to check if the \verb|Boolean ValidationMode| has been set to \verb|true|, to determine whether to continue the validation. The complete Java class \verb|PulsarValidator.java| can be seen in \emph{Appendix \ref{sec:pulsarvalidator}.1}.
+        We can then use a simple conditional statement after this function is ran to check if the \verb|Boolean ValidationMode| has been set to \verb|true|, to determine whether to continue the validation. The complete Java class \verb|PulsarValidator.java| can be seen in \emph{Appendix \ref{src:pulsarvalidator:entry}}.
         
         We can then create a new Java class, \verb|ValidationMode.java|, with the following algorithm to validate the output of the classifier against the list of pulsars:
         
@@ -730,7 +787,7 @@ PulsarValidator/
             \end{algorithmic}
         \end{algorithm}
         
-        The complete Java class for \verb|ValidationMode.java| can be found in \emph{Appendix 7.2.2}, and its supplementary classes in \emph{Appendix 7.2}.
+        The complete Java class for \verb|ValidationMode.java| can be found in \emph{Appendix \ref{src:pulsarvalidator:mode}}.
         
         We can now compile the program by first adding the following lines of code to the \verb|pom.xml| file at the root of the Maven project:
         
@@ -780,11 +837,11 @@ PulsarValidator/
 $ mvn assembly:single
         \end{lstlisting}
         
-        This will produce the file: \verb|/target/pulsarvalidator-1.0-full.jar|, which is an executable Java program. The complete source code for \verb|PulsarValidator| can be found in \emph{Appendix 7.2} or at \\\verb|https://github.com/jacob-ian/PulsarValidator.git|.
+        This will produce the file: \verb|/target/pulsarvalidator-1.0-full.jar|, which is an executable Java program. The complete source code for \verb|PulsarValidator| can be found in \emph{Appendix \ref{src:pulsarvalidator}} or at \\https://github.com/jacob-ian/PulsarValidator.git.
 
         \subsection{Developing PulsarClassifier}
         \label{apndx:pulsarclassifier}
-        To build the ensemble classification feature into the existing \verb|LOTAASClassifier| tool, we can first begin by creating a new Java project named \verb|PulsarClassifier| using the free software, Maven (\verb|https://maven.apache.org|).
+        To build the ensemble classification feature into the existing \verb|LOTAASClassifier| tool, we can first begin by creating a new Java project named \verb|PulsarClassifier| using the free software, Maven (https://maven.apache.org).
 
 \begin{lstlisting}[numbers=none]
 $ cd ~/pulsars
@@ -854,7 +911,7 @@ The class \verb|ClassifierBuilder.java| handles training and building a classifi
     \end{algorithmic}
 \end{algorithm}
 
-See \emph{Appendix \ref{sec:pulsarclassifier}.2} for the complete \verb|ClassifierBuilder.java| class. 
+See \emph{Appendix \ref{src:pulsarclassifier:builder}} for the complete \verb|ClassifierBuilder.java| class. 
 
 The class \verb|ClassifierValidator.java| handles validating and testing the existing classification models. To implement the ensemble classifier into this class, we will use the following, similar algorithm:
 
@@ -874,7 +931,7 @@ The class \verb|ClassifierValidator.java| handles validating and testing the exi
     \end{algorithmic}
 \end{algorithm}
 
-See \emph{Appendix \ref{sec:pulsarclassifier}.3} for the complete \verb|ClassifierValidator.java| class. 
+See \emph{Appendix \ref{src:pulsarclassifier:validator}} for the complete \verb|ClassifierValidator.java| class. 
 
 The class \verb|ClassPredictor.java| handles making the classification predictions on new data using existing classifier models. We can add the ensemble classification feature to this class with the following algorithm:
 
@@ -927,9 +984,9 @@ The class \verb|ClassPredictor.java| handles making the classification predictio
     \end{algorithmic}
 \end{algorithm}
 
-The above algorithm preserves the individual classifiers' predictions and also makes an ensemble prediction based on all of the classifiers' predictions. According to \cite{tan}, it is common for ensemble machine learning classifiers to use a cut-off of three concurrent positive predictions in separate classifiers to make a positive ensemble classification. Therefore, for a candidate to be classified as a pulsar with the ensemble classifier it must first be classified as a pulsar by three of the underlying machine learning classifiers. See \emph{Appendix \ref{sec:pulsarclassifier}.4} for the complete \verb|ClassPredictor.java| class.
+The above algorithm preserves the individual classifiers' predictions and also makes an ensemble prediction based on all of the classifiers' predictions. According to \cite{tan}, it is common for ensemble machine learning classifiers to use a cut-off of three concurrent positive predictions in separate classifiers to make a positive ensemble classification. Therefore, for a candidate to be classified as a pulsar with the ensemble classifier it must first be classified as a pulsar by three of the underlying machine learning classifiers. See \emph{Appendix \ref{src:pulsarclassifier:predictor}} for the complete \verb|ClassPredictor.java| class.
 
-The final class to add the ensemble classifier feature to is the entry point of the program, \verb|PulsarClassifier.java|. This class only requires changes to the command-line inputs and outputs, so the completed Java class can be found in \emph{Appendix \ref{sec:pulsarclassifier}.1}. The complete source code to the \verb|PulsarClassifier| contains the following classes:
+The final class to add the ensemble classifier feature to is the entry point of the program, \verb|PulsarClassifier.java|. This class only requires changes to the command-line inputs and outputs, so the completed Java class can be found in \emph{Appendix \ref{src:pulsarclassifier:entry}}. The complete source code to the \verb|PulsarClassifier| contains the following classes:
 
 \begin{lstlisting}[numbers=none]
 src/
@@ -1001,7 +1058,7 @@ $ cd ~/pulsars/PulsarClassifier
 $ mvn assembly:single
 \end{lstlisting}
 
-The complete source code and build of \verb|PulsarClassifier| can be found at \verb|https://github.com/jacob-ian/PulsarClassifier.git|, or in \emph{Appendix \ref{src:pulsarclassifier}}.
+The complete source code and build of \verb|PulsarClassifier| can be found at https://github.com/jacob-ian/PulsarClassifier.git, or in \emph{Appendix \ref{src:pulsarclassifier}}.
 
 \subsection{Using PulsarClassifier}
 \label{apndx:usepulsarclassifier}
@@ -1029,7 +1086,7 @@ $ java -jar pulsarclassifier-1.0-jar-with-dependencies.jar -p ~/pulsars/data/pfd
 
 \subsection{Using PulsarValidator}
 \label{apndx:usepulsarvalidator}
-We can validate the ensemble classifier with the \verb|PulsarValidator| program created in \emph{Section \ref{sec:methodvalidate}} by running the commands:
+We can validate the ensemble classifier with the \verb|PulsarValidator| program created in \emph{Appendix \ref{apndx:pulsarvalidator}} by running the commands:
 
 \begin{lstlisting}[numbers=none]
 $ cd ~/pulsars/PulsarValidator/target
@@ -1050,10 +1107,12 @@ The outputted validation statistics can then be compared to those created for th
     \begin{subappendices}
         \label{src:pulsarvalidator} 
         \subsection{PulsarValidator.java}
+        \label{src:pulsarvalidator:entry}
         \lstinputlisting[title=PulsarValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/PulsarValidator.java}
 
         \pagebreak
         \subsection{ValidationMode.java}
+        \label{src:pulsarvalidator:mode}
         \lstinputlisting[title=ValidationMode.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarvalidator/ValidationMode.java}
 
         \pagebreak
@@ -1075,18 +1134,22 @@ The outputted validation statistics can then be compared to those created for th
     \begin{subappendices}
         \label{src:pulsarclassifier}
         \subsection{PulsarClassifier.java}
-        \lstinputlisting[title=PulsarClassifier.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java}
+        \label{src:pulsarclassifier:entry}
+        \lstinputlisting[title=PulsarClassifier.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em, literate={*}{{*\allowbreak}}1]{code/jacobianmatthews/pulsarclassifier/PulsarClassifier.java}
 
         \pagebreak
         \subsection{ClassifierBuilder.java}
+        \label{src:pulsarclassifier:builder}
         \lstinputlisting[title=ClassifierBuilder.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierBuilder.java}
 
         \pagebreak
         \subsection{ClassifierValidator.java}
+        \label{src:pulsarclassifier:validator}
         \lstinputlisting[title=ClassifierValidator.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassifierValidator.java}
 
         \pagebreak
         \subsection{ClassPredictor.java}
+        \label{src:pulsarclassifier:predictor}
         \lstinputlisting[title=ClassPredictor.java, language=Java, basicstyle=\footnotesize\ttfamily, breaklines=true, framexleftmargin=2.5em]{code/jacobianmatthews/pulsarclassifier/ClassPredictor.java}
 
         \pagebreak
